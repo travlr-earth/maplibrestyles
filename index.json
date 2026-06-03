@@ -11,7 +11,7 @@
   },
   {
     "id": "comic",
-    "layers": 119,
+    "layers": 121,
     "name": "Runner"
   },
   {
@@ -111,7 +111,7 @@
   },
   {
     "id": "topo",
-    "layers": 145,
+    "layers": 146,
     "name": "finn_topo_2"
   },
   {

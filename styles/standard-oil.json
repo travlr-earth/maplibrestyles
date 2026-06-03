@@ -9319,6 +9319,21 @@
         "mapbox:featureComponent": "road-network",
         "mapbox:group": "Road network, road-labels"
       },
+      "filter": [
+        "all",
+        [
+          "has",
+          "reflen"
+        ],
+        [
+          "<=",
+          [
+            "get",
+            "reflen"
+          ],
+          9
+        ]
+      ],
       "type": "symbol",
       "source": "composite",
       "id": "road-exit-shield",
@@ -9329,7 +9344,7 @@
           0
         ]
       },
-      "source-layer": "poi"
+      "source-layer": "transportation_name"
     },
     {
       "minzoom": 5,

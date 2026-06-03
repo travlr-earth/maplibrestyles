@@ -64,6 +64,14 @@
       "type": "vector",
       "url": "https://tiles.openfreemap.org/planet"
     },
+    "__ml-priv-western": {
+      "type": "vector",
+      "tiles": [
+        "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/private/western/{z}/{x}/{y}.pbf"
+      ],
+      "maxzoom": 5,
+      "minzoom": 0
+    },
     "__ml-contours": {
       "type": "vector",
       "url": "pmtiles://https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/contours.pmtiles",
@@ -1995,8 +2003,8 @@
       "metadata": {
         "mapbox:group": "58d9984242b82ae67e79ccd07750ffe5"
       },
-      "source": "composite",
-      "source-layer": "poi",
+      "source": "__ml-priv-western",
+      "source-layer": "RDR2_Map_Strangers-1bisp2",
       "minzoom": 14,
       "layout": {},
       "paint": {
@@ -2011,8 +2019,8 @@
       "metadata": {
         "mapbox:group": "58d9984242b82ae67e79ccd07750ffe5"
       },
-      "source": "composite",
-      "source-layer": "poi",
+      "source": "__ml-priv-western",
+      "source-layer": "RDR2_Map_Strangers-1bisp2",
       "minzoom": 14,
       "layout": {
         "text-field": [

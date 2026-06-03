@@ -1578,7 +1578,7 @@
         ]
       },
       "source": "composite",
-      "source-layer": "landuse"
+      "source-layer": "building"
     },
     {
       "minzoom": 15,
@@ -7103,6 +7103,33 @@
         "mapbox:featureComponent": "walking-cycling",
         "mapbox:group": "Walking, cycling, etc., barriers-bridges"
       }
+    },
+    {
+      "minzoom": 16,
+      "layout": {
+        "icon-image": [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          "gate",
+          "gate",
+          "lift_gate",
+          "lift-gate",
+          ""
+        ],
+        "visibility": "none"
+      },
+      "metadata": {
+        "mapbox:featureComponent": "walking-cycling",
+        "mapbox:group": "Walking, cycling, etc., barriers-bridges"
+      },
+      "type": "symbol",
+      "source": "composite",
+      "id": "gate-label",
+      "paint": {},
+      "source-layer": "poi"
     },
     {
       "id": "bridge-street-case",

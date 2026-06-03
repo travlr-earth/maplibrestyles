@@ -21,6 +21,10 @@
       "type": "vector",
       "url": "https://tiles.openfreemap.org/planet"
     },
+    "__ml-ne-land": {
+      "type": "geojson",
+      "data": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/natural-earth/data/ne_110m_land.geojson"
+    },
     "__ml-contours": {
       "type": "vector",
       "url": "pmtiles://https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/contours.pmtiles",
@@ -743,6 +747,36 @@
         "fill-color": "#f4efe1"
       },
       "source-layer": "park"
+    },
+    {
+      "type": "fill",
+      "source": "__ml-ne-land",
+      "id": "barrier_line_land_fill",
+      "paint": {
+        "fill-color": "#f4efe1"
+      }
+    },
+    {
+      "type": "line",
+      "source": "__ml-ne-land",
+      "id": "barrier_line_land",
+      "paint": {
+        "line-color": "#f4efe1",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.9
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0.4,
+          20,
+          48
+        ]
+      }
     },
     {
       "filter": [
