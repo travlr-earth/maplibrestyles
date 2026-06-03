@@ -17355,7 +17355,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "glacier outline",
+      "id": "glacier-outline",
       "paint": {
         "line-color": "#62b0f0",
         "line-width": [
@@ -19036,7 +19036,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "maritime",
+      "id": "maritime-boundary",
       "paint": {
         "line-color": "rgba(120,119,119,1)",
         "line-dasharray": [
@@ -19093,7 +19093,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "maritime copy",
+      "id": "maritime-boundary-2",
       "paint": {
         "line-color": "rgba(129,176,214,1)",
         "line-dasharray": [
@@ -19139,7 +19139,7 @@
       "metadata": {
         "mapbox:group": "1452377264560.7012"
       },
-      "id": "maritime copy 1",
+      "id": "maritime-boundary-3",
       "paint": {
         "line-color": "rgba(129,176,214,1)",
         "line-dasharray": [

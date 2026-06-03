@@ -751,7 +751,7 @@
     {
       "type": "fill",
       "source": "__ml-ne-land",
-      "id": "barrier_line_land_fill",
+      "id": "land-fill",
       "paint": {
         "fill-color": "#f4efe1"
       }
@@ -4220,7 +4220,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
-      "id": "place_label_other",
+      "id": "settlement-subdivision-label",
       "paint": {
         "text-color": "rgba(50,59,74,1)",
         "text-halo-color": "rgba(255,255,255,0.8)",

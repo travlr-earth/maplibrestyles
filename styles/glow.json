@@ -599,7 +599,7 @@
       "minzoom": 12
     },
     {
-      "id": "admin",
+      "id": "admin-1-boundary",
       "type": "line",
       "paint": {
         "line-color": [

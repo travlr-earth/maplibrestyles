@@ -26,9 +26,12 @@ const DRY_RUN    = process.argv.includes('--dry-run');
 
 function filterAdminLevel(f, n) {
   const s = JSON.stringify(f ?? null);
-  // Match admin_level value n: appears after a comma, and is followed by comma or ]
-  return s.includes('"admin_level"') &&
-    new RegExp(',' + n + '[,\\]]').test(s);
+  if (!s.includes('"admin_level"')) return false;
+  // Direct value:  ,"admin_level"],4,  or  ,"admin_level"],4]
+  if (new RegExp(',' + n + '[,\\]]').test(s)) return true;
+  // Array value:   ,"admin_level"],[4],  or  ,"admin_level"],[4,...]
+  if (new RegExp('\\[' + n + '[,\\]]').test(s)) return true;
+  return false;
 }
 
 function idHas(id, ...terms) {
@@ -48,7 +51,13 @@ function canonical(layer) {
   if (!sl && type === 'background') return 'background';
 
   // ── Injected / GeoJSON fills (no source-layer, type=fill) ────────────────────
-  if (!sl && type === 'fill') return null;
+  // NE land polygon fills used as the base land canvas → land-fill
+  // Other GeoJSON fills (artistic textures, bathymetry) → keep unique names
+  if (!sl && type === 'fill') {
+    const src = (typeof layer.source === 'string') ? layer.source : '';
+    if (src.includes('ne-land') || src.includes('ne_land')) return 'land-fill';
+    return null;
+  }
 
   // ── Hillshade ────────────────────────────────────────────────────────────────
   if (type === 'hillshade') {
@@ -107,11 +116,15 @@ function canonical(layer) {
     const bg       = idHas(id,'-bg',' bg','shadow','case','cover') && !idHas(id,'case-simple');
     const maritime = idHas(id,'maritime');
 
-    // Determine admin level from filter first (most reliable), then ID
+    // Determine admin level from filter first (most reliable), then ID.
+    // Maritime-only layers (no admin_level in filter) get level 0 as default.
+    const fstr = JSON.stringify(f ?? null);
+    const hasAdminLevel = fstr.includes('"admin_level"');
     const level =
       filterAdminLevel(f, 2)                                          ? 0
       : filterAdminLevel(f, 4)                                        ? 1
       : filterAdminLevel(f, 6) || filterAdminLevel(f, 8)             ? 2
+      : maritime && !hasAdminLevel                                    ? 0  // pure maritime → country-level
       : idHas(id,'admin-0','admin_l2',' l2 ','country','ne-countries',
                'country lines','country-borders','admin_maritime',
                'admin_maritime_cover','water lines',' admin ')        ? 0
@@ -190,6 +203,9 @@ function canonical(layer) {
   }
   if (sl === 'landuse' && type === 'line') {
     if (idHas(id,'pitch')) return 'landuse-pitch-outline';
+    // Normalise double-space or trailing-space in IDs
+    const trimmed = id.replace(/\s+/g, ' ').trim().replace(/\s/g, '-').toLowerCase();
+    if (trimmed !== id) return trimmed;
     return null;
   }
 
@@ -273,7 +289,7 @@ function canonical(layer) {
 
     // Suburb / neighbourhood → settlement-subdivision-label
     if (lid.includes('suburb') || lid.includes('neighbourhood') || lid.includes('neighborhood') ||
-        lid.includes('subdivision'))
+        lid.includes('subdivision') || lid === 'place_label_other')
       return 'settlement-subdivision-label';
 
     // Custom/unique — keep

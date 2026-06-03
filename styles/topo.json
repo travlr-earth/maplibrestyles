@@ -698,7 +698,7 @@
       },
       "type": "line",
       "source": "composite",
-      "id": "landuse  line",
+      "id": "landuse-line",
       "paint": {
         "line-color": "#69655d",
         "line-dasharray": [
