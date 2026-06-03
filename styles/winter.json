@@ -1,0 +1,1215 @@
+{
+  "version": 8,
+  "name": "Outdoors Winter",
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "mapbox:sdk-support": {
+      "js": "3.14.0",
+      "android": "11.14.0",
+      "ios": "11.14.0"
+    },
+    "mapbox:uiExpandedImports": [
+      "basemap"
+    ],
+    "mapbox:trackposition": false,
+    "mapbox:groups": {},
+    "_mlSpaceColor": "hsl(0, 0%, 0%)"
+  },
+  "center": [
+    -122.9848,
+    49.7331
+  ],
+  "zoom": 10.46,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {
+    "composite": {
+      "type": "vector",
+      "url": "https://tiles.openfreemap.org/planet"
+    },
+    "mapbox-terrain-v2-contour": {
+      "type": "vector",
+      "url": "https://tiles.openfreemap.org/planet"
+    },
+    "__ml-contours": {
+      "type": "vector",
+      "url": "pmtiles://https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/contours.pmtiles",
+      "maxzoom": 8,
+      "minzoom": 7,
+      "attribution": "Contours: SRTM (NASA/USGS), pre-generated"
+    },
+    "__ml-terrain": {
+      "type": "raster-dem",
+      "tiles": [
+        "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/terrain/{z}/{x}/{y}.png"
+      ],
+      "encoding": "terrarium",
+      "tileSize": 256,
+      "maxzoom": 5,
+      "attribution": "Terrain: SRTM (NASA/USGS), public domain"
+    }
+  },
+  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/winter/sprite/sprite",
+  "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
+  "projection": {
+    "type": "globe"
+  },
+  "layers": [
+    {
+      "id": "__ml-bg",
+      "type": "background",
+      "paint": {
+        "background-color": "hsl(38, 31%, 87%)"
+      }
+    },
+    {
+      "id": "__ml-water",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "hsl(200, 99%, 72%)",
+        "fill-opacity": 1
+      }
+    },
+    {
+      "id": "__ml-hillshade",
+      "type": "hillshade",
+      "source": "__ml-terrain",
+      "paint": {
+        "hillshade-exaggeration": 0.5,
+        "hillshade-shadow-color": "hsla(200, 55%, 25%, 0.88)",
+        "hillshade-highlight-color": "#ffffff",
+        "hillshade-accent-color": "hsla(200, 55%, 25%, 0.88)",
+        "hillshade-illumination-anchor": "map"
+      }
+    },
+    {
+      "minzoom": 10,
+      "layout": {},
+      "type": "line",
+      "source": "__ml-contours",
+      "id": "contour",
+      "paint": {
+        "line-color": "hsla(196, 36%, 25%, 0.5)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "exponential",
+            1.75
+          ],
+          [
+            "zoom"
+          ],
+          9.5,
+          0,
+          12.5,
+          1
+        ],
+        "line-width": [
+          "case",
+          [
+            "==",
+            [
+              "%",
+              [
+                "get",
+                "ele"
+              ],
+              100
+            ],
+            0
+          ],
+          0.6,
+          0.2
+        ]
+      },
+      "source-layer": "contours"
+    },
+    {
+      "layout": {
+        "text-optional": true,
+        "text-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            18,
+            5,
+            12
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            18,
+            13,
+            12
+          ]
+        ],
+        "icon-image": [
+          "image",
+          "mountain"
+        ],
+        "text-font": [
+          "Open Sans Bold Italic"
+        ],
+        "text-offset": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            [
+              "literal",
+              [
+                0,
+                0
+              ]
+            ],
+            5,
+            [
+              "literal",
+              [
+                0,
+                0.75
+              ]
+            ]
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            [
+              "literal",
+              [
+                0,
+                0
+              ]
+            ],
+            13,
+            [
+              "literal",
+              [
+                0,
+                0.75
+              ]
+            ]
+          ]
+        ],
+        "text-anchor": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            "center",
+            5,
+            "top"
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            "center",
+            13,
+            "top"
+          ]
+        ],
+        "text-field": [
+          "case",
+          [
+            "has",
+            "name"
+          ],
+          [
+            "concat",
+            [
+              "coalesce",
+              [
+                "get",
+                "name_en"
+              ],
+              [
+                "get",
+                "name"
+              ]
+            ],
+            "\n",
+            [
+              "get",
+              "elevation_m"
+            ],
+            "m"
+          ],
+          [
+            "concat",
+            [
+              "get",
+              "elevation_m"
+            ],
+            "m"
+          ]
+        ],
+        "text-max-width": 6
+      },
+      "filter": [
+        "all",
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "landform"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "$localized"
+            ],
+            true,
+            true
+          ],
+          false
+        ],
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ]
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "natural-label-peak",
+      "paint": {
+        "text-halo-color": "hsl(20, 20%, 100%)",
+        "text-halo-blur": 0.5,
+        "text-color": "hsl(189, 68%, 18%)",
+        "icon-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "filterrank"
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            1,
+            0
+          ],
+          13,
+          [
+            "match",
+            [
+              "get",
+              "filterrank"
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            1,
+            0
+          ]
+        ],
+        "text-halo-width": 1,
+        "text-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "match",
+            [
+              "get",
+              "filterrank"
+            ],
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            1,
+            0
+          ],
+          13,
+          [
+            "match",
+            [
+              "get",
+              "filterrank"
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            1,
+            0
+          ]
+        ]
+      },
+      "source-layer": "mountain_peak"
+    },
+    {
+      "layout": {
+        "text-font": [
+          "Open Sans Bold Italic"
+        ],
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name_en"
+          ],
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-size": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            18,
+            5,
+            12
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            18,
+            13,
+            12
+          ]
+        ],
+        "text-anchor": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            "center",
+            5,
+            "top"
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            "center",
+            13,
+            "top"
+          ]
+        ],
+        "text-offset": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            [
+              "literal",
+              [
+                0,
+                0
+              ]
+            ],
+            5,
+            [
+              "literal",
+              [
+                0,
+                0.8
+              ]
+            ]
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            [
+              "literal",
+              [
+                0,
+                0
+              ]
+            ],
+            13,
+            [
+              "literal",
+              [
+                0,
+                0.8
+              ]
+            ]
+          ]
+        ],
+        "text-max-width": 6,
+        "icon-image": [
+          "image",
+          "marker"
+        ]
+      },
+      "filter": true,
+      "type": "symbol",
+      "source": "composite",
+      "id": "natural-label-glacier",
+      "paint": {
+        "text-halo-color": "hsl(20, 20%, 100%)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5,
+        "text-color": "hsl(199, 70%, 35%)",
+        "icon-opacity": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
+            1
+          ]
+        ]
+      },
+      "source-layer": "landcover"
+    },
+    {
+      "layout": {
+        "line-join": [
+          "step",
+          [
+            "zoom"
+          ],
+          "miter",
+          14,
+          "round"
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          "track",
+          true,
+          false
+        ],
+        [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "!",
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              [
+                "steps",
+                "sidewalk",
+                "crossing"
+              ],
+              true,
+              false
+            ]
+          ],
+          16,
+          [
+            "!=",
+            [
+              "get",
+              "type"
+            ],
+            "steps"
+          ]
+        ],
+        [
+          "all",
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "tunnel"
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "bridge"
+          ]
+        ],
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ]
+      ],
+      "type": "line",
+      "source": "composite",
+      "id": "track-case",
+      "paint": {
+        "line-color": "hsla(0, 0%, 16%, 0.5)",
+        "line-dasharray": [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "literal",
+            [
+              4,
+              1
+            ]
+          ],
+          15,
+          [
+            "literal",
+            [
+              6,
+              1
+            ]
+          ]
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          1,
+          22,
+          2
+        ],
+        "line-gap-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          1,
+          18,
+          10,
+          22,
+          100
+        ]
+      },
+      "source-layer": "transportation"
+    },
+    {
+      "layout": {
+        "line-join": [
+          "step",
+          [
+            "zoom"
+          ],
+          "miter",
+          14,
+          "round"
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "path"
+        ],
+        [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "!",
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              [
+                "steps",
+                "sidewalk",
+                "crossing"
+              ],
+              true,
+              false
+            ]
+          ],
+          16,
+          [
+            "!=",
+            [
+              "get",
+              "type"
+            ],
+            "steps"
+          ]
+        ],
+        [
+          "all",
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "tunnel"
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "bridge"
+          ]
+        ],
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "",
+            "piste"
+          ],
+          false,
+          true
+        ]
+      ],
+      "type": "line",
+      "source": "composite",
+      "id": "path",
+      "paint": {
+        "line-dasharray": [
+          2,
+          2
+        ],
+        "line-color": "hsl(0, 0%, 16%)"
+      },
+      "source-layer": "transportation"
+    },
+    {
+      "layout": {
+        "line-join": [
+          "step",
+          [
+            "zoom"
+          ],
+          "miter",
+          14,
+          "round"
+        ],
+        "line-cap": "round"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "path"
+        ],
+        [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "!",
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              [
+                "steps",
+                "sidewalk",
+                "crossing"
+              ],
+              true,
+              false
+            ]
+          ],
+          16,
+          [
+            "!=",
+            [
+              "get",
+              "type"
+            ],
+            "steps"
+          ]
+        ],
+        [
+          "all",
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "tunnel"
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "bridge"
+          ]
+        ],
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "piste"
+          ],
+          true,
+          false
+        ]
+      ],
+      "type": "line",
+      "source": "composite",
+      "id": "ski-run",
+      "paint": {
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-width": 12
+      },
+      "source-layer": "transportation"
+    },
+    {
+      "minzoom": 11,
+      "layout": {
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "ele"
+          ]
+        ],
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          8,
+          18,
+          13
+        ],
+        "symbol-placement": "line",
+        "symbol-spacing": 300
+      },
+      "filter": true,
+      "type": "symbol",
+      "source": "__ml-contours",
+      "id": "contour-labels",
+      "paint": {
+        "text-color": "hsl(196, 36%, 25%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11.5,
+          0,
+          12,
+          1
+        ],
+        "text-halo-width": 1,
+        "text-halo-color": "hsla(20, 20%, 100%, 0.6)"
+      },
+      "source-layer": "contours"
+    },
+    {
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": 12
+      },
+      "filter": [
+        "all",
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "path",
+            "track"
+          ],
+          true,
+          false
+        ],
+        [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "!",
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              [
+                "steps",
+                "sidewalk",
+                "crossing"
+              ],
+              true,
+              false
+            ]
+          ],
+          16,
+          [
+            "!=",
+            [
+              "get",
+              "type"
+            ],
+            "steps"
+          ]
+        ],
+        [
+          "all",
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "tunnel"
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "bridge"
+          ]
+        ],
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "piste"
+          ],
+          false,
+          true
+        ]
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "path-track-labels",
+      "paint": {
+        "text-color": "hsl(0, 0%, 18%)",
+        "text-halo-color": "hsl(20, 20%, 100%)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "source-layer": "transportation"
+    },
+    {
+      "layout": {
+        "symbol-placement": "line",
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-font": [
+          "Open Sans Bold"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          12,
+          22,
+          14
+        ]
+      },
+      "filter": [
+        "all",
+        [
+          "match",
+          [
+            "get",
+            "class"
+          ],
+          [
+            "path",
+            "track"
+          ],
+          true,
+          false
+        ],
+        [
+          "step",
+          [
+            "zoom"
+          ],
+          [
+            "!",
+            [
+              "match",
+              [
+                "get",
+                "type"
+              ],
+              [
+                "steps",
+                "sidewalk",
+                "crossing"
+              ],
+              true,
+              false
+            ]
+          ],
+          16,
+          [
+            "!=",
+            [
+              "get",
+              "type"
+            ],
+            "steps"
+          ]
+        ],
+        [
+          "all",
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "tunnel"
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "brunnel"
+            ],
+            "bridge"
+          ]
+        ],
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "type"
+          ],
+          [
+            "piste"
+          ],
+          true,
+          false
+        ]
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "ski-run-labels",
+      "paint": {
+        "text-color": "hsl(0, 0%, 18%)",
+        "text-halo-color": "hsl(20, 20%, 100%)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "source-layer": "transportation"
+    }
+  ],
+  "created": "2025-11-21T15:32:46.834Z",
+  "modified": "2025-11-21T15:32:46.834Z",
+  "id": "cmi90reya00c201r1hhxj1d3c",
+  "owner": "matsmiersen",
+  "visibility": "private",
+  "protected": false,
+  "draft": false,
+  "sky": {
+    "atmosphere-blend": 0.8
+  }
+}

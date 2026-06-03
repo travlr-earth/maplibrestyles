@@ -1,0 +1,1522 @@
+{
+  "version": 8,
+  "name": "Vintage",
+  "metadata": {
+    "mapbox:groups": {
+      "1443753078266.6763": {
+        "name": "backgrounds",
+        "collapsed": false
+      },
+      "1443556300729.845": {
+        "name": "vintage",
+        "collapsed": false
+      },
+      "1443753087749.751": {
+        "name": "terrain",
+        "collapsed": false
+      },
+      "1450288596803.136": {
+        "name": "admin",
+        "collapsed": false
+      },
+      "1443753148043.5981": {
+        "name": "labels",
+        "collapsed": false
+      },
+      "1443556291227.081": {
+        "name": "olive",
+        "collapsed": true
+      },
+      "1443648437800.5745": {
+        "name": "graticules",
+        "collapsed": true
+      },
+      "1447177683179.7437": {
+        "name": "dup vintage",
+        "collapsed": true
+      }
+    },
+    "mapbox:trackposition": false,
+    "mapbox:sdk-support": {
+      "js": "3.8.0",
+      "android": "11.9.0",
+      "ios": "11.9.0"
+    },
+    "mapbox:autocomposite": true,
+    "_mlSpaceColor": "hsl(38, 82%, 5%)"
+  },
+  "center": [
+    -94.02332894034062,
+    34.58058796394228
+  ],
+  "zoom": 3.8461476117305553,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {
+    "composite": {
+      "type": "vector",
+      "url": "https://tiles.openfreemap.org/planet"
+    },
+    "__ml-ne-land": {
+      "type": "geojson",
+      "data": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/natural-earth/data/ne_110m_land.geojson"
+    },
+    "__ml-contours": {
+      "type": "vector",
+      "url": "pmtiles://https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/contours.pmtiles",
+      "maxzoom": 8,
+      "minzoom": 7,
+      "attribution": "Contours: SRTM (NASA/USGS), pre-generated"
+    },
+    "__ml-terrain": {
+      "type": "raster-dem",
+      "tiles": [
+        "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/terrain/{z}/{x}/{y}.png"
+      ],
+      "encoding": "terrarium",
+      "tileSize": 256,
+      "maxzoom": 5,
+      "attribution": "Terrain: SRTM (NASA/USGS), public domain"
+    }
+  },
+  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/vintage/sprite/sprite",
+  "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
+  "projection": {
+    "type": "globe"
+  },
+  "layers": [
+    {
+      "id": "background vintage",
+      "paint": {
+        "background-color": "rgba(207,177,155,1)"
+      },
+      "layout": {},
+      "type": "background",
+      "metadata": {
+        "mapbox:group": "1443753078266.6763"
+      }
+    },
+    {
+      "layout": {},
+      "metadata": {
+        "mapbox:group": "1443753078266.6763"
+      },
+      "type": "fill",
+      "source": "__ml-ne-land",
+      "id": "bg white blend",
+      "paint": {
+        "fill-opacity": 0.05,
+        "fill-color": "#fff"
+      }
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443753078266.6763"
+      },
+      "id": "earth texture 2 copy",
+      "paint": {
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2.5,
+          0.6,
+          2.9,
+          0
+        ],
+        "fill-pattern": "texture_64"
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "__ml-ne-land"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "type": "fill",
+      "source": "composite",
+      "id": "water",
+      "paint": {
+        "fill-translate": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          22,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "fill-color": "rgba(148,126,112,1)"
+      },
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water texture",
+      "paint": {
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          1,
+          4,
+          1,
+          6,
+          0.25
+        ],
+        "fill-translate": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          22,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "fill-color": "rgba(204,198,137,1)",
+        "fill-pattern": "texture_64"
+      },
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water texture copy",
+      "paint": {
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          1,
+          4,
+          1,
+          5,
+          0
+        ],
+        "fill-translate": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          22,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "fill-color": "rgba(204,198,137,1)",
+        "fill-pattern": "texture_64"
+      },
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water texture copy 1",
+      "paint": {
+        "fill-opacity": 0.7,
+        "fill-translate": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          22,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "fill-color": "rgba(204,198,137,1)",
+        "fill-pattern": "texture_64"
+      },
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water texture copy 2",
+      "paint": {
+        "fill-opacity": 0.7,
+        "fill-translate": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          22,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "fill-color": "rgba(204,198,137,1)",
+        "fill-pattern": "texture_64"
+      },
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water texture copy 3",
+      "paint": {
+        "fill-opacity": 0.7,
+        "fill-translate": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ],
+          22,
+          [
+            "literal",
+            [
+              0,
+              0
+            ]
+          ]
+        ],
+        "fill-color": "rgba(204,198,137,1)",
+        "fill-pattern": "texture_64"
+      },
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "type": "fill",
+      "source": "composite",
+      "id": "water2",
+      "paint": {
+        "fill-color": "rgba(161,137,122,1)",
+        "fill-pattern": "texture-dktan_64"
+      },
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water2 (texture)",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-pattern": "texture_64"
+      },
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water2  (texture) copy",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-pattern": "texture_64"
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water2  (texture) copy2",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-pattern": "texture_64"
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water2  (texture) copy 2",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-pattern": "texture_64"
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water2 (soften)",
+      "paint": {
+        "fill-color": "rgba(207,178,156,1)",
+        "fill-opacity": 0.2
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "layout": {},
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "type": "fill",
+      "source": "composite",
+      "id": "water3  (texture)",
+      "paint": {
+        "fill-color": "rgba(201,44,44,1)",
+        "fill-pattern": "texture_64"
+      },
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water3 (soften)",
+      "paint": {
+        "fill-color": "rgba(207,178,156,1)",
+        "fill-opacity": 0.45
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "waterline3",
+      "paint": {
+        "line-color": "rgba(77,66,48,1)",
+        "line-blur": 2
+      },
+      "layout": {},
+      "type": "line",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "layout": {},
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "type": "fill",
+      "source": "composite",
+      "id": "water4",
+      "paint": {
+        "fill-color": "rgba(161,137,122,1)"
+      },
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water4 (texture)",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-pattern": "texture_64"
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water4 (soften)",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-opacity": 0.6
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "layout": {},
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "type": "fill",
+      "source": "composite",
+      "id": "water5",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-opacity": 0.8
+      },
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443556300729.845"
+      },
+      "id": "water5 tex",
+      "paint": {
+        "fill-color": "#CFB29C",
+        "fill-pattern": "texture_64"
+      },
+      "layout": {},
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water"
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443753087749.751"
+      },
+      "type": "hillshade",
+      "source": "__ml-terrain",
+      "id": "hillshade (highlight) copy",
+      "paint": {
+        "hillshade-exaggeration": 0.44999999999999996,
+        "hillshade-illumination-anchor": "map",
+        "hillshade-highlight-color": "rgba(219,203,186,1)"
+      }
+    },
+    {
+      "metadata": {
+        "mapbox:group": "1443753087749.751"
+      },
+      "type": "hillshade",
+      "source": "__ml-terrain",
+      "id": "hillshade (shadow) copy",
+      "paint": {
+        "hillshade-exaggeration": 0.315,
+        "hillshade-illumination-anchor": "map",
+        "hillshade-shadow-color": "rgba(43,34,21,1)"
+      }
+    },
+    {
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "type": "line",
+      "source": "__ml-contours",
+      "id": "contour",
+      "paint": {
+        "line-color": "rgba(143,124,94,1)",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          2.5,
+          12,
+          1.25
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          0,
+          15,
+          1
+        ],
+        "line-blur": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          1,
+          12,
+          1.25
+        ],
+        "line-translate": [
+          1,
+          1
+        ]
+      },
+      "source-layer": "contours",
+      "metadata": {
+        "mapbox:group": "1443753087749.751"
+      }
+    },
+    {
+      "id": "contour copy",
+      "paint": {
+        "line-color": "rgba(74,62,43,1)",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          2.5,
+          12,
+          1.25
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          0,
+          15,
+          1
+        ],
+        "line-blur": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          1,
+          12,
+          1.25
+        ],
+        "line-translate": [
+          1,
+          1
+        ]
+      },
+      "metadata": {
+        "mapbox:group": "1443753087749.751"
+      },
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "type": "line",
+      "source": "__ml-contours",
+      "source-layer": "contours"
+    },
+    {
+      "layout": {},
+      "metadata": {
+        "mapbox:group": "1450288596803.136"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "!=",
+            [
+              "get",
+              "admin_level"
+            ],
+            4
+          ],
+          [
+            "==",
+            [
+              "get",
+              "maritime"
+            ],
+            1
+          ]
+        ]
+      ],
+      "type": "line",
+      "source": "composite",
+      "id": "water lines",
+      "paint": {
+        "line-color": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          "rgba(148,124,99,1)",
+          6,
+          "rgba(26,19,12,1)",
+          12,
+          "rgba(10,6,4,1)"
+        ],
+        "line-blur": 1,
+        "line-dasharray": [
+          1,
+          0
+        ],
+        "line-width": 1.25
+      },
+      "source-layer": "boundary"
+    },
+    {
+      "layout": {},
+      "metadata": {
+        "mapbox:group": "1450288596803.136"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            4
+          ],
+          [
+            "==",
+            [
+              "get",
+              "maritime"
+            ],
+            0
+          ]
+        ]
+      ],
+      "type": "line",
+      "source": "composite",
+      "id": "state lines",
+      "paint": {
+        "line-color": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          "rgba(117,100,79,1)",
+          12,
+          "rgba(56,37,22,1)"
+        ],
+        "line-blur": 1,
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          1.5,
+          3,
+          2,
+          5,
+          3,
+          10,
+          4
+        ],
+        "line-dasharray": [
+          1,
+          0
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          0,
+          4.75,
+          1
+        ]
+      },
+      "source-layer": "boundary"
+    },
+    {
+      "layout": {},
+      "metadata": {
+        "mapbox:group": "1450288596803.136"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "LineString"
+        ],
+        [
+          "all",
+          [
+            "==",
+            [
+              "get",
+              "admin_level"
+            ],
+            2
+          ],
+          [
+            "==",
+            [
+              "get",
+              "maritime"
+            ],
+            0
+          ]
+        ]
+      ],
+      "type": "line",
+      "source": "composite",
+      "id": "country lines",
+      "paint": {
+        "line-color": "rgba(56,49,38,1)",
+        "line-opacity": 0.8,
+        "line-blur": 1,
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          1,
+          2,
+          2.5,
+          6,
+          3.5
+        ],
+        "line-dasharray": [
+          10,
+          2
+        ]
+      },
+      "source-layer": "boundary"
+    },
+    {
+      "layout": {
+        "icon-image": "circle-12",
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name_en"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Bold Italic"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          55,
+          10,
+          26
+        ]
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "maxzoom": 14,
+      "type": "symbol",
+      "source": "composite",
+      "id": "water-label copy",
+      "paint": {
+        "text-halo-color": "rgba(207,181,165,1)",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.25,
+        "text-color": "rgba(59,48,33,1)"
+      },
+      "source-layer": "water_name"
+    },
+    {
+      "layout": {
+        "text-line-height": 0.8,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name_en"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Bold Italic"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          15,
+          5,
+          30,
+          10,
+          45
+        ]
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "maxzoom": 14,
+      "filter": [
+        "match",
+        [
+          "get",
+          "labelrank"
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        true,
+        false
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "marine-label (big)",
+      "paint": {
+        "text-halo-color": "rgba(207,181,165,1)",
+        "text-halo-width": 1,
+        "text-color": "rgba(84,72,61,1)"
+      },
+      "source-layer": "water_name"
+    },
+    {
+      "layout": {
+        "text-line-height": 0.8,
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          10,
+          5,
+          25,
+          10,
+          35
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Bold Italic"
+        ],
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name_en"
+          ]
+        ],
+        "text-max-width": 2.5
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "filter": [
+        "match",
+        [
+          "get",
+          "labelrank"
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        true,
+        false
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "marine-label (other)",
+      "paint": {
+        "text-halo-color": "rgba(207,181,165,1)",
+        "text-halo-width": 1,
+        "text-color": "rgba(84,72,61,1)"
+      },
+      "source-layer": "water_name"
+    },
+    {
+      "layout": {
+        "text-letter-spacing": 0.2,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "abbr"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Bold"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          5,
+          6,
+          18
+        ],
+        "text-transform": "uppercase"
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "maxzoom": 5,
+      "type": "symbol",
+      "source": "composite",
+      "id": "state-label (abbr)",
+      "paint": {
+        "text-halo-color": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          "rgba(184,163,141,1)",
+          5,
+          "rgba(207,186,159,0.83)"
+        ],
+        "text-halo-width": 1.5,
+        "text-halo-blur": 0.25,
+        "text-color": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          "rgba(41,33,22,1)",
+          5,
+          "rgba(41,33,22,0.85)"
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.75,
+          14,
+          1
+        ]
+      },
+      "source-layer": "place",
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "state"
+      ]
+    },
+    {
+      "minzoom": 5,
+      "layout": {
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Bold"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4.99,
+          18,
+          22,
+          26
+        ],
+        "text-transform": "uppercase",
+        "text-letter-spacing": 0.5
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "type": "symbol",
+      "source": "composite",
+      "id": "state-label",
+      "paint": {
+        "text-halo-color": "rgba(184,162,141,0.83)",
+        "text-halo-width": 1.25,
+        "text-halo-blur": 0.25,
+        "text-color": "rgba(41,33,22,0.85)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          1,
+          12,
+          0.75
+        ]
+      },
+      "source-layer": "place",
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "state"
+      ]
+    },
+    {
+      "minzoom": 3,
+      "layout": {
+        "text-line-height": 0.9,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name_en"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Italic"
+        ],
+        "text-max-width": 4,
+        "text-transform": "uppercase",
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          10,
+          3,
+          12,
+          5,
+          12,
+          8,
+          14
+        ]
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "filter": [
+        "match",
+        [
+          "get",
+          "scalerank"
+        ],
+        [
+          7,
+          8,
+          9
+        ],
+        true,
+        false
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "place-label (sm)",
+      "paint": {
+        "text-color": "rgba(48,43,32,1)",
+        "text-halo-color": "rgba(207,181,165,1)",
+        "text-halo-width": 2
+      },
+      "source-layer": "place"
+    },
+    {
+      "layout": {
+        "text-line-height": 0.9,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name_en"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Italic"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          10,
+          3,
+          12,
+          5,
+          12,
+          8,
+          14
+        ],
+        "text-max-width": 6,
+        "text-transform": "uppercase"
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "filter": [
+        "all",
+        [
+          "<",
+          [
+            "get",
+            "localrank"
+          ],
+          10
+        ],
+        [
+          "match",
+          [
+            "get",
+            "scalerank"
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          true,
+          false
+        ]
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "place-label (med)",
+      "paint": {
+        "text-color": "rgba(48,43,32,1)",
+        "text-halo-color": "rgba(207,181,165,1)",
+        "text-halo-width": 2
+      },
+      "source-layer": "place"
+    },
+    {
+      "layout": {
+        "text-line-height": 0.9,
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name_en"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Italic"
+        ],
+        "text-max-width": 4,
+        "text-transform": "uppercase",
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          10,
+          3,
+          12,
+          5,
+          12,
+          8,
+          14
+        ]
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "city"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "scalerank"
+          ],
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          true,
+          false
+        ]
+      ],
+      "type": "symbol",
+      "source": "composite",
+      "id": "place-label (lrg)",
+      "paint": {
+        "text-color": "rgba(48,43,32,1)",
+        "text-halo-color": "rgba(207,181,165,1)",
+        "text-halo-width": 2
+      },
+      "source-layer": "place"
+    },
+    {
+      "layout": {
+        "text-field": [
+          "to-string",
+          [
+            "get",
+            "name_en"
+          ]
+        ],
+        "text-font": [
+          "Klokantech Noto Sans Bold Italic"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          8,
+          10,
+          26
+        ],
+        "text-transform": "uppercase",
+        "text-letter-spacing": 0.25
+      },
+      "metadata": {
+        "mapbox:group": "1443753148043.5981"
+      },
+      "maxzoom": 14,
+      "type": "symbol",
+      "source": "composite",
+      "id": "country-label abbr",
+      "paint": {
+        "text-halo-color": "rgba(207,181,165,1)",
+        "text-color": "rgba(59,48,33,1)",
+        "text-halo-blur": 0.25,
+        "text-halo-width": 1.5
+      },
+      "source-layer": "place",
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "country"
+      ]
+    }
+  ],
+  "created": "2024-12-19T22:06:11.137Z",
+  "modified": "2024-12-20T00:34:03.384Z",
+  "id": "cm4vvf9hd001z01sfd627hr6b",
+  "owner": "matsmiersen",
+  "visibility": "private",
+  "protected": false,
+  "draft": false,
+  "sky": {
+    "atmosphere-blend": 0.8
+  }
+}

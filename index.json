@@ -1,0 +1,137 @@
+[
+  {
+    "id": "basic",
+    "layers": 42,
+    "name": "Mapbox Basic Overcast"
+  },
+  {
+    "id": "blue-print",
+    "layers": 78,
+    "name": "Blueprint"
+  },
+  {
+    "id": "comic",
+    "layers": 119,
+    "name": "Runner"
+  },
+  {
+    "id": "dark",
+    "layers": 81,
+    "name": "Mapbox Dark"
+  },
+  {
+    "id": "decimal",
+    "layers": 96,
+    "name": "Decimal"
+  },
+  {
+    "id": "dune",
+    "layers": 33,
+    "name": "DUNE"
+  },
+  {
+    "id": "glow",
+    "layers": 16,
+    "name": "Glow V2-Miguel"
+  },
+  {
+    "id": "golden-age-travel",
+    "layers": 69,
+    "name": "Golden Age of Travel"
+  },
+  {
+    "id": "ice-cream",
+    "layers": 69,
+    "name": "Ice Cream"
+  },
+  {
+    "id": "light",
+    "layers": 47,
+    "name": "Light V2-Miguel 2"
+  },
+  {
+    "id": "mineral",
+    "layers": 29,
+    "name": "Mineral"
+  },
+  {
+    "id": "moonlight",
+    "layers": 137,
+    "name": "Moonlight"
+  },
+  {
+    "id": "natural-earth",
+    "layers": 16,
+    "name": "Natural Earth Style"
+  },
+  {
+    "id": "north-star",
+    "layers": 154,
+    "name": "North Star"
+  },
+  {
+    "id": "osrs",
+    "layers": 38,
+    "name": "OSRS Gielinor"
+  },
+  {
+    "id": "picture-book",
+    "layers": 36,
+    "name": "Picture Book"
+  },
+  {
+    "id": "purple",
+    "layers": 29,
+    "name": "notable-bg-labels"
+  },
+  {
+    "id": "satelite",
+    "layers": 10,
+    "name": "Satelite V2-Miguel"
+  },
+  {
+    "id": "ski",
+    "layers": 67,
+    "name": "Swiss ski"
+  },
+  {
+    "id": "standard-oil",
+    "layers": 126,
+    "name": "Standard Oil Company"
+  },
+  {
+    "id": "stranger-things",
+    "layers": 35,
+    "name": "Upside-down"
+  },
+  {
+    "id": "streets",
+    "layers": 73,
+    "name": "Streets V2-Miguel"
+  },
+  {
+    "id": "topo",
+    "layers": 145,
+    "name": "finn_topo_2"
+  },
+  {
+    "id": "unicorn",
+    "layers": 7,
+    "name": "Unicorn"
+  },
+  {
+    "id": "vintage",
+    "layers": 39,
+    "name": "Vintage"
+  },
+  {
+    "id": "western",
+    "layers": 43,
+    "name": "Western"
+  },
+  {
+    "id": "winter",
+    "layers": 12,
+    "name": "Outdoors Winter"
+  }
+]
