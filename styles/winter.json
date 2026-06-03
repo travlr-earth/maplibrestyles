@@ -93,20 +93,36 @@
       "paint": {
         "line-color": "hsla(196, 36%, 25%, 0.5)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.75
+              "interpolate",
+              [
+                "exponential",
+                1.75
+              ],
+              [
+                "zoom"
+              ],
+              9.5,
+              0,
+              12.5,
+              1
             ],
             [
-              "zoom"
-            ],
-            9.5,
-            0,
-            12.5,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              10,
+              0,
+              10.25,
+              1
+            ]
           ],
           [
             "interpolate",

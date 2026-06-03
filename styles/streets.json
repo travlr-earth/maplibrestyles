@@ -157,42 +157,58 @@
           "hsl(110, 52%, 81%)"
         ],
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.5
-            ],
-            [
-              "zoom"
-            ],
-            9,
-            0.4,
-            10,
-            [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "exponential",
+                1.5
               ],
-              "crop",
-              0,
-              0.4
-            ],
-            11,
-            [
-              "match",
               [
-                "get",
-                "class"
+                "zoom"
               ],
-              "crop",
-              0,
-              0.4
+              9,
+              0.4,
+              10,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "crop",
+                0,
+                0.4
+              ],
+              11,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "crop",
+                0,
+                0.4
+              ],
+              12,
+              0
             ],
-            12,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              11.75,
+              1,
+              12,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -506,35 +522,51 @@
           ]
         ],
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            8,
-            [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "linear"
               ],
-              "residential",
-              0.8,
-              0.2
-            ],
-            10,
-            [
-              "match",
               [
-                "get",
-                "class"
+                "zoom"
               ],
-              "residential",
+              8,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "residential",
+                0.8,
+                0.2
+              ],
+              10,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "residential",
+                0,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              5,
               0,
+              5.25,
               1
             ]
           ],

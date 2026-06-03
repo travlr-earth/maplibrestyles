@@ -2680,23 +2680,43 @@
       "id": "place-country",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
-            ],
-            [
-              "case",
+              "step",
               [
-                "has",
-                "text_anchor"
+                "zoom"
               ],
-              1,
+              [
+                "case",
+                [
+                  "has",
+                  "text_anchor"
+                ],
+                1,
+                0
+              ],
+              7,
               0
             ],
-            7,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              1,
+              0,
+              1.25,
+              1,
+              9.75,
+              1,
+              10,
+              0
+            ]
           ],
           [
             "interpolate",

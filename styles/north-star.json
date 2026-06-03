@@ -5494,20 +5494,36 @@
           "hsl(33, 28%, 93%)"
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.2
+              "interpolate",
+              [
+                "exponential",
+                1.2
+              ],
+              [
+                "zoom"
+              ],
+              10,
+              0,
+              11,
+              1
             ],
             [
-              "zoom"
-            ],
-            10,
-            0,
-            11,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              8,
+              0,
+              8.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5615,20 +5631,36 @@
           "hsl(33, 28%, 93%)"
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.2
+              "interpolate",
+              [
+                "exponential",
+                1.2
+              ],
+              [
+                "zoom"
+              ],
+              8,
+              0,
+              9,
+              1
             ],
             [
-              "zoom"
-            ],
-            8,
-            0,
-            9,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              8,
+              0,
+              8.25,
+              1
+            ]
           ],
           [
             "interpolate",

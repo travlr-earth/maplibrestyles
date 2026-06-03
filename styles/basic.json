@@ -300,48 +300,64 @@
           ]
         ],
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            5,
-            [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "linear"
               ],
-              "residential",
-              1,
-              0
-            ],
-            6,
-            [
-              "match",
               [
-                "get",
-                "class"
+                "zoom"
               ],
-              "ice",
-              0.5,
-              1
-            ],
-            12,
-            [
-              "match",
+              5,
               [
-                "get",
-                "class"
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "residential",
+                1,
+                0
               ],
-              "ice",
-              0.5,
-              "residential",
+              6,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "ice",
+                0.5,
+                1
+              ],
+              12,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "ice",
+                0.5,
+                "residential",
+                0,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              5,
               0,
+              5.25,
               1
             ]
           ],
@@ -3739,31 +3755,47 @@
       },
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              4,
               0,
-              13,
+              4.25,
               1
             ]
           ],
@@ -4367,31 +4399,47 @@
       },
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              6,
               0,
-              13,
+              6.25,
               1
             ]
           ],
@@ -4999,15 +5047,35 @@
         "text-halo-color": "hsl(187, 34%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              2,
+              0,
+              2.25,
+              1,
+              12.75,
+              1,
+              13,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -5288,15 +5356,35 @@
         "text-halo-color": "hsl(187, 34%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              2,
+              0,
+              2.25,
+              1,
+              14.75,
+              1,
+              15,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -5595,23 +5683,43 @@
       "id": "place-country",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
-            ],
-            [
-              "case",
+              "step",
               [
-                "has",
-                "text_anchor"
+                "zoom"
               ],
-              1,
+              [
+                "case",
+                [
+                  "has",
+                  "text_anchor"
+                ],
+                1,
+                0
+              ],
+              7,
               0
             ],
-            7,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              1,
+              0,
+              1.25,
+              1,
+              9.75,
+              1,
+              10,
+              0
+            ]
           ],
           [
             "interpolate",

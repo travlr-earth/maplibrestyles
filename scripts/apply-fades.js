@@ -123,10 +123,6 @@ function normalizeOpacity(existing, mn, mx) {
     return ['interpolate', ['linear'], ['zoom'], ...st];
   }
 
-  if (JSON.stringify(existing).includes('"get"')) {
-    return ['*', existing, buildEnvelope(mn, mx)];
-  }
-
   if (Array.isArray(existing) && existing[0] === 'interpolate' &&
       existing[1]?.[0] === 'linear' && existing[2]?.[0] === 'zoom') {
     const stops = existing.slice(3);
@@ -135,7 +131,11 @@ function normalizeOpacity(existing, mn, mx) {
     }
   }
 
-  return ['*', existing, buildEnvelope(mn, mx)];
+  // Everything else (data-driven, step, exponential, zoom+data composite):
+  // Leave unchanged — these expressions already manage their own zoom visibility.
+  // Wrapping them (["*"], ["min"], or as interpolation stop values) causes
+  // MapLibre GL JS v5 to hang on style load for some paint property types.
+  return existing;
 }
 
 function applyFades(layers) {
@@ -147,10 +147,13 @@ function applyFades(layers) {
     if (!layer.paint) layer.paint = {};
 
     if (layer.type === 'symbol') {
+      // Symbol layers: only add opacity when none exists — never modify existing
+      // zoom/composite expressions (wrapping them breaks MapLibre GL JS v5 load).
       for (const key of ['text-opacity', 'icon-opacity']) {
-        const before = JSON.stringify(layer.paint[key] ?? null);
-        layer.paint[key] = normalizeOpacity(layer.paint[key], mn, mx);
-        if (JSON.stringify(layer.paint[key]) !== before) changed++;
+        if (layer.paint[key] !== undefined && layer.paint[key] !== null) continue;
+        const newVal = buildEnvelope(mn, mx);
+        layer.paint[key] = newVal;
+        changed++;
       }
     } else {
       const key = OPACITY_KEY[layer.type];

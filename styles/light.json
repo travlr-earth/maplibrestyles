@@ -145,20 +145,36 @@
       "paint": {
         "fill-color": "hsl(220, 23%, 95%)",
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.5
+              "interpolate",
+              [
+                "exponential",
+                1.5
+              ],
+              [
+                "zoom"
+              ],
+              8,
+              0.4,
+              9,
+              0
             ],
             [
-              "zoom"
-            ],
-            8,
-            0.4,
-            9,
-            0
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              8.75,
+              1,
+              9,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -291,38 +307,54 @@
       "paint": {
         "fill-color": "hsl(220, 27%, 94%)",
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            8,
-            [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "linear"
               ],
               [
+                "zoom"
+              ],
+              8,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                [
+                  "residential",
+                  "airport"
+                ],
+                0.8,
+                0.2
+              ],
+              12,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
                 "residential",
-                "airport"
-              ],
-              0.8,
-              0.2
+                0,
+                1
+              ]
             ],
-            12,
             [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "linear"
               ],
-              "residential",
+              [
+                "zoom"
+              ],
+              5,
               0,
+              5.25,
               1
             ]
           ],
@@ -3654,31 +3686,47 @@
       "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              4,
               0,
-              13,
+              4.25,
               1
             ]
           ],
@@ -4228,15 +4276,35 @@
         "text-halo-color": "hsl(220, 22%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              2,
+              0,
+              2.25,
+              1,
+              12.75,
+              1,
+              13,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -4420,15 +4488,35 @@
         "text-halo-color": "hsl(220, 22%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              2,
+              0,
+              2.25,
+              1,
+              14.75,
+              1,
+              15,
+              0
+            ]
           ],
           [
             "interpolate",

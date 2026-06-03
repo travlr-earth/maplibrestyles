@@ -150,42 +150,58 @@
           "rgb(15, 46, 54)"
         ],
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.5
-            ],
-            [
-              "zoom"
-            ],
-            9,
-            0.4,
-            10,
-            [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "exponential",
+                1.5
               ],
-              "crop",
-              0,
-              0.4
-            ],
-            11,
-            [
-              "match",
               [
-                "get",
-                "class"
+                "zoom"
               ],
-              "crop",
-              0,
-              0.4
+              9,
+              0.4,
+              10,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "crop",
+                0,
+                0.4
+              ],
+              11,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "crop",
+                0,
+                0.4
+              ],
+              12,
+              0
             ],
-            12,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              11.75,
+              1,
+              12,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -371,52 +387,68 @@
           "hsl(193, 63%, 29%)"
         ],
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            5,
-            0,
-            6,
-            [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "linear"
               ],
-              "ice",
-              0.5,
-              0.5
-            ],
-            12,
-            [
-              "match",
               [
-                "get",
-                "class"
+                "zoom"
               ],
-              "ice",
-              0.5,
-              "residential",
+              5,
               0,
-              0.5
-            ],
-            20,
-            [
-              "match",
+              6,
               [
-                "get",
-                "class"
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "ice",
+                0.5,
+                0.5
               ],
-              "ice",
-              0.5,
-              "residential",
+              12,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "ice",
+                0.5,
+                "residential",
+                0,
+                0.5
+              ],
+              20,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "ice",
+                0.5,
+                "residential",
+                0,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              5,
               0,
+              5.25,
               1
             ]
           ],
@@ -1201,15 +1233,35 @@
         "text-halo-color": "rgb(6, 21, 25)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              2,
+              0,
+              2.25,
+              1,
+              14.75,
+              1,
+              15,
+              0
+            ]
           ],
           [
             "interpolate",

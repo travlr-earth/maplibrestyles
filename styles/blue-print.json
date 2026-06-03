@@ -481,17 +481,37 @@
       "paint": {
         "line-color": "#e4eaf6",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              2,
+              0,
+              3,
+              1
             ],
-            0,
-            2,
-            0,
-            3,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              2,
+              0,
+              2.25,
+              1,
+              10.75,
+              1,
+              11,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -773,15 +793,31 @@
         ],
         "line-color": "hsl(224, 46%, 44%)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              14,
+              0
             ],
-            1,
-            14,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -927,15 +963,31 @@
           ]
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -1785,15 +1837,31 @@
         ],
         "line-color": "hsl(224, 46%, 44%)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -2775,20 +2843,36 @@
         ],
         "line-color": "hsl(224, 47%, 56%)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              6,
+              0,
+              8,
               1
             ],
             [
-              "zoom"
-            ],
-            6,
-            0,
-            8,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -2935,22 +3019,38 @@
           12
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0.05,
+              13.5,
+              0.5,
+              14,
               1
             ],
             [
-              "zoom"
-            ],
-            13,
-            0.05,
-            13.5,
-            0.5,
-            14,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3180,20 +3280,36 @@
           18
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              13.9,
+              0,
+              14,
               1
             ],
             [
-              "zoom"
-            ],
-            13.9,
-            0,
-            14,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              11,
+              0,
+              11.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3314,22 +3430,38 @@
           26
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              9,
+              0.05,
+              10.9,
+              0.5,
+              11,
               1
             ],
             [
-              "zoom"
-            ],
-            9,
-            0.05,
-            10.9,
-            0.5,
-            11,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              8,
+              0,
+              8.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3445,22 +3577,38 @@
           32
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              9,
+              0.05,
+              10.9,
+              0.5,
+              11,
               1
             ],
             [
-              "zoom"
-            ],
-            9,
-            0.05,
-            10.9,
-            0.5,
-            11,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              7,
+              0,
+              7.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3583,22 +3731,38 @@
           18
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              5,
+              0.05,
+              6,
+              0.5,
+              8,
               1
             ],
             [
-              "zoom"
-            ],
-            5,
-            0.05,
-            6,
-            0.5,
-            8,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              10,
+              0,
+              10.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3719,24 +3883,40 @@
           32
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              5,
+              0,
+              6,
+              0.05,
+              7,
+              0.5,
+              8,
               1
             ],
             [
-              "zoom"
-            ],
-            5,
-            0,
-            6,
-            0.05,
-            7,
-            0.5,
-            8,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              5,
+              0,
+              5.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3845,22 +4025,38 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              9,
+              0.05,
+              10.9,
+              0.5,
+              11,
               1
             ],
             [
-              "zoom"
-            ],
-            9,
-            0.05,
-            10.9,
-            0.5,
-            11,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              10,
+              0,
+              10.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3993,22 +4189,38 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0.05,
+              13.5,
+              0.5,
+              14,
               1
             ],
             [
-              "zoom"
-            ],
-            13,
-            0.05,
-            13.5,
-            0.5,
-            14,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4117,20 +4329,36 @@
         ],
         "line-color": "hsl(225, 47%, 47%)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              13.9,
+              0,
+              14,
               1
             ],
             [
-              "zoom"
-            ],
-            13.9,
-            0,
-            14,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              11,
+              0,
+              11.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4237,22 +4465,38 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              9,
+              0.05,
+              10.9,
+              0.5,
+              11,
               1
             ],
             [
-              "zoom"
-            ],
-            9,
-            0.05,
-            10.9,
-            0.5,
-            11,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              8,
+              0,
+              8.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4354,22 +4598,38 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              8,
+              0.05,
+              10,
+              0.5,
+              11,
               1
             ],
             [
-              "zoom"
-            ],
-            8,
-            0.05,
-            10,
-            0.5,
-            11,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              6,
+              0,
+              6.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5214,15 +5474,31 @@
         ],
         "line-color": "hsl(224, 47%, 56%)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              14,
+              0
             ],
-            1,
-            14,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5368,15 +5644,31 @@
           ]
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5497,15 +5789,31 @@
           ]
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              10,
+              1
             ],
-            0,
-            10,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5945,15 +6253,31 @@
         ],
         "line-color": "hsl(224, 47%, 56%)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -7633,31 +7957,47 @@
       "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              4,
               0,
-              13,
+              4.25,
               1
             ]
           ],
@@ -8527,15 +8867,35 @@
           11
         ],
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              3,
+              0,
+              3.25,
+              1,
+              12.75,
+              1,
+              13,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -8769,15 +9129,35 @@
           4
         ],
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              3,
+              0,
+              3.25,
+              1,
+              14.75,
+              1,
+              15,
+              0
+            ]
           ],
           [
             "interpolate",

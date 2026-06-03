@@ -4476,20 +4476,36 @@
           2.25
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.25
+              "interpolate",
+              [
+                "exponential",
+                1.25
+              ],
+              [
+                "zoom"
+              ],
+              14,
+              0.25,
+              17,
+              1
             ],
             [
-              "zoom"
-            ],
-            14,
-            0.25,
-            17,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",

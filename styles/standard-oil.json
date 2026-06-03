@@ -603,20 +603,36 @@
       "paint": {
         "fill-pattern": "yellow-pattern",
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              10.75,
+              1,
+              11,
+              0
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              2,
+              0,
+              2.25,
               1
-            ],
-            [
-              "zoom"
-            ],
-            10.75,
-            1,
-            11,
-            0
+            ]
           ],
           [
             "interpolate",
@@ -974,15 +990,31 @@
         ],
         "line-color": "#f0e9d8",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              14,
+              0
             ],
-            1,
-            14,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -1126,15 +1158,31 @@
           ]
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -2281,15 +2329,31 @@
           "#d14747"
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3543,20 +3607,36 @@
           1
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.5
+              "interpolate",
+              [
+                "exponential",
+                1.5
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              14,
+              1
             ],
             [
-              "zoom"
-            ],
-            13,
-            0,
-            14,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              12,
+              0,
+              12.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -3999,15 +4079,31 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              14,
+              0
             ],
-            1,
-            14,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4155,15 +4251,31 @@
           12
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4273,15 +4385,31 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              14,
+              0
             ],
-            1,
-            14,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              11,
+              0,
+              11.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4405,15 +4533,31 @@
           18
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              11,
+              0,
+              11.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4652,15 +4796,31 @@
           32
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              10,
+              1
             ],
-            0,
-            10,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              7,
+              0,
+              7.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -4784,15 +4944,31 @@
           18
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              11,
+              1
             ],
-            0,
-            11,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              10,
+              0,
+              10.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5342,20 +5518,36 @@
         ],
         "line-color": "#d14545",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              14.9,
+              0,
+              15,
               1
             ],
             [
-              "zoom"
-            ],
-            14.9,
-            0,
-            15,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5448,20 +5640,36 @@
         ],
         "line-color": "hsl(0, 60%, 55%)",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              11.9,
+              0,
+              12,
               1
             ],
             [
-              "zoom"
-            ],
-            11.9,
-            0,
-            12,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              11,
+              0,
+              11.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -5644,20 +5852,36 @@
         ],
         "line-color": "#d14545",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
+              "interpolate",
+              [
+                "exponential",
+                1
+              ],
+              [
+                "zoom"
+              ],
+              6.9,
+              0,
+              7,
               1
             ],
             [
-              "zoom"
-            ],
-            6.9,
-            0,
-            7,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              6,
+              0,
+              6.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -6223,20 +6447,36 @@
           3
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.5
+              "interpolate",
+              [
+                "exponential",
+                1.5
+              ],
+              [
+                "zoom"
+              ],
+              13.9,
+              0,
+              14,
+              1
             ],
             [
-              "zoom"
-            ],
-            13.9,
-            0,
-            14,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -7510,15 +7750,31 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              14,
+              0
             ],
-            1,
-            14,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -7664,15 +7920,31 @@
           ]
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -7770,15 +8042,31 @@
           16
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              10,
+              1
             ],
-            0,
-            10,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -8335,15 +8623,31 @@
           "#d14747"
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              14,
+              1
             ],
-            0,
-            14,
-            1
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -9213,20 +9517,36 @@
           1.5
         ],
         "line-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "exponential",
-              1.5
+              "interpolate",
+              [
+                "exponential",
+                1.5
+              ],
+              [
+                "zoom"
+              ],
+              12.9,
+              0,
+              13,
+              1
             ],
             [
-              "zoom"
-            ],
-            12.9,
-            0,
-            13,
-            1
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              13,
+              0,
+              13.25,
+              1
+            ]
           ],
           [
             "interpolate",
@@ -10609,36 +10929,52 @@
       "paint": {
         "text-color": "hsl(0, 60%, 55%)",
         "text-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              6.9,
+              0,
+              7,
+              [
+                "match",
+                [
+                  "get",
+                  "shield"
+                ],
+                [
+                  "us-highway",
+                  "us-highway-bypass",
+                  "us-highway-truck",
+                  "us-highway-business",
+                  "us-highway-duplex",
+                  "us-highway-alternate",
+                  "us-interstate",
+                  "us-interstate-duplex",
+                  "us-interstate-business",
+                  "us-interstate-truck"
+                ],
+                1,
+                0
+              ]
             ],
-            0,
-            6.9,
-            0,
-            7,
             [
-              "match",
+              "interpolate",
               [
-                "get",
-                "shield"
+                "linear"
               ],
               [
-                "us-highway",
-                "us-highway-bypass",
-                "us-highway-truck",
-                "us-highway-business",
-                "us-highway-duplex",
-                "us-highway-alternate",
-                "us-interstate",
-                "us-interstate-duplex",
-                "us-interstate-business",
-                "us-interstate-truck"
+                "zoom"
               ],
-              1,
-              0
+              6,
+              0,
+              6.25,
+              1
             ]
           ],
           [
@@ -10656,36 +10992,52 @@
           ]
         ],
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              6.9,
+              0,
+              7,
+              [
+                "match",
+                [
+                  "get",
+                  "shield"
+                ],
+                [
+                  "us-highway",
+                  "us-highway-bypass",
+                  "us-highway-truck",
+                  "us-highway-business",
+                  "us-highway-duplex",
+                  "us-highway-alternate",
+                  "us-interstate",
+                  "us-interstate-duplex",
+                  "us-interstate-business",
+                  "us-interstate-truck"
+                ],
+                1,
+                0
+              ]
             ],
-            0,
-            6.9,
-            0,
-            7,
             [
-              "match",
+              "interpolate",
               [
-                "get",
-                "shield"
+                "linear"
               ],
               [
-                "us-highway",
-                "us-highway-bypass",
-                "us-highway-truck",
-                "us-highway-business",
-                "us-highway-duplex",
-                "us-highway-alternate",
-                "us-interstate",
-                "us-interstate-duplex",
-                "us-interstate-business",
-                "us-interstate-truck"
+                "zoom"
               ],
-              1,
-              0
+              6,
+              0,
+              6.25,
+              1
             ]
           ],
           [
@@ -10897,76 +11249,92 @@
       "paint": {
         "text-color": "#d14545",
         "text-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              6.9,
+              0,
+              7,
+              [
+                "match",
+                [
+                  "get",
+                  "shield"
+                ],
+                [
+                  "us-highway",
+                  "tw-provincial-expy",
+                  "br-federal",
+                  "ro-communal",
+                  "default",
+                  "ch-motorway",
+                  "ro-national",
+                  "za-provincial",
+                  "rectangle-green",
+                  "kr-local",
+                  "de-motorway",
+                  "ae-s-route",
+                  "au-national-route",
+                  "tw-county-township",
+                  "cn-provincial-expy",
+                  "in-state",
+                  "tw-provincial",
+                  "au-national-highway",
+                  "pe-national",
+                  "rectangle-white",
+                  "rectangle-orange",
+                  "circle-white",
+                  "kr-natl-hwy",
+                  "mx-state",
+                  "nz-state",
+                  "si-motorway",
+                  "kr-metropolitan",
+                  "rectangle-yellow",
+                  "hk-strategic-route",
+                  "rectangle-red",
+                  "br-state",
+                  "cn-nths-expy",
+                  "kr-metro-expy",
+                  "pe-regional",
+                  "ae-d-route",
+                  "za-national",
+                  "au-state",
+                  "rectangle-blue",
+                  "kr-natl-expy",
+                  "ae-f-route",
+                  "hu-main",
+                  "au-tourist",
+                  "in-national",
+                  "ro-county",
+                  "hu-motorway",
+                  "mx-federal",
+                  "ae-national",
+                  "gr-motorway",
+                  "tw-national",
+                  "hr-motorway"
+                ],
+                1,
+                0
+              ]
             ],
-            0,
-            6.9,
-            0,
-            7,
             [
-              "match",
+              "interpolate",
               [
-                "get",
-                "shield"
+                "linear"
               ],
               [
-                "us-highway",
-                "tw-provincial-expy",
-                "br-federal",
-                "ro-communal",
-                "default",
-                "ch-motorway",
-                "ro-national",
-                "za-provincial",
-                "rectangle-green",
-                "kr-local",
-                "de-motorway",
-                "ae-s-route",
-                "au-national-route",
-                "tw-county-township",
-                "cn-provincial-expy",
-                "in-state",
-                "tw-provincial",
-                "au-national-highway",
-                "pe-national",
-                "rectangle-white",
-                "rectangle-orange",
-                "circle-white",
-                "kr-natl-hwy",
-                "mx-state",
-                "nz-state",
-                "si-motorway",
-                "kr-metropolitan",
-                "rectangle-yellow",
-                "hk-strategic-route",
-                "rectangle-red",
-                "br-state",
-                "cn-nths-expy",
-                "kr-metro-expy",
-                "pe-regional",
-                "ae-d-route",
-                "za-national",
-                "au-state",
-                "rectangle-blue",
-                "kr-natl-expy",
-                "ae-f-route",
-                "hu-main",
-                "au-tourist",
-                "in-national",
-                "ro-county",
-                "hu-motorway",
-                "mx-federal",
-                "ae-national",
-                "gr-motorway",
-                "tw-national",
-                "hr-motorway"
+                "zoom"
               ],
-              1,
-              0
+              5,
+              0,
+              5.25,
+              1
             ]
           ],
           [
@@ -10984,76 +11352,92 @@
           ]
         ],
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              0,
+              6.9,
+              0,
+              7,
+              [
+                "match",
+                [
+                  "get",
+                  "shield"
+                ],
+                [
+                  "us-highway",
+                  "tw-provincial-expy",
+                  "br-federal",
+                  "ro-communal",
+                  "default",
+                  "ch-motorway",
+                  "ro-national",
+                  "za-provincial",
+                  "rectangle-green",
+                  "kr-local",
+                  "de-motorway",
+                  "ae-s-route",
+                  "au-national-route",
+                  "tw-county-township",
+                  "cn-provincial-expy",
+                  "in-state",
+                  "tw-provincial",
+                  "au-national-highway",
+                  "pe-national",
+                  "rectangle-white",
+                  "rectangle-orange",
+                  "circle-white",
+                  "kr-natl-hwy",
+                  "mx-state",
+                  "nz-state",
+                  "si-motorway",
+                  "kr-metropolitan",
+                  "rectangle-yellow",
+                  "hk-strategic-route",
+                  "rectangle-red",
+                  "br-state",
+                  "cn-nths-expy",
+                  "kr-metro-expy",
+                  "pe-regional",
+                  "ae-d-route",
+                  "za-national",
+                  "au-state",
+                  "rectangle-blue",
+                  "kr-natl-expy",
+                  "ae-f-route",
+                  "hu-main",
+                  "au-tourist",
+                  "in-national",
+                  "ro-county",
+                  "hu-motorway",
+                  "mx-federal",
+                  "ae-national",
+                  "gr-motorway",
+                  "tw-national",
+                  "hr-motorway"
+                ],
+                1,
+                0
+              ]
             ],
-            0,
-            6.9,
-            0,
-            7,
             [
-              "match",
+              "interpolate",
               [
-                "get",
-                "shield"
+                "linear"
               ],
               [
-                "us-highway",
-                "tw-provincial-expy",
-                "br-federal",
-                "ro-communal",
-                "default",
-                "ch-motorway",
-                "ro-national",
-                "za-provincial",
-                "rectangle-green",
-                "kr-local",
-                "de-motorway",
-                "ae-s-route",
-                "au-national-route",
-                "tw-county-township",
-                "cn-provincial-expy",
-                "in-state",
-                "tw-provincial",
-                "au-national-highway",
-                "pe-national",
-                "rectangle-white",
-                "rectangle-orange",
-                "circle-white",
-                "kr-natl-hwy",
-                "mx-state",
-                "nz-state",
-                "si-motorway",
-                "kr-metropolitan",
-                "rectangle-yellow",
-                "hk-strategic-route",
-                "rectangle-red",
-                "br-state",
-                "cn-nths-expy",
-                "kr-metro-expy",
-                "pe-regional",
-                "ae-d-route",
-                "za-national",
-                "au-state",
-                "rectangle-blue",
-                "kr-natl-expy",
-                "ae-f-route",
-                "hu-main",
-                "au-tourist",
-                "in-national",
-                "ro-county",
-                "hu-motorway",
-                "mx-federal",
-                "ae-national",
-                "gr-motorway",
-                "tw-national",
-                "hr-motorway"
+                "zoom"
               ],
-              1,
-              0
+              5,
+              0,
+              5.25,
+              1
             ]
           ],
           [
@@ -11743,31 +12127,47 @@
       "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              4,
               0,
-              13,
+              4.25,
               1
             ]
           ],
@@ -12198,31 +12598,47 @@
       "id": "poi-label",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              6,
               0,
-              13,
+              6.25,
               1
             ]
           ],
@@ -12733,15 +13149,35 @@
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 2,
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              3,
+              0,
+              3.25,
+              1,
+              12.75,
+              1,
+              13,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -13091,15 +13527,35 @@
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 2,
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
+              "step",
+              [
+                "zoom"
+              ],
+              1,
+              8,
+              0
             ],
-            1,
-            8,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              3,
+              0,
+              3.25,
+              1,
+              14.75,
+              1,
+              15,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -13403,23 +13859,43 @@
       "id": "place-country",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
-            ],
-            [
-              "case",
+              "step",
               [
-                "has",
-                "text_anchor"
+                "zoom"
               ],
-              1,
+              [
+                "case",
+                [
+                  "has",
+                  "text_anchor"
+                ],
+                1,
+                0
+              ],
+              7,
               0
             ],
-            7,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              1,
+              0,
+              1.25,
+              1,
+              9.75,
+              1,
+              10,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -13570,23 +14046,43 @@
       "id": "place-country-sm",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
-            ],
-            [
-              "case",
+              "step",
               [
-                "has",
-                "text_anchor"
+                "zoom"
               ],
-              1,
+              [
+                "case",
+                [
+                  "has",
+                  "text_anchor"
+                ],
+                1,
+                0
+              ],
+              7,
               0
             ],
-            7,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              1,
+              0,
+              1.25,
+              1,
+              9.75,
+              1,
+              10,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -13735,23 +14231,43 @@
       "id": "place-country-md",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
-            ],
-            [
-              "case",
+              "step",
               [
-                "has",
-                "text_anchor"
+                "zoom"
               ],
-              1,
+              [
+                "case",
+                [
+                  "has",
+                  "text_anchor"
+                ],
+                1,
+                0
+              ],
+              7,
               0
             ],
-            7,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              1,
+              0,
+              1.25,
+              1,
+              9.75,
+              1,
+              10,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -13900,23 +14416,43 @@
       "id": "place-country-lg",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
-            ],
-            [
-              "case",
+              "step",
               [
-                "has",
-                "text_anchor"
+                "zoom"
               ],
-              1,
+              [
+                "case",
+                [
+                  "has",
+                  "text_anchor"
+                ],
+                1,
+                0
+              ],
+              7,
               0
             ],
-            7,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              1,
+              0,
+              1.25,
+              1,
+              9.75,
+              1,
+              10,
+              0
+            ]
           ],
           [
             "interpolate",

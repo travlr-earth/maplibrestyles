@@ -422,35 +422,51 @@
           ]
         ],
         "fill-opacity": [
-          "*",
+          "min",
           [
-            "interpolate",
+            "*",
             [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            8,
-            [
-              "match",
+              "interpolate",
               [
-                "get",
-                "class"
+                "linear"
               ],
-              "residential",
-              0.8,
-              0.2
-            ],
-            10,
-            [
-              "match",
               [
-                "get",
-                "class"
+                "zoom"
               ],
-              "residential",
+              8,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "residential",
+                0.8,
+                0.2
+              ],
+              10,
+              [
+                "match",
+                [
+                  "get",
+                  "class"
+                ],
+                "residential",
+                0,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              5,
               0,
+              5.25,
               1
             ]
           ],
@@ -3937,31 +3953,47 @@
       "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              4,
               0,
-              13,
+              4.25,
               1
             ]
           ],
@@ -4135,31 +4167,47 @@
       "id": "mountain-peak-label-3",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              4,
               0,
-              13,
+              4.25,
               1
             ]
           ],
@@ -4910,31 +4958,47 @@
       "id": "poi-label",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              12,
               0,
-              13,
+              12.25,
               1
             ]
           ],
@@ -5117,31 +5181,47 @@
       "id": "park-label",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
-            [
-              "zoom"
-            ],
+            "*",
             [
               "step",
               [
-                "get",
-                "sizerank"
+                "zoom"
               ],
-              0,
-              5,
-              1
-            ],
-            17,
-            [
-              "step",
               [
-                "get",
-                "sizerank"
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                5,
+                1
               ],
+              17,
+              [
+                "step",
+                [
+                  "get",
+                  "sizerank"
+                ],
+                0,
+                13,
+                1
+              ]
+            ],
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              4,
               0,
-              13,
+              4.25,
               1
             ]
           ],
@@ -9152,23 +9232,43 @@
       "id": "place-country",
       "paint": {
         "icon-opacity": [
-          "*",
+          "min",
           [
-            "step",
+            "*",
             [
-              "zoom"
-            ],
-            [
-              "case",
+              "step",
               [
-                "has",
-                "text_anchor"
+                "zoom"
               ],
-              1,
+              [
+                "case",
+                [
+                  "has",
+                  "text_anchor"
+                ],
+                1,
+                0
+              ],
+              7,
               0
             ],
-            7,
-            0
+            [
+              "interpolate",
+              [
+                "linear"
+              ],
+              [
+                "zoom"
+              ],
+              3.4,
+              0,
+              3.65,
+              1,
+              9.75,
+              1,
+              10,
+              0
+            ]
           ],
           [
             "interpolate",
@@ -9315,10 +9415,8 @@
           ],
           3,
           0,
-          3,
-          1,
-          3,
-          0
+          3.25,
+          1
         ]
       },
       "source-layer": "place"
@@ -10389,10 +10487,8 @@
           ],
           3.4,
           0,
-          3.45,
-          1,
-          3.5,
-          0
+          3.65,
+          1
         ],
         "icon-opacity": [
           "interpolate",
@@ -10404,10 +10500,8 @@
           ],
           3.4,
           0,
-          3.45,
-          1,
-          3.5,
-          0
+          3.65,
+          1
         ]
       }
     }
