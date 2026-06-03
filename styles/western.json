@@ -2010,7 +2010,20 @@
       "paint": {
         "circle-radius": 21,
         "circle-color": "#fff",
-        "circle-blur": 0
+        "circle-blur": 0,
+        "circle-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       }
     },
     {
@@ -2038,7 +2051,34 @@
           -0.1
         ]
       },
-      "paint": {}
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
+      }
     },
     {
       "id": "background-2",

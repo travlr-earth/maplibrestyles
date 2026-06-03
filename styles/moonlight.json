@@ -110,7 +110,19 @@
       "id": "landcover-crop",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
-        "fill-opacity": 0.01,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          0.01,
+          14,
+          0
+        ],
         "fill-antialias": false
       },
       "source-layer": "landcover"
@@ -134,7 +146,19 @@
       "id": "landcover-wood",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
-        "fill-opacity": 0.01,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          0.01,
+          14,
+          0
+        ],
         "fill-antialias": false
       },
       "source-layer": "landcover"
@@ -158,7 +182,19 @@
       "id": "landcover-scrub",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
-        "fill-opacity": 0.01,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          0.01,
+          14,
+          0
+        ],
         "fill-antialias": false
       },
       "source-layer": "landcover"
@@ -182,7 +218,19 @@
       "id": "landcover-grass",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
-        "fill-opacity": 0.01,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          0.01,
+          14,
+          0
+        ],
         "fill-antialias": false
       },
       "source-layer": "landcover"
@@ -307,6 +355,10 @@
           [
             "zoom"
           ],
+          12,
+          0,
+          12.25,
+          0.1,
           15.5,
           0,
           16,
@@ -374,9 +426,9 @@
           [
             "zoom"
           ],
-          5,
+          16,
           0,
-          6,
+          16.25,
           0.05
         ]
       },
@@ -419,9 +471,9 @@
           [
             "zoom"
           ],
-          5,
+          16,
           0,
-          6,
+          16.25,
           0.05
         ]
       },
@@ -464,9 +516,9 @@
           [
             "zoom"
           ],
-          5,
+          16,
           0,
-          6,
+          16.25,
           0.05
         ]
       },
@@ -533,9 +585,9 @@
           [
             "zoom"
           ],
-          5,
+          15,
           0,
-          6,
+          15.25,
           0.05
         ]
       },
@@ -682,6 +734,8 @@
           ],
           8,
           0,
+          8.25,
+          1,
           8.5,
           1
         ]
@@ -727,6 +781,8 @@
           ],
           11,
           0,
+          11.25,
+          1,
           11.5,
           1
         ]
@@ -775,6 +831,19 @@
           1,
           18,
           80
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          1
         ]
       },
       "source-layer": "aeroway"
@@ -821,6 +890,19 @@
           0.5,
           18,
           20
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          1
         ]
       },
       "source-layer": "aeroway"
@@ -900,6 +982,8 @@
             "zoom"
           ],
           11,
+          0,
+          11.25,
           0.2,
           15,
           0.5
@@ -938,7 +1022,19 @@
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-outline-color": "hsl(0, 0%, 90%)",
-        "fill-opacity": 0.1
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          0.1
+        ]
       },
       "source-layer": "building"
     },
@@ -1023,6 +1119,19 @@
         "line-dasharray": [
           3,
           3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1104,6 +1213,10 @@
           [
             "zoom"
           ],
+          11,
+          0,
+          11.25,
+          1,
           13,
           0,
           14,
@@ -1319,6 +1432,19 @@
         "line-dasharray": [
           3,
           3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1389,6 +1515,19 @@
         "line-dasharray": [
           3,
           3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1573,7 +1712,19 @@
           18
         ],
         "line-color": "hsl(0, 0%, 10%)",
-        "line-opacity": 0.5,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          0.5
+        ],
         "line-dasharray": [
           "step",
           [
@@ -1727,6 +1878,19 @@
         "line-dasharray": [
           1,
           0
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1783,6 +1947,19 @@
         "line-dasharray": [
           1,
           0
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1843,7 +2020,19 @@
           12
         ],
         "line-color": "hsl(0, 0%, 10%)",
-        "line-opacity": 0.5,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          0.5
+        ],
         "line-dasharray": [
           "step",
           [
@@ -1944,7 +2133,19 @@
           1,
           0
         ],
-        "line-opacity": 0.5
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          0.5
+        ]
       },
       "source-layer": "transportation"
     },
@@ -1999,7 +2200,19 @@
           18
         ],
         "line-color": "hsl(0, 0%, 10%)",
-        "line-opacity": 0.5
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          0.5
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2282,9 +2495,9 @@
           [
             "zoom"
           ],
-          13,
-          0,
           16,
+          0,
+          16.25,
           1
         ]
       },
@@ -2387,14 +2600,10 @@
           [
             "zoom"
           ],
-          6,
+          16,
           0,
-          7,
-          0.4,
-          9,
-          0.5,
-          10,
-          1
+          16.25,
+          0.4
         ]
       },
       "source-layer": "transportation"
@@ -2482,14 +2691,10 @@
           [
             "zoom"
           ],
-          6,
+          11,
           0,
-          7,
-          0.4,
-          9,
-          0.5,
-          10,
-          1
+          11.25,
+          0.4
         ]
       },
       "source-layer": "transportation"
@@ -2765,14 +2970,10 @@
           [
             "zoom"
           ],
-          6,
-          0,
-          7,
-          0.4,
-          9,
-          0.5,
           10,
-          1
+          0,
+          10.25,
+          0.4
         ]
       },
       "source-layer": "transportation"
@@ -2859,14 +3060,10 @@
           [
             "zoom"
           ],
-          6,
+          11,
           0,
-          7,
-          0.4,
-          9,
-          0.5,
-          10,
-          1
+          11.25,
+          0.4
         ]
       },
       "source-layer": "transportation"
@@ -2955,6 +3152,10 @@
           [
             "zoom"
           ],
+          5,
+          0,
+          5.25,
+          1,
           6,
           0,
           6.1,
@@ -3103,9 +3304,9 @@
           [
             "zoom"
           ],
-          13,
-          0,
           14,
+          0,
+          14.25,
           1
         ],
         "line-dasharray": [
@@ -3407,7 +3608,20 @@
           18,
           18
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -3470,7 +3684,20 @@
           18,
           18
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -3558,6 +3785,19 @@
               0.2
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3636,7 +3876,20 @@
           18,
           12
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -3709,6 +3962,10 @@
           [
             "zoom"
           ],
+          11,
+          0,
+          11.25,
+          1,
           13,
           0,
           14,
@@ -3942,6 +4199,8 @@
           ],
           5,
           0,
+          5.25,
+          1,
           5.5,
           1
         ]
@@ -4076,6 +4335,19 @@
         "line-dasharray": [
           0.25,
           10
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4129,6 +4401,19 @@
           14,
           0.75,
           20,
+          1
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
           1
         ]
       },
@@ -4191,18 +4476,34 @@
           2.25
         ],
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
-            1.25
+            "interpolate",
+            [
+              "exponential",
+              1.25
+            ],
+            [
+              "zoom"
+            ],
+            14,
+            0.25,
+            17,
+            1
           ],
           [
-            "zoom"
-          ],
-          14,
-          0.25,
-          17,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -4271,9 +4572,9 @@
           [
             "zoom"
           ],
-          13,
+          16,
           0,
-          14,
+          16.25,
           1
         ]
       },
@@ -4355,6 +4656,19 @@
           0.5,
           18,
           12
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4415,6 +4729,10 @@
           [
             "zoom"
           ],
+          11,
+          0,
+          11.25,
+          1,
           13,
           0,
           14,
@@ -4648,9 +4966,9 @@
           [
             "zoom"
           ],
-          10.99,
+          13,
           0,
-          11,
+          13.25,
           1
         ]
       },
@@ -4725,6 +5043,19 @@
           2,
           18,
           18
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4909,9 +5240,9 @@
           [
             "zoom"
           ],
-          13,
-          0,
           14,
+          0,
+          14.25,
           1
         ],
         "line-dasharray": [
@@ -5090,7 +5421,20 @@
           18,
           18
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -5157,7 +5501,20 @@
           18,
           18
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -5245,6 +5602,19 @@
               0.2
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5312,7 +5682,20 @@
           18,
           12
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -5375,6 +5758,10 @@
           [
             "zoom"
           ],
+          11,
+          0,
+          11.25,
+          1,
           13,
           0,
           14,
@@ -5715,9 +6102,9 @@
           [
             "zoom"
           ],
-          10.99,
+          13,
           0,
-          11,
+          13.25,
           1
         ]
       },
@@ -5792,6 +6179,19 @@
           2,
           18,
           18
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5994,7 +6394,20 @@
           18,
           18
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -6054,7 +6467,20 @@
           18,
           18
         ],
-        "line-color": "hsl(0, 0%, 10%)"
+        "line-color": "hsl(0, 0%, 10%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -6321,6 +6747,10 @@
           [
             "zoom"
           ],
+          1,
+          0,
+          1.25,
+          0.5,
           3,
           0,
           4,
@@ -6450,14 +6880,6 @@
       "filter": [
         "all",
         [
-          "<=",
-          [
-            "get",
-            "admin_level"
-          ],
-          1
-        ],
-        [
           "==",
           [
             "get",
@@ -6510,6 +6932,8 @@
           ],
           1,
           0,
+          1.25,
+          1,
           1.5,
           1
         ]
@@ -6581,7 +7005,19 @@
           10,
           2
         ],
-        "line-opacity": 0.75
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          0.75
+        ]
       },
       "source-layer": "boundary"
     },
@@ -6718,6 +7154,32 @@
           1.25,
           16.5,
           2.5
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6847,6 +7309,32 @@
           1.25,
           16.5,
           2.5
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6967,6 +7455,32 @@
           1,
           16.5,
           2
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -7043,7 +7557,19 @@
             1000
           ]
         ],
-        "fill-extrusion-opacity": 0.9,
+        "fill-extrusion-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          0.9
+        ],
         "fill-extrusion-base": [
           "interpolate",
           [
@@ -7153,7 +7679,33 @@
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -7246,7 +7798,33 @@
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -7333,7 +7911,33 @@
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -7420,7 +8024,33 @@
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -7501,7 +8131,33 @@
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "waterway"
     },
@@ -7576,7 +8232,33 @@
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ]
       },
       "source-layer": "water_name"
     },
@@ -7651,7 +8333,33 @@
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          6.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          6.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -7739,7 +8447,33 @@
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -7847,7 +8581,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -7953,7 +8713,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "transportation_name"
     },
@@ -8026,7 +8812,33 @@
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ]
       },
       "source-layer": "aerodrome_label"
     },
@@ -8114,7 +8926,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1.25
+        "text-halo-width": 1.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8202,7 +9040,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1.25
+        "text-halo-width": 1.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8287,7 +9151,41 @@
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.5,
-        "text-color": "hsl(0, 0%, 10%)"
+        "text-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8367,7 +9265,41 @@
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.5,
-        "text-color": "hsl(0, 0%, 10%)"
+        "text-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8444,7 +9376,41 @@
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.25,
-        "text-color": "hsl(0, 0%, 10%)"
+        "text-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8526,7 +9492,41 @@
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.25,
-        "text-color": "hsl(0, 0%, 10%)"
+        "text-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8608,7 +9608,41 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1.25
+        "text-halo-width": 1.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          0,
+          7.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          0,
+          7.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8691,7 +9725,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1.25
+        "text-halo-width": 1.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8773,7 +9833,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1.25
+        "text-halo-width": 1.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8877,7 +9963,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -8969,7 +10081,33 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -9057,7 +10195,41 @@
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-width": 1.5,
-        "text-halo-color": "hsl(0, 0%, 90%)"
+        "text-halo-color": "hsl(0, 0%, 90%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -9153,7 +10325,41 @@
       "id": "water-label-line-sm",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
-        "text-halo-color": "hsl(0, 0%, 10%)"
+        "text-halo-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -9234,7 +10440,41 @@
       "id": "water-label-point-sm",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
-        "text-halo-color": "hsl(0, 0%, 10%)"
+        "text-halo-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -9325,7 +10565,41 @@
       "id": "water-label-line-md",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
-        "text-halo-color": "hsl(0, 0%, 10%)"
+        "text-halo-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -9416,7 +10690,41 @@
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
         "text-halo-width": 1,
-        "text-halo-blur": 0.25
+        "text-halo-blur": 0.25,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -9506,7 +10814,41 @@
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 0.5
+        "text-halo-blur": 0.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          4.75,
+          1,
+          5,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          4.75,
+          1,
+          5,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -9594,7 +10936,41 @@
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 0.5
+        "text-halo-blur": 0.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          4.75,
+          1,
+          5,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          4.75,
+          1,
+          5,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -9678,7 +11054,41 @@
       "paint": {
         "text-halo-width": 1,
         "text-color": "hsl(0, 0%, 10%)",
-        "text-halo-color": "hsl(0, 0%, 90%)"
+        "text-halo-color": "hsl(0, 0%, 90%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          8.75,
+          1,
+          9,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          8.75,
+          1,
+          9,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -9770,7 +11180,41 @@
       "paint": {
         "text-halo-width": 1,
         "text-color": "hsl(0, 0%, 10%)",
-        "text-halo-color": "hsl(0, 0%, 90%)"
+        "text-halo-color": "hsl(0, 0%, 90%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -9854,7 +11298,41 @@
       "paint": {
         "text-halo-width": 1,
         "text-color": "hsl(0, 0%, 10%)",
-        "text-halo-color": "hsl(0, 0%, 90%)"
+        "text-halo-color": "hsl(0, 0%, 90%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -9916,7 +11394,41 @@
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-color": "hsl(0, 0%, 10%)"
+        "text-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -10004,7 +11516,41 @@
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-color": "hsl(0, 0%, 10%)"
+        "text-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -10084,7 +11630,41 @@
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "hsl(0, 0%, 90%)",
-        "text-color": "hsl(0, 0%, 10%)"
+        "text-color": "hsl(0, 0%, 10%)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ]
       },
       "source-layer": "place"
     }

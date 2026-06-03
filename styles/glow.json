@@ -150,40 +150,56 @@
           "rgb(15, 46, 54)"
         ],
         "fill-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
-            1.5
-          ],
-          [
-            "zoom"
-          ],
-          9,
-          0.4,
-          10,
-          [
-            "match",
+            "interpolate",
             [
-              "get",
-              "class"
+              "exponential",
+              1.5
             ],
-            "crop",
-            0,
-            0.4
-          ],
-          11,
-          [
-            "match",
             [
-              "get",
-              "class"
+              "zoom"
             ],
-            "crop",
-            0,
-            0.4
+            9,
+            0.4,
+            10,
+            [
+              "match",
+              [
+                "get",
+                "class"
+              ],
+              "crop",
+              0,
+              0.4
+            ],
+            11,
+            [
+              "match",
+              [
+                "get",
+                "class"
+              ],
+              "crop",
+              0,
+              0.4
+            ],
+            12,
+            0
           ],
-          12,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            11.75,
+            1,
+            12,
+            0
+          ]
         ],
         "fill-antialias": false
       },
@@ -219,6 +235,8 @@
           ],
           5,
           0,
+          5.25,
+          0.2,
           6,
           0.2,
           9,
@@ -353,50 +371,66 @@
           "hsl(193, 63%, 29%)"
         ],
         "fill-opacity": [
-          "interpolate",
+          "*",
           [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          5,
-          0,
-          6,
-          [
-            "match",
+            "interpolate",
             [
-              "get",
-              "class"
+              "linear"
             ],
-            "ice",
-            0.5,
-            0.5
-          ],
-          12,
-          [
-            "match",
             [
-              "get",
-              "class"
+              "zoom"
             ],
-            "ice",
-            0.5,
-            "residential",
+            5,
             0,
-            0.5
-          ],
-          20,
-          [
-            "match",
+            6,
             [
-              "get",
-              "class"
+              "match",
+              [
+                "get",
+                "class"
+              ],
+              "ice",
+              0.5,
+              0.5
             ],
-            "ice",
-            0.5,
-            "residential",
+            12,
+            [
+              "match",
+              [
+                "get",
+                "class"
+              ],
+              "ice",
+              0.5,
+              "residential",
+              0,
+              0.5
+            ],
+            20,
+            [
+              "match",
+              [
+                "get",
+                "class"
+              ],
+              "ice",
+              0.5,
+              "residential",
+              0,
+              1
+            ]
+          ],
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            5,
             0,
+            5.25,
             1
           ]
         ],
@@ -494,6 +528,8 @@
           ],
           8,
           0,
+          8.25,
+          0,
           8.5,
           0
         ]
@@ -554,6 +590,10 @@
           [
             "zoom"
           ],
+          3,
+          0,
+          3.25,
+          1,
           5,
           0,
           7,
@@ -588,6 +628,10 @@
           [
             "zoom"
           ],
+          12,
+          0,
+          12.25,
+          1,
           15,
           0,
           17,
@@ -649,28 +693,20 @@
       "filter": [
         "all",
         [
-          "match",
+          "==",
           [
             "get",
             "admin_level"
           ],
-          [
-            4
-          ],
-          true,
-          false
+          4
         ],
         [
-          "match",
+          "==",
           [
             "get",
             "maritime"
           ],
-          [
-            0
-          ],
-          true,
-          false
+          0
         ]
       ]
     },
@@ -697,7 +733,34 @@
       },
       "layout": {},
       "source": "composite",
-      "source-layer": "boundary"
+      "source-layer": "boundary",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "admin_level"
+          ],
+          2
+        ],
+        [
+          "==",
+          [
+            "get",
+            "disputed"
+          ],
+          0
+        ],
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          0
+        ]
+      ]
     },
     {
       "minzoom": 10,
@@ -779,7 +842,41 @@
         "text-halo-color": "rgba(6, 21, 25, 0.75)",
         "text-halo-width": 1,
         "text-color": "rgb(225, 255, 77)",
-        "text-halo-blur": 0.5
+        "text-halo-blur": 0.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -934,9 +1031,41 @@
         "text-color": "rgb(217, 255, 26)",
         "text-halo-color": "rgb(6, 21, 25)",
         "text-halo-width": 1,
-        "icon-opacity": 0.45,
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          0.45,
+          12.75,
+          0.45,
+          13,
+          0
+        ],
         "text-halo-blur": 1,
-        "text-opacity": 0.77
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          0.77,
+          12.75,
+          0.77,
+          13,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -1072,15 +1201,52 @@
         "text-halo-color": "rgb(6, 21, 25)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "step",
+          "*",
+          [
+            "step",
+            [
+              "zoom"
+            ],
+            1,
+            8,
+            0
+          ],
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            2,
+            0,
+            2.25,
+            1,
+            14.75,
+            1,
+            15,
+            0
+          ]
+        ],
+        "text-halo-blur": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
           [
             "zoom"
           ],
+          2,
+          0,
+          2.25,
           1,
-          8,
+          14.75,
+          1,
+          15,
           0
-        ],
-        "text-halo-blur": 1
+        ]
       },
       "source-layer": "place"
     },
@@ -1161,11 +1327,30 @@
           [
             "zoom"
           ],
+          0.75,
           0,
+          1,
           0.8,
           1.5,
           0.5,
           2.5,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0.75,
+          0,
+          1,
+          1,
+          2.75,
+          1,
+          3,
           0
         ]
       },

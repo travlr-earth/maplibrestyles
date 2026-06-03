@@ -250,6 +250,8 @@
           ],
           5,
           0,
+          5.25,
+          0.5,
           6,
           0.5,
           10,
@@ -296,7 +298,20 @@
       "id": "landuse-park",
       "paint": {
         "fill-color": "hsl(0, 87%, 85%)",
-        "fill-pattern": ""
+        "fill-pattern": "",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ]
       },
       "source-layer": "landuse"
     },
@@ -319,7 +334,20 @@
       "source": "composite",
       "id": "landuse-pitch-outline",
       "paint": {
-        "line-color": "rgb(214, 208, 209)"
+        "line-color": "rgb(214, 208, 209)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
       },
       "source-layer": "landuse"
     },
@@ -392,6 +420,8 @@
           ],
           8,
           0,
+          8.25,
+          1,
           8.5,
           1
         ],
@@ -437,7 +467,20 @@
       "source": "composite",
       "id": "landuse-hospital",
       "paint": {
-        "fill-color": "hsl(0, 87%, 85%)"
+        "fill-color": "hsl(0, 87%, 85%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ]
       },
       "source-layer": "landuse"
     },
@@ -465,7 +508,20 @@
       "id": "landuse-hospital-2",
       "paint": {
         "fill-pattern": "yellow-pattern",
-        "fill-color": "hsl(0, 0%, 0%)"
+        "fill-color": "hsl(0, 0%, 0%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ]
       },
       "source-layer": "landuse"
     },
@@ -494,7 +550,20 @@
       "id": "landuse-park-2",
       "paint": {
         "fill-pattern": "gray-pattern",
-        "fill-color": "hsl(0, 0%, 0%)"
+        "fill-color": "hsl(0, 0%, 0%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ]
       },
       "source-layer": "landuse"
     },
@@ -534,18 +603,34 @@
       "paint": {
         "fill-pattern": "yellow-pattern",
         "fill-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
+            "interpolate",
+            [
+              "exponential",
+              1
+            ],
+            [
+              "zoom"
+            ],
+            10.75,
+            1,
+            11,
+            0
+          ],
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            2,
+            0,
+            2.25,
             1
-          ],
-          [
-            "zoom"
-          ],
-          10.75,
-          1,
-          11,
-          0
+          ]
         ],
         "fill-color": "hsl(0, 0%, 0%)"
       }
@@ -586,7 +671,19 @@
       "id": "aeroway-polygon",
       "paint": {
         "fill-color": "#31339e",
-        "fill-opacity": 0.15
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          0.15
+        ]
       },
       "source-layer": "aeroway"
     },
@@ -624,6 +721,19 @@
           3,
           20,
           8
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          1
         ]
       },
       "source-layer": "aeroway"
@@ -683,6 +793,8 @@
           ],
           15,
           0,
+          15.25,
+          1,
           16,
           1
         ]
@@ -742,6 +854,8 @@
           ],
           15,
           0,
+          15.25,
+          1,
           16,
           1
         ],
@@ -860,13 +974,29 @@
         ],
         "line-color": "#f0e9d8",
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            1,
+            14,
+            0
           ],
-          1,
-          14,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -996,13 +1126,29 @@
           ]
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            14,
+            1
           ],
-          0,
-          14,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ],
         "line-dasharray": [
           3,
@@ -1074,6 +1220,19 @@
         "line-dasharray": [
           0,
           0
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1154,6 +1313,19 @@
         "line-dasharray": [
           3,
           3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1218,6 +1390,19 @@
         "line-dasharray": [
           0,
           0
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1320,6 +1505,19 @@
               0.15
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1428,6 +1626,19 @@
               0.25
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1535,6 +1746,19 @@
               0.25
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1637,6 +1861,19 @@
               0.5
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1733,6 +1970,19 @@
               0.3
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1819,6 +2069,19 @@
               0.2
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1881,7 +2144,20 @@
           18,
           18
         ],
-        "line-color": "#d14545"
+        "line-color": "#d14545",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2005,13 +2281,29 @@
           "#d14747"
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            14,
+            1
           ],
-          0,
-          14,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -2077,7 +2369,20 @@
           18,
           16
         ],
-        "line-color": "#d14747"
+        "line-color": "#d14747",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2181,7 +2486,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "tunnel-oneway-arrow-blue",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -2244,7 +2576,20 @@
           17,
           10
         ],
-        "line-color": "#d14545"
+        "line-color": "#d14545",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2303,7 +2648,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "tunnel-oneway-arrow-white",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -2411,7 +2783,20 @@
           18,
           7
         ],
-        "line-color": "hsl(338, 17%, 82%)"
+        "line-color": "hsl(338, 17%, 82%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2482,7 +2867,19 @@
           18,
           7
         ],
-        "line-opacity": 0.75,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          0.75
+        ],
         "line-color": "hsl(338, 17%, 82%)"
       },
       "source-layer": "transportation"
@@ -2560,7 +2957,20 @@
           18,
           14.5
         ],
-        "line-color": "hsl(338, 26%, 88%)"
+        "line-color": "hsl(338, 26%, 88%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2687,6 +3097,19 @@
               0.25
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -2813,6 +3236,19 @@
               0.25
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -2929,6 +3365,19 @@
           1,
           1,
           1
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3004,6 +3453,19 @@
           2,
           1,
           1,
+          1
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
           1
         ]
       },
@@ -3081,18 +3543,34 @@
           1
         ],
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
-            1.5
+            "interpolate",
+            [
+              "exponential",
+              1.5
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            14,
+            1
           ],
           [
-            "zoom"
-          ],
-          13,
-          0,
-          14,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            12,
+            0,
+            12.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -3181,7 +3659,20 @@
           16.25,
           "hsl(338, 52%, 98%)"
         ],
-        "fill-outline-color": "hsl(338, 26%, 88%)"
+        "fill-outline-color": "hsl(338, 26%, 88%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -3293,7 +3784,20 @@
       "source": "composite",
       "id": "golf-hole-line",
       "paint": {
-        "line-color": "rgb(178, 166, 166)"
+        "line-color": "rgb(178, 166, 166)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -3350,7 +3854,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "turning-feature-outline",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -3468,13 +3999,29 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            1,
+            14,
+            0
           ],
-          1,
-          14,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -3608,13 +4155,29 @@
           12
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            14,
+            1
           ],
-          0,
-          14,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -3710,13 +4273,29 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            1,
+            14,
+            0
           ],
-          1,
-          14,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            11,
+            0,
+            11.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -3826,13 +4405,29 @@
           18
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            14,
+            1
           ],
-          0,
-          14,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            11,
+            0,
+            11.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -3947,6 +4542,10 @@
           [
             "zoom"
           ],
+          8,
+          0,
+          8.25,
+          1,
           10,
           0,
           10.1,
@@ -4053,13 +4652,29 @@
           32
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            10,
+            1
           ],
-          0,
-          10,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            7,
+            0,
+            7.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -4169,13 +4784,29 @@
           18
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            11,
+            1
           ],
-          0,
-          11,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            10,
+            0,
+            10.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -4290,7 +4921,9 @@
           [
             "zoom"
           ],
-          5.1,
+          5,
+          0,
+          5.25,
           1,
           6,
           0
@@ -4407,6 +5040,19 @@
               0.15
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4490,7 +5136,20 @@
           18,
           18
         ],
-        "line-color": "#d14545"
+        "line-color": "#d14545",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -4559,7 +5218,20 @@
       "id": "road-polygon",
       "paint": {
         "fill-color": "#d14747",
-        "fill-outline-color": "hsl(338, 26%, 88%)"
+        "fill-outline-color": "hsl(338, 26%, 88%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -4670,18 +5342,34 @@
         ],
         "line-color": "#d14545",
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
+            "interpolate",
+            [
+              "exponential",
+              1
+            ],
+            [
+              "zoom"
+            ],
+            14.9,
+            0,
+            15,
             1
           ],
           [
-            "zoom"
-          ],
-          14.9,
-          0,
-          15,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -4760,18 +5448,34 @@
         ],
         "line-color": "hsl(0, 60%, 55%)",
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
+            "interpolate",
+            [
+              "exponential",
+              1
+            ],
+            [
+              "zoom"
+            ],
+            11.9,
+            0,
+            12,
             1
           ],
           [
-            "zoom"
-          ],
-          11.9,
-          0,
-          12,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            11,
+            0,
+            11.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -4858,6 +5562,10 @@
           [
             "zoom"
           ],
+          8,
+          0,
+          8.25,
+          1,
           10,
           0,
           10.1,
@@ -4936,18 +5644,34 @@
         ],
         "line-color": "#d14545",
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
+            "interpolate",
+            [
+              "exponential",
+              1
+            ],
+            [
+              "zoom"
+            ],
+            6.9,
+            0,
+            7,
             1
           ],
           [
-            "zoom"
-          ],
-          6.9,
-          0,
-          7,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
+            0,
+            6.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -5063,7 +5787,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "road-oneway-arrow-blue",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -5285,6 +6036,19 @@
           1,
           1,
           1
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5370,9 +6134,9 @@
           [
             "zoom"
           ],
-          12.9,
-          0,
           13,
+          0,
+          13.25,
           1
         ]
       },
@@ -5459,18 +6223,34 @@
           3
         ],
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
-            1.5
+            "interpolate",
+            [
+              "exponential",
+              1.5
+            ],
+            [
+              "zoom"
+            ],
+            13.9,
+            0,
+            14,
+            1
           ],
           [
-            "zoom"
-          ],
-          13.9,
-          0,
-          14,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -5497,7 +6277,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "level-crossing",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -5567,7 +6374,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "road-oneway-arrow-white",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -5621,7 +6455,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "turning-feature",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -5654,7 +6515,19 @@
           20,
           3
         ],
-        "line-opacity": 1,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
         "line-dasharray": [
           1,
           2,
@@ -5768,7 +6641,20 @@
           18,
           7
         ],
-        "line-color": "hsl(338, 17%, 82%)"
+        "line-color": "hsl(338, 17%, 82%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -5827,7 +6713,19 @@
           18,
           7
         ],
-        "line-opacity": 0.75,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          0.75
+        ],
         "line-color": "hsl(338, 17%, 82%)"
       },
       "source-layer": "transportation"
@@ -5885,7 +6783,20 @@
           18,
           14.5
         ],
-        "line-color": "hsl(338, 26%, 88%)"
+        "line-color": "hsl(338, 26%, 88%)",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -6001,6 +6912,19 @@
               0.25
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6116,6 +7040,19 @@
               0.25
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6218,6 +7155,19 @@
               0.25
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6314,6 +7264,19 @@
               0.3
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6400,6 +7363,19 @@
               0.2
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6534,13 +7510,29 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            1,
+            14,
+            0
           ],
-          1,
-          14,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -6672,13 +7664,29 @@
           ]
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            14,
+            1
           ],
-          0,
-          14,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -6762,13 +7770,29 @@
           16
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            10,
+            1
           ],
-          0,
-          10,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -6853,6 +7877,19 @@
           1,
           18,
           8
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6939,6 +7976,19 @@
           2.5,
           17,
           10
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -7041,6 +8091,19 @@
               0.15
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -7116,7 +8179,20 @@
           18,
           16
         ],
-        "line-color": "#d14545"
+        "line-color": "#d14545",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -7259,13 +8335,29 @@
           "#d14747"
         ],
         "line-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            14,
+            1
           ],
-          0,
-          14,
-          1
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -7350,7 +8442,20 @@
           18,
           16
         ],
-        "line-color": "#d14747"
+        "line-color": "#d14747",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -7454,7 +8559,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "bridge-oneway-arrow-blue",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -7526,7 +8658,20 @@
           17,
           10
         ],
-        "line-color": "#d14545"
+        "line-color": "#d14545",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -7614,6 +8759,19 @@
           2,
           18,
           16
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -7700,6 +8858,19 @@
           2.5,
           17,
           10
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -7775,7 +8946,20 @@
           18,
           16
         ],
-        "line-color": "#d14545"
+        "line-color": "#d14545",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -7864,7 +9048,20 @@
           17,
           10
         ],
-        "line-color": "#d14545"
+        "line-color": "#d14545",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -7923,7 +9120,34 @@
       "type": "symbol",
       "source": "composite",
       "id": "bridge-oneway-arrow-white",
-      "paint": {},
+      "paint": {
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
+      },
       "source-layer": "transportation"
     },
     {
@@ -7989,18 +9213,34 @@
           1.5
         ],
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
-            1.5
+            "interpolate",
+            [
+              "exponential",
+              1.5
+            ],
+            [
+              "zoom"
+            ],
+            12.9,
+            0,
+            13,
+            1
           ],
           [
-            "zoom"
-          ],
-          12.9,
-          0,
-          13,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            13,
+            0,
+            13.25,
+            1
+          ]
         ]
       },
       "source-layer": "transportation"
@@ -8082,6 +9322,10 @@
           [
             "zoom"
           ],
+          13,
+          0,
+          13.25,
+          1,
           13.9,
           0,
           14,
@@ -8344,6 +9588,8 @@
           ],
           7,
           0,
+          7.25,
+          0.75,
           8,
           0.75
         ],
@@ -8431,6 +9677,10 @@
           [
             "zoom"
           ],
+          1,
+          0,
+          1.25,
+          0.5,
           3,
           0,
           4,
@@ -8553,6 +9803,8 @@
           ],
           2,
           0,
+          2.25,
+          1,
           3,
           1
         ],
@@ -8618,6 +9870,19 @@
         "line-dasharray": [
           10,
           0
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1
         ]
       },
       "source-layer": "boundary"
@@ -8712,6 +9977,19 @@
               2
             ]
           ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1
         ]
       },
       "source-layer": "boundary"
@@ -8738,7 +10016,33 @@
       "paint": {
         "text-color": "rgb(183, 173, 159)",
         "text-halo-color": "rgb(233, 230, 222)",
-        "text-halo-width": 0.5
+        "text-halo-width": 0.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ]
       },
       "metadata": {
         "mapbox:featureComponent": "buildings",
@@ -8795,7 +10099,33 @@
         "text-color": "rgb(168, 148, 108)",
         "text-halo-color": "rgb(249, 248, 246)",
         "text-halo-width": 0.5,
-        "text-halo-blur": 0.5
+        "text-halo-blur": 0.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
       },
       "source-layer": "place"
     },
@@ -8987,7 +10317,33 @@
       "paint": {
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -9054,7 +10410,33 @@
       "source": "composite",
       "id": "road-intersection",
       "paint": {
-        "text-color": "rgb(236, 54, 73)"
+        "text-color": "rgb(236, 54, 73)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -9227,65 +10609,97 @@
       "paint": {
         "text-color": "hsl(0, 60%, 55%)",
         "text-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            6.9,
+            0,
+            7,
+            [
+              "match",
+              [
+                "get",
+                "shield"
+              ],
+              [
+                "us-highway",
+                "us-highway-bypass",
+                "us-highway-truck",
+                "us-highway-business",
+                "us-highway-duplex",
+                "us-highway-alternate",
+                "us-interstate",
+                "us-interstate-duplex",
+                "us-interstate-business",
+                "us-interstate-truck"
+              ],
+              1,
+              0
+            ]
           ],
-          0,
-          6.9,
-          0,
-          7,
           [
-            "match",
+            "interpolate",
             [
-              "get",
-              "shield"
+              "linear"
             ],
             [
-              "us-highway",
-              "us-highway-bypass",
-              "us-highway-truck",
-              "us-highway-business",
-              "us-highway-duplex",
-              "us-highway-alternate",
-              "us-interstate",
-              "us-interstate-duplex",
-              "us-interstate-business",
-              "us-interstate-truck"
+              "zoom"
             ],
-            1,
-            0
+            6,
+            0,
+            6.25,
+            1
           ]
         ],
         "icon-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            6.9,
+            0,
+            7,
+            [
+              "match",
+              [
+                "get",
+                "shield"
+              ],
+              [
+                "us-highway",
+                "us-highway-bypass",
+                "us-highway-truck",
+                "us-highway-business",
+                "us-highway-duplex",
+                "us-highway-alternate",
+                "us-interstate",
+                "us-interstate-duplex",
+                "us-interstate-business",
+                "us-interstate-truck"
+              ],
+              1,
+              0
+            ]
           ],
-          0,
-          6.9,
-          0,
-          7,
           [
-            "match",
+            "interpolate",
             [
-              "get",
-              "shield"
+              "linear"
             ],
             [
-              "us-highway",
-              "us-highway-bypass",
-              "us-highway-truck",
-              "us-highway-business",
-              "us-highway-duplex",
-              "us-highway-alternate",
-              "us-interstate",
-              "us-interstate-duplex",
-              "us-interstate-business",
-              "us-interstate-truck"
+              "zoom"
             ],
-            1,
-            0
+            6,
+            0,
+            6.25,
+            1
           ]
         ]
       },
@@ -9342,6 +10756,32 @@
         "text-translate": [
           0,
           0
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
         ]
       },
       "source-layer": "transportation_name"
@@ -9457,145 +10897,177 @@
       "paint": {
         "text-color": "#d14545",
         "text-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            6.9,
+            0,
+            7,
+            [
+              "match",
+              [
+                "get",
+                "shield"
+              ],
+              [
+                "us-highway",
+                "tw-provincial-expy",
+                "br-federal",
+                "ro-communal",
+                "default",
+                "ch-motorway",
+                "ro-national",
+                "za-provincial",
+                "rectangle-green",
+                "kr-local",
+                "de-motorway",
+                "ae-s-route",
+                "au-national-route",
+                "tw-county-township",
+                "cn-provincial-expy",
+                "in-state",
+                "tw-provincial",
+                "au-national-highway",
+                "pe-national",
+                "rectangle-white",
+                "rectangle-orange",
+                "circle-white",
+                "kr-natl-hwy",
+                "mx-state",
+                "nz-state",
+                "si-motorway",
+                "kr-metropolitan",
+                "rectangle-yellow",
+                "hk-strategic-route",
+                "rectangle-red",
+                "br-state",
+                "cn-nths-expy",
+                "kr-metro-expy",
+                "pe-regional",
+                "ae-d-route",
+                "za-national",
+                "au-state",
+                "rectangle-blue",
+                "kr-natl-expy",
+                "ae-f-route",
+                "hu-main",
+                "au-tourist",
+                "in-national",
+                "ro-county",
+                "hu-motorway",
+                "mx-federal",
+                "ae-national",
+                "gr-motorway",
+                "tw-national",
+                "hr-motorway"
+              ],
+              1,
+              0
+            ]
           ],
-          0,
-          6.9,
-          0,
-          7,
           [
-            "match",
+            "interpolate",
             [
-              "get",
-              "shield"
+              "linear"
             ],
             [
-              "us-highway",
-              "tw-provincial-expy",
-              "br-federal",
-              "ro-communal",
-              "default",
-              "ch-motorway",
-              "ro-national",
-              "za-provincial",
-              "rectangle-green",
-              "kr-local",
-              "de-motorway",
-              "ae-s-route",
-              "au-national-route",
-              "tw-county-township",
-              "cn-provincial-expy",
-              "in-state",
-              "tw-provincial",
-              "au-national-highway",
-              "pe-national",
-              "rectangle-white",
-              "rectangle-orange",
-              "circle-white",
-              "kr-natl-hwy",
-              "mx-state",
-              "nz-state",
-              "si-motorway",
-              "kr-metropolitan",
-              "rectangle-yellow",
-              "hk-strategic-route",
-              "rectangle-red",
-              "br-state",
-              "cn-nths-expy",
-              "kr-metro-expy",
-              "pe-regional",
-              "ae-d-route",
-              "za-national",
-              "au-state",
-              "rectangle-blue",
-              "kr-natl-expy",
-              "ae-f-route",
-              "hu-main",
-              "au-tourist",
-              "in-national",
-              "ro-county",
-              "hu-motorway",
-              "mx-federal",
-              "ae-national",
-              "gr-motorway",
-              "tw-national",
-              "hr-motorway"
+              "zoom"
             ],
-            1,
-            0
+            5,
+            0,
+            5.25,
+            1
           ]
         ],
         "icon-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
+            "step",
+            [
+              "zoom"
+            ],
+            0,
+            6.9,
+            0,
+            7,
+            [
+              "match",
+              [
+                "get",
+                "shield"
+              ],
+              [
+                "us-highway",
+                "tw-provincial-expy",
+                "br-federal",
+                "ro-communal",
+                "default",
+                "ch-motorway",
+                "ro-national",
+                "za-provincial",
+                "rectangle-green",
+                "kr-local",
+                "de-motorway",
+                "ae-s-route",
+                "au-national-route",
+                "tw-county-township",
+                "cn-provincial-expy",
+                "in-state",
+                "tw-provincial",
+                "au-national-highway",
+                "pe-national",
+                "rectangle-white",
+                "rectangle-orange",
+                "circle-white",
+                "kr-natl-hwy",
+                "mx-state",
+                "nz-state",
+                "si-motorway",
+                "kr-metropolitan",
+                "rectangle-yellow",
+                "hk-strategic-route",
+                "rectangle-red",
+                "br-state",
+                "cn-nths-expy",
+                "kr-metro-expy",
+                "pe-regional",
+                "ae-d-route",
+                "za-national",
+                "au-state",
+                "rectangle-blue",
+                "kr-natl-expy",
+                "ae-f-route",
+                "hu-main",
+                "au-tourist",
+                "in-national",
+                "ro-county",
+                "hu-motorway",
+                "mx-federal",
+                "ae-national",
+                "gr-motorway",
+                "tw-national",
+                "hr-motorway"
+              ],
+              1,
+              0
+            ]
           ],
-          0,
-          6.9,
-          0,
-          7,
           [
-            "match",
+            "interpolate",
             [
-              "get",
-              "shield"
+              "linear"
             ],
             [
-              "us-highway",
-              "tw-provincial-expy",
-              "br-federal",
-              "ro-communal",
-              "default",
-              "ch-motorway",
-              "ro-national",
-              "za-provincial",
-              "rectangle-green",
-              "kr-local",
-              "de-motorway",
-              "ae-s-route",
-              "au-national-route",
-              "tw-county-township",
-              "cn-provincial-expy",
-              "in-state",
-              "tw-provincial",
-              "au-national-highway",
-              "pe-national",
-              "rectangle-white",
-              "rectangle-orange",
-              "circle-white",
-              "kr-natl-hwy",
-              "mx-state",
-              "nz-state",
-              "si-motorway",
-              "kr-metropolitan",
-              "rectangle-yellow",
-              "hk-strategic-route",
-              "rectangle-red",
-              "br-state",
-              "cn-nths-expy",
-              "kr-metro-expy",
-              "pe-regional",
-              "ae-d-route",
-              "za-national",
-              "au-state",
-              "rectangle-blue",
-              "kr-natl-expy",
-              "ae-f-route",
-              "hu-main",
-              "au-tourist",
-              "in-national",
-              "ro-county",
-              "hu-motorway",
-              "mx-federal",
-              "ae-national",
-              "gr-motorway",
-              "tw-national",
-              "hr-motorway"
+              "zoom"
             ],
-            1,
-            0
+            5,
+            0,
+            5.25,
+            1
           ]
         ]
       },
@@ -9681,7 +11153,33 @@
       "paint": {
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -9724,7 +11222,33 @@
         "text-halo-color": "rgb(255, 255, 255)",
         "text-halo-width": 0.5,
         "text-halo-blur": 0.5,
-        "text-color": "rgb(23, 23, 23)"
+        "text-color": "rgb(23, 23, 23)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -9830,7 +11354,33 @@
       "paint": {
         "text-color": "#3c8de3",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 2
+        "text-halo-width": 2,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "waterway"
     },
@@ -9963,6 +11513,32 @@
             13,
             "#454545"
           ]
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          0,
+          4.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          0,
+          4.25,
+          1
         ]
       },
       "source-layer": "mountain_peak"
@@ -10167,29 +11743,45 @@
       "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
-          "step",
-          [
-            "zoom"
-          ],
+          "*",
           [
             "step",
             [
-              "get",
-              "sizerank"
+              "zoom"
             ],
-            0,
-            5,
-            1
-          ],
-          17,
-          [
-            "step",
             [
-              "get",
-              "sizerank"
+              "step",
+              [
+                "get",
+                "sizerank"
+              ],
+              0,
+              5,
+              1
             ],
+            17,
+            [
+              "step",
+              [
+                "get",
+                "sizerank"
+              ],
+              0,
+              13,
+              1
+            ]
+          ],
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            4,
             0,
-            13,
+            4.25,
             1
           ]
         ],
@@ -10222,6 +11814,19 @@
             13,
             "#454545"
           ]
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4,
+          0,
+          4.25,
+          1
         ]
       },
       "source-layer": "mountain_peak"
@@ -10593,29 +12198,45 @@
       "id": "poi-label",
       "paint": {
         "icon-opacity": [
-          "step",
-          [
-            "zoom"
-          ],
+          "*",
           [
             "step",
             [
-              "get",
-              "sizerank"
+              "zoom"
             ],
-            0,
-            5,
-            1
-          ],
-          17,
-          [
-            "step",
             [
-              "get",
-              "sizerank"
+              "step",
+              [
+                "get",
+                "sizerank"
+              ],
+              0,
+              5,
+              1
             ],
+            17,
+            [
+              "step",
+              [
+                "get",
+                "sizerank"
+              ],
+              0,
+              13,
+              1
+            ]
+          ],
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            6,
             0,
-            13,
+            6.25,
             1
           ]
         ],
@@ -10632,6 +12253,19 @@
           ],
           "#454545",
           "#31339e"
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          6.25,
+          1
         ]
       },
       "source-layer": "poi"
@@ -10712,7 +12346,33 @@
         "text-color": "hsl(230, 48%, 44%)",
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 1,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
       },
       "source-layer": "aerodrome_label"
     },
@@ -10788,7 +12448,41 @@
       "paint": {
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 1.5,
-        "text-color": "#31339e"
+        "text-color": "#31339e",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -11039,12 +12733,49 @@
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 2,
         "icon-opacity": [
-          "step",
+          "*",
+          [
+            "step",
+            [
+              "zoom"
+            ],
+            1,
+            8,
+            0
+          ],
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            3,
+            0,
+            3.25,
+            1,
+            12.75,
+            1,
+            13,
+            0
+          ]
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
           [
             "zoom"
           ],
+          3,
+          0,
+          3.25,
           1,
-          8,
+          12.75,
+          1,
+          13,
           0
         ]
       },
@@ -11360,12 +13091,49 @@
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 2,
         "icon-opacity": [
-          "step",
+          "*",
+          [
+            "step",
+            [
+              "zoom"
+            ],
+            1,
+            8,
+            0
+          ],
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            3,
+            0,
+            3.25,
+            1,
+            14.75,
+            1,
+            15,
+            0
+          ]
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
           [
             "zoom"
           ],
+          3,
+          0,
+          3.25,
           1,
-          8,
+          14.75,
+          1,
+          15,
           0
         ]
       },
@@ -11493,7 +13261,41 @@
       "paint": {
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 1
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          8.75,
+          1,
+          9,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          8.75,
+          1,
+          9,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -11601,25 +13403,62 @@
       "id": "place-country",
       "paint": {
         "icon-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
-          ],
-          [
-            "case",
+            "step",
             [
-              "has",
-              "text_anchor"
+              "zoom"
             ],
-            1,
+            [
+              "case",
+              [
+                "has",
+                "text_anchor"
+              ],
+              1,
+              0
+            ],
+            7,
             0
           ],
-          7,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            1,
+            0,
+            1.25,
+            1,
+            9.75,
+            1,
+            10,
+            0
+          ]
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -11731,25 +13570,62 @@
       "id": "place-country-sm",
       "paint": {
         "icon-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
-          ],
-          [
-            "case",
+            "step",
             [
-              "has",
-              "text_anchor"
+              "zoom"
             ],
-            1,
+            [
+              "case",
+              [
+                "has",
+                "text_anchor"
+              ],
+              1,
+              0
+            ],
+            7,
             0
           ],
-          7,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            1,
+            0,
+            1.25,
+            1,
+            9.75,
+            1,
+            10,
+            0
+          ]
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -11859,25 +13735,62 @@
       "id": "place-country-md",
       "paint": {
         "icon-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
-          ],
-          [
-            "case",
+            "step",
             [
-              "has",
-              "text_anchor"
+              "zoom"
             ],
-            1,
+            [
+              "case",
+              [
+                "has",
+                "text_anchor"
+              ],
+              1,
+              0
+            ],
+            7,
             0
           ],
-          7,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            1,
+            0,
+            1.25,
+            1,
+            9.75,
+            1,
+            10,
+            0
+          ]
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -11987,25 +13900,62 @@
       "id": "place-country-lg",
       "paint": {
         "icon-opacity": [
-          "step",
+          "*",
           [
-            "zoom"
-          ],
-          [
-            "case",
+            "step",
             [
-              "has",
-              "text_anchor"
+              "zoom"
             ],
-            1,
+            [
+              "case",
+              [
+                "has",
+                "text_anchor"
+              ],
+              1,
+              0
+            ],
+            7,
             0
           ],
-          7,
-          0
+          [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            1,
+            0,
+            1.25,
+            1,
+            9.75,
+            1,
+            10,
+            0
+          ]
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "place"
     }

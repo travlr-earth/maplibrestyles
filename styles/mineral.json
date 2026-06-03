@@ -1209,7 +1209,33 @@
       "paint": {
         "text-halo-color": "hsl(46, 80%, 67%)",
         "text-halo-width": 30,
-        "text-halo-blur": 10
+        "text-halo-blur": 10,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6.75,
+          1,
+          7,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6.75,
+          1,
+          7,
+          0
+        ]
       },
       "source-layer": "place"
     }

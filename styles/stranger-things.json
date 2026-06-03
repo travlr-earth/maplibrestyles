@@ -1295,14 +1295,6 @@
           "==",
           [
             "get",
-            "disputed"
-          ],
-          0
-        ],
-        [
-          "==",
-          [
-            "get",
             "maritime"
           ],
           0
@@ -2410,7 +2402,33 @@
       "id": "place-state",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 100%)",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1
+        ]
       },
       "source-layer": "place"
     },

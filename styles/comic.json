@@ -2265,6 +2265,8 @@
           0,
           9.5,
           1,
+          11.75,
+          0.09999999999999998,
           12,
           0
         ]
@@ -3520,18 +3522,23 @@
         "line-join": "round"
       },
       "filter": [
-        "match",
+        "all",
         [
-          "get",
-          "admin_level"
+          "==",
+          [
+            "get",
+            "admin_level"
+          ],
+          4
         ],
         [
-          3,
-          4,
-          5
-        ],
-        true,
-        false
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          0
+        ]
       ],
       "type": "line",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -3577,12 +3584,31 @@
         "line-cap": "round"
       },
       "filter": [
-        "==",
+        "all",
         [
-          "get",
-          "admin_level"
+          "==",
+          [
+            "get",
+            "admin_level"
+          ],
+          2
         ],
-        2
+        [
+          "==",
+          [
+            "get",
+            "disputed"
+          ],
+          0
+        ],
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          0
+        ]
       ],
       "type": "line",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -3716,7 +3742,33 @@
       "paint": {
         "text-color": "#444",
         "text-halo-color": "#f4efe1",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16,
+          0,
+          16.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -3785,7 +3837,33 @@
       "paint": {
         "text-color": "#444",
         "text-halo-color": "#f4efe1",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -3859,7 +3937,33 @@
       "paint": {
         "text-color": "rgba(97,95,92,1)",
         "text-halo-color": "#fff",
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          6.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          6.25,
+          1
+        ]
       },
       "source-layer": "poi"
     },
@@ -4225,7 +4329,33 @@
         "text-color": "rgba(50,59,74,1)",
         "text-halo-color": "rgba(255,255,255,0.8)",
         "text-halo-width": 1,
-        "text-halo-blur": 1
+        "text-halo-blur": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16.75,
+          1,
+          17,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          16.75,
+          1,
+          17,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4283,7 +4413,33 @@
         "text-color": "rgba(96,104,120,1)",
         "text-halo-color": "rgba(255,255,255,0.8)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 1.5
+        "text-halo-blur": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4342,7 +4498,41 @@
         "text-color": "rgba(50,59,74,1)",
         "text-halo-color": "rgba(255,255,255,0.8)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 1.5
+        "text-halo-blur": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          0,
+          7.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          0,
+          7.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4417,7 +4607,33 @@
         "text-color": "rgba(50,59,74,1)",
         "text-halo-color": "rgba(255,255,255,0.8)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 1.5
+        "text-halo-blur": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4488,7 +4704,33 @@
         "text-color": "rgba(50,59,74,1)",
         "text-halo-color": "rgba(255,255,255,0.8)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 1.5
+        "text-halo-blur": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4545,7 +4787,33 @@
         "text-color": "#333",
         "text-halo-color": "rgba(244,239,225,0.8)",
         "text-halo-width": 1.5,
-        "text-halo-blur": 1.5
+        "text-halo-blur": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8.75,
+          1,
+          9,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8.75,
+          1,
+          9,
+          0
+        ]
       },
       "source-layer": "place"
     },

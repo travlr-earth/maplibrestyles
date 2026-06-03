@@ -741,28 +741,18 @@
         [
           "==",
           [
-            "geometry-type"
+            "get",
+            "admin_level"
           ],
-          "LineString"
+          4
         ],
         [
-          "all",
+          "==",
           [
-            "!=",
-            [
-              "get",
-              "admin_level"
-            ],
-            4
+            "get",
+            "maritime"
           ],
-          [
-            "==",
-            [
-              "get",
-              "maritime"
-            ],
-            1
-          ]
+          0
         ]
       ],
       "type": "line",
@@ -892,28 +882,26 @@
         [
           "==",
           [
-            "geometry-type"
+            "get",
+            "admin_level"
           ],
-          "LineString"
+          2
         ],
         [
-          "all",
+          "==",
           [
-            "==",
-            [
-              "get",
-              "admin_level"
-            ],
-            2
+            "get",
+            "disputed"
           ],
+          0
+        ],
+        [
+          "==",
           [
-            "==",
-            [
-              "get",
-              "maritime"
-            ],
-            0
-          ]
+            "get",
+            "maritime"
+          ],
+          0
         ]
       ],
       "type": "line",
@@ -983,7 +971,33 @@
         "text-halo-color": "rgba(207,181,165,1)",
         "text-halo-width": 1,
         "text-halo-blur": 0.25,
-        "text-color": "rgba(59,48,33,1)"
+        "text-color": "rgba(59,48,33,1)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -1040,7 +1054,33 @@
       "paint": {
         "text-halo-color": "rgba(207,181,165,1)",
         "text-halo-width": 1,
-        "text-color": "rgba(84,72,61,1)"
+        "text-color": "rgba(84,72,61,1)",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -1175,8 +1215,23 @@
           ],
           0,
           0.75,
-          14,
-          1
+          4.75,
+          0.8348214285714286,
+          5,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          4.75,
+          1,
+          5,
+          0
         ]
       },
       "source-layer": "place",
@@ -1237,10 +1292,25 @@
           [
             "zoom"
           ],
-          4,
+          5,
+          0,
+          5.25,
           1,
           12,
           0.75
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
         ]
       },
       "source-layer": "place",
@@ -1310,7 +1380,33 @@
       "paint": {
         "text-color": "rgba(48,43,32,1)",
         "text-halo-color": "rgba(207,181,165,1)",
-        "text-halo-width": 2
+        "text-halo-width": 2,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1
+        ]
       },
       "source-layer": "place"
     },
@@ -1496,7 +1592,33 @@
         "text-halo-color": "rgba(207,181,165,1)",
         "text-color": "rgba(59,48,33,1)",
         "text-halo-blur": 0.25,
-        "text-halo-width": 1.5
+        "text-halo-width": 1.5,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          1,
+          14,
+          0
+        ]
       },
       "source-layer": "place",
       "filter": [

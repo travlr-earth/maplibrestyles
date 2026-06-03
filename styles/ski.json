@@ -18945,12 +18945,23 @@
         "mapbox:group": "1452377264560.7012"
       },
       "filter": [
-        "==",
+        "all",
         [
-          "get",
-          "maritime"
+          "==",
+          [
+            "get",
+            "admin_level"
+          ],
+          4
         ],
-        0
+        [
+          "==",
+          [
+            "get",
+            "maritime"
+          ],
+          0
+        ]
       ],
       "type": "line",
       "source": "mapbox-streets-v6",

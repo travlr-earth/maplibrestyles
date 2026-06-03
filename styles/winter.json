@@ -93,18 +93,34 @@
       "paint": {
         "line-color": "hsla(196, 36%, 25%, 0.5)",
         "line-opacity": [
-          "interpolate",
+          "*",
           [
-            "exponential",
-            1.75
+            "interpolate",
+            [
+              "exponential",
+              1.75
+            ],
+            [
+              "zoom"
+            ],
+            9.5,
+            0,
+            12.5,
+            1
           ],
           [
-            "zoom"
-          ],
-          9.5,
-          0,
-          12.5,
-          1
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            10,
+            0,
+            10.25,
+            1
+          ]
         ],
         "line-width": [
           "case",
@@ -955,13 +971,30 @@
           [
             "zoom"
           ],
+          11,
+          0,
+          11.25,
+          1,
           11.5,
           0,
           12,
           1
         ],
         "text-halo-width": 1,
-        "text-halo-color": "hsla(20, 20%, 100%, 0.6)"
+        "text-halo-color": "hsla(20, 20%, 100%, 0.6)",
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ]
       },
       "source-layer": "contours"
     },

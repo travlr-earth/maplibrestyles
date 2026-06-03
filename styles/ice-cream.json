@@ -106,7 +106,19 @@
       "id": "landcover-grass",
       "paint": {
         "fill-color": "#F4E7F8",
-        "fill-opacity": 0.1,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.75,
+          0.1,
+          14,
+          0
+        ],
         "fill-antialias": false
       },
       "source-layer": "landcover"
@@ -310,9 +322,9 @@
           [
             "zoom"
           ],
-          5,
+          10,
           0,
-          6,
+          10.25,
           0.75
         ],
         "fill-outline-color": "#F4E7F8"
@@ -505,6 +517,8 @@
           ],
           8,
           0,
+          8.25,
+          1,
           8.5,
           1
         ]
@@ -550,6 +564,8 @@
           ],
           11,
           0,
+          11.25,
+          1,
           11.5,
           1
         ],
@@ -599,6 +615,19 @@
           1,
           18,
           80
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          1
         ]
       },
       "source-layer": "aeroway"
@@ -645,6 +674,19 @@
           0.5,
           18,
           20
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          1
         ]
       },
       "source-layer": "aeroway"
@@ -724,6 +766,8 @@
             "zoom"
           ],
           11,
+          0,
+          11.25,
           0.5,
           14,
           0.75
@@ -786,9 +830,9 @@
           [
             "zoom"
           ],
-          13.99,
-          0,
           14,
+          0,
+          14.25,
           1
         ],
         "line-dasharray": [
@@ -1191,7 +1235,19 @@
           18
         ],
         "line-color": "#fff",
-        "line-opacity": 1
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -1233,7 +1289,19 @@
           18
         ],
         "line-color": "#fff",
-        "line-opacity": 1
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -1282,7 +1350,19 @@
           12
         ],
         "line-color": "#fff",
-        "line-opacity": 1,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
         "line-dasharray": [
           "step",
           [
@@ -1370,7 +1450,20 @@
           18,
           12
         ],
-        "line-color": "#fff"
+        "line-color": "#fff",
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          14.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -1651,7 +1744,19 @@
           32
         ],
         "line-color": "#fff",
-        "line-opacity": 1
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -1733,6 +1838,19 @@
           0.75,
           20,
           1
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -1791,6 +1909,19 @@
         ],
         "line-dasharray": [
           2,
+          1
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
           1
         ]
       },
@@ -1857,6 +1988,10 @@
           [
             "zoom"
           ],
+          1,
+          0,
+          1.25,
+          0.5,
           3,
           0,
           4,
@@ -1893,26 +2028,18 @@
       "filter": [
         "all",
         [
-          "<=",
+          "==",
           [
             "get",
             "admin_level"
           ],
-          1
+          4
         ],
         [
           "==",
           [
             "get",
             "maritime"
-          ],
-          0
-        ],
-        [
-          ">=",
-          [
-            "get",
-            "admin_level"
           ],
           0
         ]
@@ -1986,14 +2113,6 @@
       "filter": [
         "all",
         [
-          "<=",
-          [
-            "get",
-            "admin_level"
-          ],
-          1
-        ],
-        [
           "==",
           [
             "get",
@@ -2035,6 +2154,19 @@
           0.5,
           10,
           2
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1
         ]
       },
       "source-layer": "boundary"
@@ -2115,6 +2247,19 @@
           0.5,
           10,
           2
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1
         ]
       },
       "source-layer": "boundary"
@@ -2195,7 +2340,33 @@
       "paint": {
         "text-halo-width": 0,
         "text-halo-blur": 0,
-        "text-color": "#B18AC8"
+        "text-color": "#B18AC8",
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "waterway"
     },
@@ -2267,7 +2438,33 @@
       "id": "water-label-point",
       "paint": {
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          0,
+          5.25,
+          1
+        ]
       },
       "source-layer": "water_name"
     },
@@ -2408,7 +2605,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 0.5,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1
+        ]
       },
       "source-layer": "aerodrome_label"
     },
@@ -2518,7 +2741,33 @@
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
-        "text-halo-width": 1
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2641,7 +2890,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1.25,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15,
+          0,
+          15.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2756,7 +3031,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2862,7 +3163,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 2,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1
+        ]
       },
       "source-layer": "transportation"
     },
@@ -2955,7 +3282,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3048,7 +3401,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3136,7 +3515,41 @@
         "text-halo-color": "#fff",
         "text-halo-width": 3,
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          12,
+          0,
+          12.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3219,7 +3632,41 @@
         "text-halo-color": "#fff",
         "text-halo-width": 1,
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3298,7 +3745,41 @@
         "text-halo-color": "#fff",
         "text-halo-width": 1.25,
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          10.25,
+          1,
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3382,7 +3863,41 @@
         "text-halo-color": "#fff",
         "text-halo-width": 1.25,
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3475,12 +3990,33 @@
           [
             "zoom"
           ],
+          7,
+          0,
+          7.25,
+          1,
           7.99,
           1,
           8,
           0
         ],
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          7,
+          0,
+          7.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3568,7 +4104,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 2,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3655,7 +4217,33 @@
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 2,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          15.75,
+          1,
+          16,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3773,7 +4361,20 @@
           8,
           0
         ],
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14.75,
+          1,
+          15,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3881,7 +4482,20 @@
           8,
           0
         ],
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14.75,
+          1,
+          15,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -3971,7 +4585,23 @@
       "id": "settlement-major-label-3",
       "paint": {
         "text-color": "#B18AC8",
-        "text-opacity": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          14.75,
+          1,
+          15,
+          0
+        ],
         "text-halo-color": "#fff",
         "text-halo-width": 2,
         "icon-opacity": [
@@ -3982,6 +4612,10 @@
           [
             "zoom"
           ],
+          1,
+          0,
+          1.25,
+          1,
           7.99,
           1,
           8,
@@ -4083,7 +4717,41 @@
       "id": "water-label-line-sm",
       "paint": {
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -4165,7 +4833,41 @@
       "id": "water-label-point-sm",
       "paint": {
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -4257,7 +4959,41 @@
       "id": "water-label-line-md",
       "paint": {
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -4347,7 +5083,41 @@
       "id": "water-label-point-md",
       "paint": {
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          2,
+          0,
+          2.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -4435,7 +5205,41 @@
       "id": "water-label-line-lg",
       "paint": {
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          3.75,
+          1,
+          4,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          3.75,
+          1,
+          4,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -4522,7 +5326,41 @@
       "id": "water-label-point-lg",
       "paint": {
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          3.75,
+          1,
+          4,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          3.75,
+          1,
+          4,
+          0
+        ]
       },
       "source-layer": "water_name"
     },
@@ -4605,11 +5443,44 @@
       "source": "composite",
       "id": "place-state-sm",
       "paint": {
-        "text-opacity": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          8.75,
+          1,
+          9,
+          0
+        ],
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          8.75,
+          1,
+          9,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4700,11 +5571,44 @@
       "source": "composite",
       "id": "place-state-md",
       "paint": {
-        "text-opacity": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4788,11 +5692,44 @@
       "source": "composite",
       "id": "place-state-lg",
       "paint": {
-        "text-opacity": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ],
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0,
+          3.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4856,7 +5793,41 @@
         "text-halo-width": 1.25,
         "text-halo-color": "#fff",
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          9.75,
+          1,
+          10,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -4946,7 +5917,41 @@
         "text-halo-width": 1.25,
         "text-halo-color": "#fff",
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          7.75,
+          1,
+          8,
+          0
+        ]
       },
       "source-layer": "place"
     },
@@ -5027,7 +6032,41 @@
         "text-halo-width": 1.25,
         "text-halo-color": "#fff",
         "text-color": "#B18AC8",
-        "text-halo-blur": 0
+        "text-halo-blur": 0,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          1,
+          0,
+          1.25,
+          1,
+          6.75,
+          1,
+          7,
+          0
+        ]
       },
       "source-layer": "place"
     }
