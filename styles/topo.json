@@ -158,7 +158,7 @@
   },
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -212,7 +212,7 @@
       "maxzoom": 12,
       "type": "fill",
       "source": "composite",
-      "id": "landcover copy",
+      "id": "landcover-2",
       "paint": {
         "fill-color": [
           "match",
@@ -457,7 +457,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse background",
+      "id": "landuse-park",
       "paint": {
         "fill-antialias": false,
         "fill-color": "#ffffff"
@@ -595,7 +595,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse",
+      "id": "landuse-park-2",
       "paint": {
         "fill-color": [
           "match",
@@ -730,7 +730,7 @@
       },
       "type": "line",
       "source": "__ml-contours",
-      "id": "contour-line",
+      "id": "contour",
       "paint": {
         "line-width": [
           "interpolate",
@@ -797,7 +797,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "pitch-outline",
+      "id": "landuse-pitch-outline",
       "paint": {
         "line-color": "hsl(50, 5%, 95%)"
       },
@@ -821,7 +821,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse (1)",
+      "id": "landuse-residential",
       "paint": {
         "fill-color": "#757575",
         "fill-opacity": [
@@ -1077,7 +1077,7 @@
       }
     },
     {
-      "id": "water background",
+      "id": "water-background",
       "type": "fill",
       "source": "composite",
       "source-layer": "water",
@@ -1101,7 +1101,7 @@
       },
       "type": "line",
       "source": "composite",
-      "id": "water inline",
+      "id": "water-line",
       "paint": {
         "line-color": "#98d1dd",
         "line-width": [
@@ -1283,7 +1283,7 @@
       "source-layer": "park"
     },
     {
-      "id": "wetland-pattern",
+      "id": "wetland-2",
       "type": "fill",
       "source": "composite",
       "source-layer": "park",
@@ -6072,7 +6072,7 @@
       "source-layer": "transportation"
     },
     {
-      "id": "water black line",
+      "id": "water-line-2",
       "type": "line",
       "source": "composite",
       "source-layer": "water",
@@ -7127,7 +7127,7 @@
       },
       "type": "symbol",
       "source": "composite",
-      "id": "gate-label",
+      "id": "poi-label-2",
       "paint": {},
       "source-layer": "poi"
     },
@@ -9238,7 +9238,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "building-number-label",
+      "id": "housenumber-label",
       "paint": {
         "text-color": "#ffffff",
         "text-halo-color": "rgba(99, 99, 95, 0.72)",
@@ -9685,7 +9685,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "natural-line-label",
+      "id": "mountain-peak-label",
       "paint": {
         "text-halo-width": 2,
         "text-halo-color": "rgb(255, 255, 255)",
@@ -9854,7 +9854,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "natural-point-label",
+      "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
           "step",
@@ -9974,7 +9974,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-line-label",
+      "id": "water-label-line",
       "paint": {
         "text-color": "#2b2b2b",
         "text-halo-color": "rgba(255, 255, 255, 0.5)"
@@ -10081,7 +10081,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-point-label",
+      "id": "water-label-point",
       "paint": {
         "text-color": [
           "match",
@@ -11091,7 +11091,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "state-label",
+      "id": "place-state",
       "paint": {
         "text-color": "rgb(50, 50, 57)",
         "text-halo-color": "rgb(255, 255, 255)",
@@ -11205,7 +11205,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "country-label",
+      "id": "place-country",
       "paint": {
         "icon-opacity": [
           "step",
@@ -11293,7 +11293,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "continent-label",
+      "id": "place-continent",
       "paint": {
         "text-color": "rgb(50, 50, 57)",
         "text-halo-color": [

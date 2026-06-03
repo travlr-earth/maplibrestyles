@@ -83,7 +83,7 @@
   },
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -114,7 +114,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover",
+      "id": "landcover-grass",
       "paint": {
         "fill-color": [
           "match",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "id": "land-copy-2",
+      "id": "background-2",
       "type": "background",
       "paint": {
         "background-color": "#dd852c",
@@ -275,7 +275,7 @@
       }
     },
     {
-      "id": "land-copy-1",
+      "id": "background-3",
       "type": "background",
       "paint": {
         "background-color": "#dd852c",
@@ -379,7 +379,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "building copy 1",
+      "id": "building-2",
       "paint": {
         "fill-color": "rgb(209, 122, 40)",
         "fill-opacity": [
@@ -431,7 +431,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "building copy",
+      "id": "building-3",
       "paint": {
         "fill-color": "rgb(209, 122, 40)",
         "fill-outline-color": "rgba(149, 90, 33, 0.8)",
@@ -1715,7 +1715,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "building-number-label",
+      "id": "housenumber-label",
       "paint": {
         "text-color": "#884d16",
         "text-halo-color": "#e39145",
@@ -2248,7 +2248,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "state-label",
+      "id": "place-state",
       "paint": {
         "text-color": "#974f02",
         "text-halo-color": "#dfaa72",
@@ -2361,7 +2361,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "country-label",
+      "id": "place-country",
       "paint": {
         "icon-opacity": [
           "step",
@@ -2437,7 +2437,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "continent-label",
+      "id": "place-continent",
       "paint": {
         "text-color": [
           "step",

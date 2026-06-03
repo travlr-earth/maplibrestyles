@@ -172,7 +172,7 @@
   "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -278,7 +278,7 @@
       }
     },
     {
-      "id": "water-gap-width",
+      "id": "water-line",
       "type": "line",
       "metadata": {
         "mapbox:group": "489c7b30eb80a3104ca119dd3c919c68"
@@ -306,7 +306,7 @@
       }
     },
     {
-      "id": "waterway copy",
+      "id": "waterway-2",
       "type": "line",
       "metadata": {
         "mapbox:group": "489c7b30eb80a3104ca119dd3c919c68"
@@ -395,7 +395,7 @@
       }
     },
     {
-      "id": "water copy",
+      "id": "water-line-2",
       "type": "line",
       "metadata": {
         "mapbox:group": "88219f83008dfb3f68e77bd213d471b9"
@@ -413,7 +413,7 @@
       }
     },
     {
-      "id": "ne-countries-fine",
+      "id": "admin-0-boundary-2",
       "type": "line",
       "metadata": {
         "mapbox:group": "88219f83008dfb3f68e77bd213d471b9"
@@ -449,7 +449,7 @@
       "maxzoom": 11,
       "type": "line",
       "source": "composite",
-      "id": "natural-earth-states",
+      "id": "admin-1-boundary-2",
       "paint": {
         "line-color": "#e4eaf6",
         "line-opacity": [
@@ -6605,7 +6605,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "natural-line-label",
+      "id": "mountain-peak-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(224, 53%, 48%)",
@@ -6748,7 +6748,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "natural-point-label",
+      "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
           "step",
@@ -6811,7 +6811,7 @@
       "source-layer": "mountain_peak"
     },
     {
-      "id": "water-line-label",
+      "id": "water-label-line",
       "type": "symbol",
       "metadata": {
         "mapbox:featureComponent": "natural-features",
@@ -6957,7 +6957,7 @@
       }
     },
     {
-      "id": "water-point-label",
+      "id": "water-label-point",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",

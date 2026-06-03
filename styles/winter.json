@@ -56,14 +56,14 @@
   },
   "layers": [
     {
-      "id": "__ml-bg",
+      "id": "background",
       "type": "background",
       "paint": {
         "background-color": "hsl(38, 31%, 87%)"
       }
     },
     {
-      "id": "__ml-water",
+      "id": "water",
       "type": "fill",
       "source": "composite",
       "source-layer": "water",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "id": "__ml-hillshade",
+      "id": "hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -310,7 +310,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "natural-label-peak",
+      "id": "mountain-peak-label",
       "paint": {
         "text-halo-color": "hsl(20, 20%, 100%)",
         "text-halo-blur": 0.5,
@@ -944,7 +944,7 @@
       "filter": true,
       "type": "symbol",
       "source": "__ml-contours",
-      "id": "contour-labels",
+      "id": "contour-label",
       "paint": {
         "text-color": "hsl(196, 36%, 25%)",
         "text-opacity": [

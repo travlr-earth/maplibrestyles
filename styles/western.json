@@ -94,7 +94,7 @@
   "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "Land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "Contour Line",
+      "id": "contour",
       "type": "line",
       "metadata": {
         "mapbox:group": "b384ef517debdb805c7cbbdf7d189322"
@@ -155,7 +155,7 @@
       }
     },
     {
-      "id": "Water Fill",
+      "id": "water",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7f23d1a82d2a310bbf0cf5ee6d713bd3"
@@ -176,7 +176,7 @@
       }
     },
     {
-      "id": "Water Line",
+      "id": "water-line",
       "type": "line",
       "metadata": {
         "mapbox:group": "7f23d1a82d2a310bbf0cf5ee6d713bd3"
@@ -523,7 +523,7 @@
       }
     },
     {
-      "id": "Building Fill",
+      "id": "building",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7bf42852c42e0de37b8a1b177f34e3b3"
@@ -549,7 +549,7 @@
       }
     },
     {
-      "id": "Building Line",
+      "id": "building-outline",
       "type": "line",
       "metadata": {
         "mapbox:group": "7bf42852c42e0de37b8a1b177f34e3b3"
@@ -1368,7 +1368,7 @@
       }
     },
     {
-      "id": "Natural Features",
+      "id": "mountain-peak-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1543,7 +1543,7 @@
       }
     },
     {
-      "id": "Stations",
+      "id": "transit-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1665,7 +1665,7 @@
       }
     },
     {
-      "id": "Major Water Body",
+      "id": "water-label-point",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1730,7 +1730,7 @@
       }
     },
     {
-      "id": "Minor Water Body",
+      "id": "water-label-point-2",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1817,7 +1817,7 @@
       }
     },
     {
-      "id": "Rivers",
+      "id": "waterway-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1882,7 +1882,7 @@
       }
     },
     {
-      "id": "City Names",
+      "id": "settlement-major-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -2041,7 +2041,7 @@
       "paint": {}
     },
     {
-      "id": "Texture",
+      "id": "background-2",
       "type": "background",
       "layout": {},
       "paint": {

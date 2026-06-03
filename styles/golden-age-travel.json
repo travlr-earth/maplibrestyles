@@ -169,7 +169,7 @@
   },
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "metadata": {
         "mapbox:group": "81455b85df8c39e984ba9be4906ad149"
@@ -350,7 +350,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse",
+      "id": "landuse-park",
       "paint": {
         "fill-color": [
           "interpolate",
@@ -453,7 +453,7 @@
       "source-layer": "landuse"
     },
     {
-      "id": "__ml-hillshade",
+      "id": "hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -479,14 +479,14 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "pitch-outline",
+      "id": "landuse-pitch-outline",
       "paint": {
         "line-color": "hsl(68, 55%, 68%)"
       },
       "source-layer": "landuse"
     },
     {
-      "id": "coast-outline",
+      "id": "water-line",
       "type": "line",
       "metadata": {
         "mapbox:group": "ca02d47269c94b1137e3030a2ea0a7d0"
@@ -641,7 +641,7 @@
       }
     },
     {
-      "id": "water-depth-patterns",
+      "id": "water-pattern-2",
       "type": "fill",
       "source": "composite",
       "source-layer": "water",
@@ -758,7 +758,7 @@
       }
     },
     {
-      "id": "X-land-over-coast-outline",
+      "id": "admin-0-boundary-fill",
       "type": "fill",
       "source": "composite",
       "source-layer": "boundary",
@@ -1071,7 +1071,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "building-line",
+      "id": "building-outline",
       "paint": {
         "line-color": "hsla(11, 86%, 58%, 0.62)",
         "line-width": [
@@ -3445,7 +3445,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "natural-line-label",
+      "id": "mountain-peak-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(47, 100%, 66%)",
@@ -3616,7 +3616,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "natural-point-label",
+      "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
           "step",
@@ -3785,7 +3785,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "natural-point-label-mountains",
+      "id": "mountain-peak-label-3",
       "paint": {
         "icon-opacity": [
           "step",
@@ -3904,7 +3904,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-line-label",
+      "id": "water-label-line",
       "paint": {
         "text-color": [
           "match",
@@ -4025,7 +4025,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-point-label",
+      "id": "water-label-point",
       "paint": {
         "text-color": [
           "match",
@@ -4066,7 +4066,7 @@
       }
     },
     {
-      "id": "water-lines-fish-custom",
+      "id": "water-label-line-2",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -4172,7 +4172,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-labels-custom",
+      "id": "water-label-point-2",
       "paint": {
         "text-halo-color": "hsl(186, 47%, 65%)",
         "text-color": "hsl(185, 58%, 31%)"
@@ -4248,7 +4248,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "waterway-label-custom",
+      "id": "waterway-label-2",
       "paint": {
         "text-color": "hsl(199, 0%, 0%)",
         "text-halo-color": "#f9fafb",
@@ -7694,7 +7694,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "state-label",
+      "id": "place-state",
       "paint": {
         "text-color": "hsl(80, 91%, 20%)",
         "text-halo-color": [
@@ -8384,7 +8384,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "country-label",
+      "id": "place-country",
       "paint": {
         "icon-opacity": [
           "step",
@@ -8473,7 +8473,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "continent-label",
+      "id": "place-continent",
       "paint": {
         "text-color": "hsl(0, 0%, 0%)",
         "text-halo-color": [
@@ -9406,7 +9406,7 @@
       }
     },
     {
-      "id": "arrivals-transition",
+      "id": "background-2",
       "type": "background",
       "metadata": {
         "mapbox:group": "19fe6226bdf0e8fdaca43672851ac246"

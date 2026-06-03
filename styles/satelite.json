@@ -128,7 +128,7 @@
       }
     },
     {
-      "id": "country-boundaries",
+      "id": "admin-0-boundary-fill",
       "type": "fill",
       "layout": {},
       "source": "composite",
@@ -951,7 +951,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "continent-label",
+      "id": "place-continent",
       "paint": {
         "text-color": "hsl(0, 0%, 95%)",
         "text-halo-color": [

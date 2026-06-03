@@ -84,7 +84,7 @@
   },
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -137,7 +137,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover",
+      "id": "landcover-grass",
       "paint": {
         "fill-color": [
           "match",
@@ -340,7 +340,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse",
+      "id": "landuse-park",
       "paint": {
         "fill-color": [
           "match",
@@ -533,7 +533,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "country-boundaries",
+      "id": "admin-0-boundary-fill",
       "paint": {
         "fill-opacity": 0,
         "fill-color": "#10333c",
@@ -675,7 +675,7 @@
       ]
     },
     {
-      "id": "country-borders",
+      "id": "admin-0-boundary",
       "type": "line",
       "paint": {
         "line-color": "#0a8d99",
@@ -1136,7 +1136,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "continent-label",
+      "id": "place-continent",
       "paint": {
         "text-color": "rgb(217, 255, 26)",
         "text-halo-color": [

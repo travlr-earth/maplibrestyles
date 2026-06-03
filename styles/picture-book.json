@@ -82,7 +82,7 @@
       }
     },
     {
-      "id": "__ml-hillshade",
+      "id": "hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -725,7 +725,7 @@
       }
     },
     {
-      "id": "natural-label-point",
+      "id": "mountain-peak-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -828,7 +828,7 @@
       }
     },
     {
-      "id": "natural-label-line",
+      "id": "mountain-peak-label-2",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -1501,7 +1501,7 @@
       }
     },
     {
-      "id": "halftone-texture",
+      "id": "background-2",
       "type": "background",
       "layout": {
         "visibility": "visible"
@@ -1601,7 +1601,7 @@
       }
     },
     {
-      "id": "national-park-and-forest-label",
+      "id": "park-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "poi",
@@ -1686,7 +1686,7 @@
       }
     },
     {
-      "id": "place-neighborhood-suburb-label",
+      "id": "settlement-subdivision-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1759,7 +1759,7 @@
       }
     },
     {
-      "id": "place-town-village-hamlet-label",
+      "id": "settlement-minor-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1862,7 +1862,7 @@
       }
     },
     {
-      "id": "city-label",
+      "id": "settlement-major-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -2071,7 +2071,7 @@
       }
     },
     {
-      "id": "country-label",
+      "id": "place-country",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",

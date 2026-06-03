@@ -55,7 +55,7 @@
   "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -121,7 +121,7 @@
       }
     },
     {
-      "id": "landuse",
+      "id": "landuse-park",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -5963,7 +5963,7 @@
       }
     },
     {
-      "id": "natural-line-label",
+      "id": "mountain-peak-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -6053,7 +6053,7 @@
       }
     },
     {
-      "id": "natural-point-label",
+      "id": "mountain-peak-label-2",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -6178,7 +6178,7 @@
       }
     },
     {
-      "id": "water-line-label",
+      "id": "water-label-line",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -6291,7 +6291,7 @@
       }
     },
     {
-      "id": "water-point-label",
+      "id": "water-label-point",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -7105,7 +7105,7 @@
       }
     },
     {
-      "id": "state-label",
+      "id": "place-state",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -7225,7 +7225,7 @@
       }
     },
     {
-      "id": "country-label",
+      "id": "place-country",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",

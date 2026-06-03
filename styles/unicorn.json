@@ -496,7 +496,7 @@
   },
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "__ml-hillshade",
+      "id": "hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -659,7 +659,7 @@
       }
     },
     {
-      "id": "land-outline",
+      "id": "water-line",
       "type": "line",
       "source": "composite",
       "source-layer": "water",

@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "schools",
+      "id": "landuse-school",
       "type": "fill",
       "metadata": {
         "mapbox:group": "a636a5194689e7c1dede11bf3cd8dcac"
@@ -119,7 +119,7 @@
       }
     },
     {
-      "id": "hospitals",
+      "id": "landuse-hospital",
       "type": "fill",
       "metadata": {
         "mapbox:group": "a636a5194689e7c1dede11bf3cd8dcac"
@@ -179,7 +179,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "cemeteries",
+      "id": "landuse-cemetery",
       "paint": {
         "fill-color": "#142a21",
         "fill-opacity": 0.75,
@@ -188,7 +188,7 @@
       "source-layer": "landuse"
     },
     {
-      "id": "parks",
+      "id": "landuse-park",
       "type": "fill",
       "metadata": {
         "mapbox:group": "a636a5194689e7c1dede11bf3cd8dcac"
@@ -222,7 +222,7 @@
       }
     },
     {
-      "id": "sand",
+      "id": "landuse-sand",
       "type": "fill",
       "metadata": {
         "mapbox:group": "a636a5194689e7c1dede11bf3cd8dcac"
@@ -3827,7 +3827,7 @@
       }
     },
     {
-      "id": "border-admin-3-4",
+      "id": "admin-2-boundary",
       "type": "line",
       "metadata": {
         "mapbox:group": "4a585425cb0cc2af93b4cdedda86461d"
@@ -3964,7 +3964,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "border-admin-2",
+      "id": "admin-0-boundary",
       "paint": {
         "line-color": "#3c7e61",
         "line-width": [
@@ -4028,7 +4028,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "border-admin-2-dispute",
+      "id": "admin-0-boundary-disputed",
       "paint": {
         "line-dasharray": [
           1.5,
@@ -4052,7 +4052,7 @@
       "source-layer": "boundary"
     },
     {
-      "id": "poi-parks-small",
+      "id": "poi-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "87eb9fc4e65e33c3909d5992c53c8c22"
@@ -4143,7 +4143,7 @@
       }
     },
     {
-      "id": "poi-small",
+      "id": "poi-label-2",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "87eb9fc4e65e33c3909d5992c53c8c22"
@@ -4376,14 +4376,14 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label",
+      "id": "water-label-point",
       "paint": {
         "text-color": "#50a882"
       },
       "source-layer": "water_name"
     },
     {
-      "id": "poi-parks-large",
+      "id": "poi-label-3",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "87eb9fc4e65e33c3909d5992c53c8c22"
@@ -4456,7 +4456,7 @@
       }
     },
     {
-      "id": "poi-large",
+      "id": "poi-label-4",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "87eb9fc4e65e33c3909d5992c53c8c22"
@@ -4721,7 +4721,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "rail-station-label",
+      "id": "transit-label",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -5064,7 +5064,7 @@
       "source-layer": "transportation"
     },
     {
-      "id": "generic_motorway_label",
+      "id": "generic-motorway-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "659790aba31107609c41007408bfdeeb"
@@ -5208,7 +5208,7 @@
       }
     },
     {
-      "id": "us_interstate_label",
+      "id": "us-interstate-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "659790aba31107609c41007408bfdeeb"
@@ -5312,7 +5312,7 @@
       }
     },
     {
-      "id": "us_highway_label",
+      "id": "us-highway-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "659790aba31107609c41007408bfdeeb"
@@ -5416,7 +5416,7 @@
       }
     },
     {
-      "id": "us_state_label",
+      "id": "us-state-label",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "659790aba31107609c41007408bfdeeb"
@@ -5602,7 +5602,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-islets-archipelago-aboriginal",
+      "id": "place-island",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -5691,7 +5691,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-islets-archipelago-aboriginal-2",
+      "id": "place-island-2",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -5775,7 +5775,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-neighbourhood",
+      "id": "settlement-subdivision-label",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 0%)",
         "text-halo-width": 1,
@@ -5854,7 +5854,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-suburb",
+      "id": "settlement-subdivision-label-2",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 0%)",
         "text-halo-width": 1,
@@ -5932,7 +5932,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-hamlet",
+      "id": "settlement-minor-label",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 0%)",
         "text-halo-width": 1,
@@ -6015,7 +6015,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-village",
+      "id": "settlement-minor-label-2",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 0%)",
         "text-halo-width": 1,
@@ -6098,7 +6098,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-town",
+      "id": "settlement-minor-label-3",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -6183,7 +6183,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-islands",
+      "id": "place-island-3",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -6267,7 +6267,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-islands-2",
+      "id": "place-island-4",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -6406,7 +6406,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-city-small",
+      "id": "settlement-major-label",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -6541,7 +6541,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-city-medium",
+      "id": "settlement-major-label-2",
       "paint": {
         "text-color": "#50a882",
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -6666,7 +6666,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-city-large",
+      "id": "settlement-major-label-3",
       "paint": {
         "text-color": "#50a882",
         "text-halo-width": 1,
@@ -6768,7 +6768,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "marine-line-small",
+      "id": "water-label-line-sm",
       "paint": {
         "text-color": "#142a21"
       },
@@ -6861,7 +6861,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "marine-point-small",
+      "id": "water-label-point-sm",
       "paint": {
         "text-color": "#142a21"
       },
@@ -6948,7 +6948,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "marine-line-large",
+      "id": "water-label-line-lg",
       "paint": {
         "text-color": "#142a21"
       },
@@ -7033,7 +7033,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "marine-point-large",
+      "id": "water-label-point-lg",
       "paint": {
         "text-color": "#142a21"
       },
@@ -7115,7 +7115,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "state-small",
+      "id": "place-state-sm",
       "paint": {
         "text-halo-width": 1,
         "text-color": "#3c7e61",
@@ -7199,7 +7199,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "state-large",
+      "id": "place-state-lg",
       "paint": {
         "text-halo-width": 1,
         "text-color": "#3c7e61",
@@ -7275,7 +7275,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "country-small",
+      "id": "place-country-sm",
       "paint": {
         "text-halo-width": 1,
         "text-halo-color": "hsl(0, 0%, 0%)",
@@ -7355,7 +7355,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "country-large",
+      "id": "place-country-lg",
       "paint": {
         "text-halo-width": 1,
         "text-halo-color": "hsl(0, 0%, 0%)",

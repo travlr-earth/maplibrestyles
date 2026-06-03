@@ -117,7 +117,7 @@
   },
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -269,7 +269,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse",
+      "id": "landuse-park",
       "paint": {
         "fill-color": "hsl(220, 27%, 94%)",
         "fill-opacity": [
@@ -468,7 +468,7 @@
       }
     },
     {
-      "id": "country-boundaries",
+      "id": "admin-0-boundary-fill",
       "type": "fill",
       "source": "composite",
       "source-layer": "boundary",
@@ -2980,7 +2980,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "building-number-label",
+      "id": "housenumber-label",
       "paint": {
         "text-color": "hsl(220, 13%, 60%)",
         "text-halo-color": "hsl(220, 18%, 100%)",
@@ -3134,7 +3134,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "natural-line-label",
+      "id": "mountain-peak-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(220, 22%, 100%)",
@@ -3203,7 +3203,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "natural-point-label",
+      "id": "mountain-peak-label-2",
       "paint": {
         "icon-opacity": [
           "step",
@@ -3323,7 +3323,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-line-label",
+      "id": "water-label-line",
       "paint": {
         "text-color": "hsl(220, 23%, 59%)",
         "text-halo-color": "hsla(220, 22%, 100%, 0.5)"
@@ -3429,7 +3429,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-point-label",
+      "id": "water-label-point",
       "paint": {
         "text-color": "hsl(220, 23%, 59%)",
         "text-halo-color": "hsla(220, 22%, 100%, 0.5)"
@@ -3901,7 +3901,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "state-label",
+      "id": "place-state",
       "paint": {
         "text-color": "hsl(220, 24%, 50%)",
         "text-halo-color": "hsl(220, 22%, 100%)",
@@ -3962,7 +3962,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "continent-label",
+      "id": "place-continent",
       "paint": {
         "text-color": "hsl(220, 24%, 50%)",
         "text-halo-color": "hsl(220, 22%, 100%)",

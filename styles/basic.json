@@ -104,7 +104,7 @@
   },
   "layers": [
     {
-      "id": "land",
+      "id": "background",
       "type": "background",
       "layout": {},
       "paint": {
@@ -154,7 +154,7 @@
       }
     },
     {
-      "id": "landuse",
+      "id": "landuse-park",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -348,7 +348,7 @@
       }
     },
     {
-      "id": "pitch-outline",
+      "id": "landuse-pitch-outline",
       "type": "line",
       "source": "composite",
       "source-layer": "landuse",
@@ -3165,7 +3165,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "natural-line-label",
+      "id": "mountain-peak-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(187, 34%, 100%)",
@@ -3201,7 +3201,7 @@
       "source-layer": "mountain_peak"
     },
     {
-      "id": "natural-point-label",
+      "id": "mountain-peak-label-2",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -3568,7 +3568,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-line-label",
+      "id": "water-label-line",
       "paint": {
         "text-color": [
           "match",
@@ -3589,7 +3589,7 @@
       "source-layer": "water_name"
     },
     {
-      "id": "water-point-label",
+      "id": "water-label-point",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -4854,7 +4854,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "state-label",
+      "id": "place-state",
       "paint": {
         "text-color": "hsl(169, 8%, 34%)",
         "text-halo-color": "hsl(187, 34%, 100%)",
@@ -4957,7 +4957,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "country-label",
+      "id": "place-country",
       "paint": {
         "icon-opacity": [
           "step",
@@ -5045,7 +5045,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "continent-label",
+      "id": "place-continent",
       "paint": {
         "text-color": "hsl(169, 8%, 34%)",
         "text-halo-color": [

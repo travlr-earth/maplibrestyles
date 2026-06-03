@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "__ml-hillshade",
+      "id": "hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -141,7 +141,7 @@
       }
     },
     {
-      "id": "landuse-wetland",
+      "id": "wetland",
       "type": "fill",
       "source": "composite",
       "source-layer": "park",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "landuse-national-park",
+      "id": "landuse-park",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -182,7 +182,7 @@
       }
     },
     {
-      "id": "landuse-grass",
+      "id": "landuse-pitch",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -205,7 +205,7 @@
       }
     },
     {
-      "id": "landuse-farmland",
+      "id": "landuse-crop",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -228,7 +228,7 @@
       }
     },
     {
-      "id": "landuse-forest",
+      "id": "landuse-wood",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -400,7 +400,7 @@
       }
     },
     {
-      "id": "building-fill",
+      "id": "building",
       "type": "fill",
       "source": "composite",
       "source-layer": "building",
@@ -870,7 +870,7 @@
       }
     },
     {
-      "id": "waterway-label",
+      "id": "water-label-point",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -972,7 +972,7 @@
       }
     },
     {
-      "id": "natural-label-peak",
+      "id": "mountain-peak-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -1025,7 +1025,7 @@
       }
     },
     {
-      "id": "poi-label-icon",
+      "id": "poi-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "poi",
@@ -1172,7 +1172,7 @@
       }
     },
     {
-      "id": "poi-label-text-high",
+      "id": "poi-label-2",
       "type": "symbol",
       "source": "composite",
       "source-layer": "poi",
@@ -1225,7 +1225,7 @@
       }
     },
     {
-      "id": "place-village",
+      "id": "settlement-minor-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1319,7 +1319,7 @@
       }
     },
     {
-      "id": "place-town",
+      "id": "settlement-minor-label-2",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1411,7 +1411,7 @@
       }
     },
     {
-      "id": "place-city",
+      "id": "settlement-major-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1547,7 +1547,7 @@
       }
     },
     {
-      "id": "place-region",
+      "id": "place-state",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",

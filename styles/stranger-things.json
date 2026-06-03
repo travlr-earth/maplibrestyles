@@ -91,7 +91,7 @@
       "paint": {}
     },
     {
-      "id": "water-border",
+      "id": "water-line",
       "type": "line",
       "source": "composite",
       "source-layer": "water",
@@ -978,7 +978,7 @@
       }
     },
     {
-      "id": "bridge copy",
+      "id": "bridge-copy",
       "type": "line",
       "source": "composite",
       "source-layer": "transportation",
@@ -1277,7 +1277,7 @@
       }
     },
     {
-      "id": "admin-boundaries-states",
+      "id": "admin-1-boundary",
       "type": "line",
       "source": "composite",
       "source-layer": "boundary",
@@ -1870,7 +1870,7 @@
       }
     },
     {
-      "id": "admin",
+      "id": "admin-0-boundary",
       "type": "line",
       "source": "composite",
       "source-layer": "boundary",
@@ -2129,7 +2129,7 @@
       }
     },
     {
-      "id": "neighbourhood-label",
+      "id": "settlement-subdivision-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -2407,7 +2407,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "state-label",
+      "id": "place-state",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 1.5
@@ -2415,7 +2415,7 @@
       "source-layer": "place"
     },
     {
-      "id": "country-label",
+      "id": "place-country",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",

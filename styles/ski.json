@@ -17035,7 +17035,7 @@
       },
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "water outline",
+      "id": "water-line",
       "paint": {
         "line-color": "#62b0f0",
         "line-width": 2,
@@ -17076,7 +17076,7 @@
       ],
       "type": "fill",
       "source": "mapbox-terrain-v2",
-      "id": "snow copy",
+      "id": "landcover-snow",
       "paint": {
         "fill-color": "rgba(255,255,255,1)"
       },
@@ -17196,7 +17196,7 @@
       ],
       "type": "fill",
       "source": "mapbox-streets-v6",
-      "id": "highlight 89 copy 2",
+      "id": "landuse-park",
       "paint": {
         "fill-color": "rgba(167,36,237,1)",
         "fill-pattern": "paleblue-lines-32",
@@ -17247,7 +17247,7 @@
       "metadata": {
         "mapbox:group": "1452538953048.7173"
       },
-      "id": "highlight 89 copy",
+      "id": "landuse-park-2",
       "paint": {
         "fill-color": "#fff",
         "fill-opacity": 0.5
@@ -17459,7 +17459,7 @@
       },
       "type": "line",
       "source": "__ml-contours",
-      "id": "contours",
+      "id": "contour",
       "paint": {
         "line-color": "#62b0f0",
         "line-opacity": [
@@ -17508,7 +17508,7 @@
       ],
       "type": "line",
       "source": "__ml-contours",
-      "id": "index contour ",
+      "id": "contour-index",
       "paint": {
         "line-color": "#62b0f0",
         "line-opacity": [
@@ -17581,7 +17581,7 @@
       ],
       "type": "symbol",
       "source": "__ml-contours",
-      "id": "contour elevation",
+      "id": "contour-label",
       "paint": {
         "text-color": "#62b0f0",
         "text-halo-color": "rgba(255,255,255,0.8)",
@@ -17631,7 +17631,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "road minor case",
+      "id": "road-minor-case",
       "paint": {
         "line-color": "rgba(219,219,217,1)",
         "line-width": [
@@ -17707,7 +17707,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "road minor",
+      "id": "road-minor",
       "paint": {
         "line-width": [
           "interpolate",
@@ -17764,7 +17764,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "tunnel minor case",
+      "id": "tunnel-minor-case",
       "paint": {
         "line-color": "rgba(219,219,217,1)",
         "line-width": [
@@ -17806,7 +17806,7 @@
       "metadata": {
         "mapbox:group": "1452294613743.9702"
       },
-      "id": "tunnel minor",
+      "id": "tunnel-minor",
       "paint": {
         "line-width": [
           "interpolate",
@@ -17897,7 +17897,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "bridge minor case",
+      "id": "bridge-minor-case",
       "paint": {
         "line-color": "rgba(219,219,217,1)",
         "line-width": [
@@ -17935,7 +17935,7 @@
       "metadata": {
         "mapbox:group": "1452294613743.9702"
       },
-      "id": "bridge minor",
+      "id": "bridge-minor",
       "paint": {
         "line-width": [
           "interpolate",
@@ -18026,7 +18026,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "tunnel major case",
+      "id": "tunnel-major-case",
       "paint": {
         "line-gap-width": [
           "interpolate",
@@ -18068,7 +18068,7 @@
       "metadata": {
         "mapbox:group": "1452294613743.9702"
       },
-      "id": "tunnel major",
+      "id": "tunnel-major",
       "paint": {
         "line-color": "#fff",
         "line-width": [
@@ -18161,7 +18161,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "bridge major case",
+      "id": "bridge-major-case",
       "paint": {
         "line-gap-width": [
           "interpolate",
@@ -18199,7 +18199,7 @@
       "metadata": {
         "mapbox:group": "1452294613743.9702"
       },
-      "id": "bridge major",
+      "id": "bridge-major",
       "paint": {
         "line-color": "#fff",
         "line-width": [
@@ -18280,7 +18280,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "road major case",
+      "id": "road-major-case",
       "paint": {
         "line-gap-width": [
           "interpolate",
@@ -18318,7 +18318,7 @@
       "metadata": {
         "mapbox:group": "1452294613743.9702"
       },
-      "id": "road major",
+      "id": "road-major",
       "paint": {
         "line-color": "#fff",
         "line-width": [
@@ -18402,7 +18402,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "minor streets",
+      "id": "minor-streets",
       "paint": {
         "line-color": "rgba(201,197,197,1)",
         "line-opacity": 1,
@@ -18873,7 +18873,7 @@
       "layout": {},
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "building",
+      "id": "building-outline",
       "paint": {
         "line-color": [
           "interpolate",
@@ -18914,7 +18914,7 @@
       "layout": {},
       "type": "fill",
       "source": "mapbox-streets-v6",
-      "id": "building copy",
+      "id": "building",
       "paint": {
         "fill-pattern": "thin-diagonal-lines-blk32",
         "fill-opacity": [
@@ -18954,7 +18954,7 @@
       ],
       "type": "line",
       "source": "mapbox-streets-v6",
-      "id": "boundaries",
+      "id": "admin-1-boundary",
       "paint": {
         "line-color": "rgba(120,119,119,1)",
         "line-dasharray": [
@@ -19243,7 +19243,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "POI labels",
+      "id": "poi-label",
       "paint": {
         "text-opacity": 0.75,
         "text-color": "rgba(15,15,15,1)",
@@ -19303,7 +19303,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "path label",
+      "id": "road-label-2",
       "paint": {
         "text-color": "rgba(48,47,47,1)",
         "text-halo-color": "rgba(252,252,252,1)",
@@ -19380,7 +19380,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "chairlift aerialway label",
+      "id": "road-label-3",
       "paint": {
         "text-halo-color": "#fff",
         "text-color": "rgba(69,68,68,1)",
@@ -19475,7 +19475,7 @@
       },
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "water-label",
+      "id": "water-label-point",
       "paint": {
         "text-color": "#62b0f0",
         "text-halo-color": "rgba(252,252,252,0.8)",
@@ -19564,7 +19564,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "water-label (lg)",
+      "id": "water-label-point-2",
       "paint": {
         "text-color": "#62b0f0",
         "text-halo-color": "rgba(252,252,252,0.8)",
@@ -19745,7 +19745,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "glacier labels",
+      "id": "park-label",
       "paint": {
         "text-opacity": 1,
         "text-translate": [
@@ -19881,7 +19881,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "peak labels elevation",
+      "id": "park-label-2",
       "paint": {
         "text-opacity": 0.75,
         "text-translate": [
@@ -19991,7 +19991,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "peak labels",
+      "id": "park-label-3",
       "paint": {
         "text-opacity": 0.75,
         "text-translate": [
@@ -20137,7 +20137,7 @@
       ],
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "place-label",
+      "id": "settlement-minor-label",
       "paint": {
         "text-color": "rgba(48,48,48,1)",
         "text-halo-width": 3,
@@ -20181,7 +20181,7 @@
       },
       "type": "symbol",
       "source": "mapbox-streets-v6",
-      "id": "country-label",
+      "id": "place-country",
       "paint": {
         "text-color": "rgba(48,48,48,1)",
         "text-halo-color": "rgba(252,252,252,1)",

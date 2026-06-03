@@ -192,7 +192,7 @@
       }
     },
     {
-      "id": "landcover - grass",
+      "id": "landcover-grass",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7cd60a45a077e965776330d738d6d85d"
@@ -215,7 +215,7 @@
       }
     },
     {
-      "id": "landcover - scrub",
+      "id": "landcover-scrub",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7cd60a45a077e965776330d738d6d85d"
@@ -251,7 +251,7 @@
       }
     },
     {
-      "id": "landuse - grass",
+      "id": "landuse-scrub",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7cd60a45a077e965776330d738d6d85d"
@@ -291,7 +291,7 @@
       }
     },
     {
-      "id": "landuse - wood",
+      "id": "landuse-wood",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7cd60a45a077e965776330d738d6d85d"
@@ -327,7 +327,7 @@
       }
     },
     {
-      "id": "landcover - wood",
+      "id": "landcover-wood",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7cd60a45a077e965776330d738d6d85d"
@@ -437,7 +437,7 @@
       }
     },
     {
-      "id": "building fill",
+      "id": "building",
       "type": "fill",
       "source": "composite",
       "source-layer": "building",
@@ -447,7 +447,7 @@
       }
     },
     {
-      "id": "building",
+      "id": "building-outline",
       "type": "line",
       "source": "composite",
       "source-layer": "building",
@@ -1038,7 +1038,7 @@
       }
     },
     {
-      "id": "neighbourhood",
+      "id": "settlement-subdivision-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1096,7 +1096,7 @@
       }
     },
     {
-      "id": "settlements",
+      "id": "settlement-minor-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1205,7 +1205,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "country",
+      "id": "place-country",
       "paint": {
         "text-halo-color": "hsl(46, 80%, 67%)",
         "text-halo-width": 30,

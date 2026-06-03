@@ -78,7 +78,7 @@
   },
   "layers": [
     {
-      "id": "__ml-bg",
+      "id": "background",
       "type": "background",
       "paint": {
         "background-color": "#fdf3ba"
