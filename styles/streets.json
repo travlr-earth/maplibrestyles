@@ -2086,7 +2086,7 @@
       "source-layer": "transportation"
     },
     {
-      "minzoom": 13,
+      "minzoom": 12.5,
       "layout": {
         "line-cap": [
           "step",
@@ -2170,6 +2170,10 @@
           [
             "zoom"
           ],
+          12.5,
+          0,
+          12.75,
+          0.3,
           13,
           0,
           13.25,
@@ -5427,7 +5431,7 @@
       "source-layer": "transportation"
     },
     {
-      "minzoom": 13,
+      "minzoom": 12.5,
       "layout": {
         "line-cap": [
           "step",
@@ -5511,6 +5515,10 @@
           [
             "zoom"
           ],
+          12.5,
+          0,
+          12.75,
+          0.3,
           13,
           0,
           13.25,

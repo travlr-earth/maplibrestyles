@@ -9324,7 +9324,7 @@
       "source-layer": "place"
     },
     {
-      "minzoom": 3,
+      "minzoom": 1.5,
       "layout": {
         "text-line-height": 1.1,
         "text-size": [
@@ -9665,7 +9665,7 @@
       "id": "airports-labels",
       "type": "symbol",
       "source": "airports-data",
-      "minzoom": 2.2,
+      "minzoom": 1.9,
       "maxzoom": 3.4,
       "layout": {
         "text-size": [
@@ -10419,7 +10419,7 @@
       }
     },
     {
-      "minzoom": 3.4,
+      "minzoom": 2,
       "layout": {
         "text-field": "ARRIVALS > > >",
         "text-size": 29,

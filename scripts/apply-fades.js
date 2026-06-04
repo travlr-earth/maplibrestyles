@@ -140,6 +140,16 @@ function normalizeOpacity(existing, mn, mx) {
 
 function applyFades(layers) {
   let changed = 0;
+
+  // Step 9a: ensure every bounded layer has a zoom span of at least 1.5 levels.
+  for (const layer of layers) {
+    const mn = layer.minzoom, mx = layer.maxzoom;
+    if (mn !== undefined && mx !== undefined && mx - mn < 1.5) {
+      layer.minzoom = Math.max(0, mx - 1.5);
+      changed++;
+    }
+  }
+
   for (const layer of layers) {
     const mn = layer.minzoom, mx = layer.maxzoom;
     if (mn === undefined && mx === undefined) continue;
