@@ -107,7 +107,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover-crop",
+      "id": "crop",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -143,7 +143,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover-wood",
+      "id": "wood",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -179,7 +179,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover-scrub",
+      "id": "scrub",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -215,7 +215,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover-grass",
+      "id": "grass",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -236,7 +236,7 @@
       "source-layer": "landcover"
     },
     {
-      "id": "national-park",
+      "id": "national-parks",
       "type": "fill",
       "metadata": {
         "mapbox:group": "1cfc175b0e7532a47eec44b8ede849d8"
@@ -270,7 +270,7 @@
       }
     },
     {
-      "id": "landcover-snow",
+      "id": "snow",
       "type": "fill",
       "metadata": {
         "mapbox:group": "1cfc175b0e7532a47eec44b8ede849d8"
@@ -368,7 +368,7 @@
       "source-layer": "transportation"
     },
     {
-      "id": "landuse-industrial",
+      "id": "industrial",
       "type": "fill",
       "metadata": {
         "mapbox:group": "a636a5194689e7c1dede11bf3cd8dcac"
@@ -415,7 +415,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-school",
+      "id": "schools",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -460,7 +460,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-hospital",
+      "id": "hospitals",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -505,7 +505,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-cemetery",
+      "id": "cemeteries",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -525,7 +525,7 @@
       "source-layer": "landuse"
     },
     {
-      "id": "landuse-park",
+      "id": "parks",
       "type": "fill",
       "metadata": {
         "mapbox:group": "a636a5194689e7c1dede11bf3cd8dcac"
@@ -574,7 +574,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-pitch",
+      "id": "pitch",
       "paint": {
         "fill-color": "hsl(0, 0%, 10%)",
         "fill-opacity": [
@@ -594,7 +594,7 @@
       "source-layer": "landuse"
     },
     {
-      "id": "landuse-sand",
+      "id": "sand",
       "type": "fill",
       "metadata": {
         "mapbox:group": "a636a5194689e7c1dede11bf3cd8dcac"
@@ -4476,50 +4476,18 @@
           2.25
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.25
-              ],
-              [
-                "zoom"
-              ],
-              14,
-              0.25,
-              17,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "exponential",
+            1.25
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+            "zoom"
+          ],
+          14,
+          0.25,
+          17,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6615,7 +6583,7 @@
       }
     },
     {
-      "id": "admin-2-boundary-bg",
+      "id": "border-admin-3-4-case",
       "type": "line",
       "metadata": {
         "mapbox:group": "4a585425cb0cc2af93b4cdedda86461d"
@@ -6739,7 +6707,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "admin-0-boundary-bg",
+      "id": "border-admin-2-case",
       "paint": {
         "line-width": [
           "interpolate",
@@ -6793,7 +6761,7 @@
       "source-layer": "boundary"
     },
     {
-      "id": "admin-2-boundary",
+      "id": "border-admin-3-4",
       "type": "line",
       "metadata": {
         "mapbox:group": "4a585425cb0cc2af93b4cdedda86461d"
@@ -6896,6 +6864,14 @@
       "filter": [
         "all",
         [
+          "<=",
+          [
+            "get",
+            "admin_level"
+          ],
+          1
+        ],
+        [
           "==",
           [
             "get",
@@ -6922,7 +6898,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "admin-0-boundary",
+      "id": "border-admin-2",
       "paint": {
         "line-color": "hsl(0, 0%, 10%)",
         "line-width": [
@@ -7001,7 +6977,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "admin-0-boundary-disputed",
+      "id": "border-admin-2-dispute",
       "paint": {
         "line-dasharray": [
           1.5,
@@ -7525,7 +7501,7 @@
       ],
       "type": "fill-extrusion",
       "source": "composite",
-      "id": "3D Buildings",
+      "id": "3d-buildings",
       "paint": {
         "fill-extrusion-color": "hsl(0, 0%, 90%)",
         "fill-extrusion-height": [
@@ -7690,7 +7666,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "poi-label",
+      "id": "poi-small",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -7809,7 +7785,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "poi-label-2",
+      "id": "poi-parks-small",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -7922,7 +7898,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "poi-label-3",
+      "id": "poi-parks-medium",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -8035,7 +8011,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "poi-label-4",
+      "id": "poi-medium",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -8243,7 +8219,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point",
+      "id": "water-label",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
@@ -8344,7 +8320,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "poi-label-5",
+      "id": "poi-parks-large",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -8458,7 +8434,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "poi-label-6",
+      "id": "poi-large",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -8725,7 +8701,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "transit-label",
+      "id": "rail-station-label",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -8938,7 +8914,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island",
+      "id": "place-islets-archipelago-aboriginal",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -9052,7 +9028,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island-2",
+      "id": "place-islets-archipelago-aboriginal-2",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -9163,7 +9139,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-subdivision-label",
+      "id": "place-neighbourhood",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.5,
@@ -9277,7 +9253,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-subdivision-label-2",
+      "id": "place-suburb",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.5,
@@ -9388,7 +9364,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-minor-label",
+      "id": "place-hamlet",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.25,
@@ -9504,7 +9480,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-minor-label-2",
+      "id": "place-village",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 90%)",
         "text-halo-width": 1.25,
@@ -9620,7 +9596,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-minor-label-3",
+      "id": "place-town",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -9737,7 +9713,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island-3",
+      "id": "place-islands",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -9845,7 +9821,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island-4",
+      "id": "place-islands-2",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -9975,7 +9951,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-major-label",
+      "id": "place-city-small",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -10093,7 +10069,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-major-label-2",
+      "id": "place-city-medium",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -10207,7 +10183,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-major-label-3",
+      "id": "place-city-large",
       "paint": {
         "text-color": "hsl(0, 0%, 10%)",
         "text-halo-width": 1.5,
@@ -10338,7 +10314,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line-sm",
+      "id": "marine-line-small",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
@@ -10453,7 +10429,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point-sm",
+      "id": "marine-point-small",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
@@ -10578,7 +10554,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line-md",
+      "id": "marine-line-medium",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
@@ -10701,7 +10677,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point-md",
+      "id": "marine-point-medium",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
@@ -10825,7 +10801,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line-lg",
+      "id": "marine-line-large",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
@@ -10947,7 +10923,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point-lg",
+      "id": "marine-point-large",
       "paint": {
         "text-color": "hsl(0, 0%, 90%)",
         "text-halo-color": "hsl(0, 0%, 10%)",
@@ -11066,7 +11042,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state-sm",
+      "id": "state-small",
       "paint": {
         "text-halo-width": 1,
         "text-color": "hsl(0, 0%, 10%)",
@@ -11192,7 +11168,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state-md",
+      "id": "state-medium",
       "paint": {
         "text-halo-width": 1,
         "text-color": "hsl(0, 0%, 10%)",
@@ -11310,7 +11286,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state-lg",
+      "id": "state-large",
       "paint": {
         "text-halo-width": 1,
         "text-color": "hsl(0, 0%, 10%)",
@@ -11406,7 +11382,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-sm",
+      "id": "country-small",
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -11528,7 +11504,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-md",
+      "id": "country-medium",
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -11642,7 +11618,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-lg",
+      "id": "country-large",
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "hsl(0, 0%, 90%)",
@@ -11685,13 +11661,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2024-12-19T19:00:11.498Z",
-  "modified": "2024-12-19T22:40:21.183Z",
-  "id": "cm4vos2ne003001qwhv0felw8",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

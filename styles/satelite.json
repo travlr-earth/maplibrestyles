@@ -69,7 +69,6 @@
   "zoom": 0.63,
   "bearing": 0,
   "pitch": 0,
-  "lights": [],
   "sources": {
     "composite": {
       "type": "vector",
@@ -128,7 +127,7 @@
       }
     },
     {
-      "id": "admin-0-boundary-fill",
+      "id": "country-boundaries",
       "type": "fill",
       "layout": {},
       "source": "composite",
@@ -676,53 +675,13 @@
         "text-halo-color": "hsl(0, 5%, 0%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              12.75,
-              1,
-              13,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            12.75,
-            1,
-            13,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -989,53 +948,13 @@
         "text-halo-color": "hsl(0, 5%, 0%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              14.75,
-              1,
-              15,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            14.75,
-            1,
-            15,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -1109,7 +1028,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-continent",
+      "id": "continent-label",
       "paint": {
         "text-color": "hsl(0, 0%, 95%)",
         "text-halo-color": [
@@ -1134,9 +1053,7 @@
           [
             "zoom"
           ],
-          0.75,
           0,
-          1,
           0.8,
           1.5,
           0.5,
@@ -1164,13 +1081,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2024-12-06T11:21:39.037Z",
-  "modified": "2025-05-12T13:11:50.153Z",
-  "id": "cm4cnob8d01m801s8cyor57qo",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

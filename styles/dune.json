@@ -83,7 +83,7 @@
   },
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -114,7 +114,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover-grass",
+      "id": "landcover",
       "paint": {
         "fill-color": [
           "match",
@@ -265,7 +265,7 @@
       }
     },
     {
-      "id": "background-2",
+      "id": "land-copy-2",
       "type": "background",
       "paint": {
         "background-color": "#dd852c",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "id": "background-3",
+      "id": "land-copy-1",
       "type": "background",
       "paint": {
         "background-color": "#dd852c",
@@ -286,7 +286,7 @@
       }
     },
     {
-      "id": "depth-copy copy",
+      "id": "depth-copy-copy",
       "type": "fill",
       "paint": {
         "fill-color": [
@@ -383,7 +383,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "building-2",
+      "id": "building-copy-1",
       "paint": {
         "fill-color": "rgb(209, 122, 40)",
         "fill-opacity": [
@@ -437,7 +437,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "building-3",
+      "id": "building-copy",
       "paint": {
         "fill-color": "rgb(209, 122, 40)",
         "fill-outline-color": "rgba(149, 90, 33, 0.8)",
@@ -1798,19 +1798,7 @@
         "text-color": "rgb(69, 42, 17)",
         "text-halo-color": "rgb(215, 137, 64)",
         "text-halo-width": 1,
-        "icon-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          18,
-          0,
-          18.25,
-          0.4
-        ],
+        "icon-opacity": 0.4,
         "text-opacity": [
           "interpolate",
           [
@@ -1844,7 +1832,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "housenumber-label",
+      "id": "building-number-label",
       "paint": {
         "text-color": "#884d16",
         "text-halo-color": "#e39145",
@@ -2531,27 +2519,11 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "place-state",
+      "id": "state-label",
       "paint": {
         "text-color": "#974f02",
         "text-halo-color": "#dfaa72",
-        "text-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          3,
-          0,
-          3.25,
-          0.7,
-          8.75,
-          0.7,
-          9,
-          0
-        ],
+        "text-opacity": 0.7,
         "icon-opacity": [
           "interpolate",
           [
@@ -2677,64 +2649,24 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "place-country",
+      "id": "country-label",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "case",
-                [
-                  "has",
-                  "text_anchor"
-                ],
-                1,
-                0
-              ],
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              1,
-              0,
-              1.25,
-              1,
-              9.75,
-              1,
-              10,
-              0
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "case",
             [
-              "linear"
-            ],
-            [
-              "zoom"
+              "has",
+              "text_anchor"
             ],
             1,
-            0,
-            1.25,
-            1,
-            9.75,
-            1,
-            10,
             0
-          ]
+          ],
+          7,
+          0
         ],
         "text-color": "#2280fc",
         "text-halo-color": "#e27a03",
@@ -2810,7 +2742,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-continent",
+      "id": "continent-label",
       "paint": {
         "text-color": [
           "step",
@@ -2870,13 +2802,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2025-11-28T21:01:49.135Z",
-  "modified": "2025-11-28T21:01:49.135Z",
-  "id": "cmijclivj001v01sb6dtyatl8",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

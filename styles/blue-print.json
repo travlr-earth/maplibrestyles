@@ -172,7 +172,7 @@
   "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -280,7 +280,7 @@
       }
     },
     {
-      "id": "water-line",
+      "id": "water-gap-width",
       "type": "line",
       "metadata": {
         "mapbox:group": "489c7b30eb80a3104ca119dd3c919c68"
@@ -308,7 +308,7 @@
       }
     },
     {
-      "id": "waterway-2",
+      "id": "waterway-copy",
       "type": "line",
       "metadata": {
         "mapbox:group": "489c7b30eb80a3104ca119dd3c919c68"
@@ -399,7 +399,7 @@
       }
     },
     {
-      "id": "water-line-2",
+      "id": "water-copy",
       "type": "line",
       "metadata": {
         "mapbox:group": "88219f83008dfb3f68e77bd213d471b9"
@@ -429,7 +429,7 @@
       }
     },
     {
-      "id": "admin-0-boundary-2",
+      "id": "ne-countries-fine",
       "type": "line",
       "metadata": {
         "mapbox:group": "88219f83008dfb3f68e77bd213d471b9"
@@ -477,59 +477,19 @@
       "maxzoom": 11,
       "type": "line",
       "source": "composite",
-      "id": "admin-1-boundary-2",
+      "id": "natural-earth-states",
       "paint": {
         "line-color": "#e4eaf6",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              2,
-              0,
-              3,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              10.75,
-              1,
-              11,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            10.75,
-            1,
-            11,
-            0
-          ]
+          0,
+          2,
+          0,
+          3,
+          1
         ],
         "line-width": [
           "interpolate",
@@ -793,45 +753,13 @@
         ],
         "line-color": "hsl(224, 46%, 44%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       },
       "source-layer": "transportation"
@@ -963,45 +891,13 @@
           ]
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ],
         "line-dasharray": [
           3,
@@ -1837,45 +1733,13 @@
         ],
         "line-color": "hsl(224, 46%, 44%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -2843,50 +2707,18 @@
         ],
         "line-color": "hsl(224, 47%, 56%)",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              6,
-              0,
-              8,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+            "zoom"
+          ],
+          6,
+          0,
+          8,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3019,52 +2851,20 @@
           12
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0.05,
-              13.5,
-              0.5,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+            "zoom"
+          ],
+          13,
+          0.05,
+          13.5,
+          0.5,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3280,50 +3080,18 @@
           18
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              13.9,
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+            "zoom"
+          ],
+          13.9,
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3430,52 +3198,20 @@
           26
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              9,
-              0.05,
-              10.9,
-              0.5,
-              11,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              8,
-              0,
-              8.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            8,
-            0,
-            8.25,
-            1
-          ]
+            "zoom"
+          ],
+          9,
+          0.05,
+          10.9,
+          0.5,
+          11,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3577,52 +3313,20 @@
           32
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              9,
-              0.05,
-              10.9,
-              0.5,
-              11,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              7,
-              0,
-              7.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            7,
-            0,
-            7.25,
-            1
-          ]
+            "zoom"
+          ],
+          9,
+          0.05,
+          10.9,
+          0.5,
+          11,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3731,52 +3435,20 @@
           18
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0.05,
-              6,
-              0.5,
-              8,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              10,
-              0,
-              10.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            10,
-            0,
-            10.25,
-            1
-          ]
+            "zoom"
+          ],
+          5,
+          0.05,
+          6,
+          0.5,
+          8,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3883,54 +3555,22 @@
           32
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              6,
-              0.05,
-              7,
-              0.5,
-              8,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              5.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            5,
-            0,
-            5.25,
-            1
-          ]
+            "zoom"
+          ],
+          5,
+          0,
+          6,
+          0.05,
+          7,
+          0.5,
+          8,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4025,52 +3665,20 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              9,
-              0.05,
-              10.9,
-              0.5,
-              11,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              10,
-              0,
-              10.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            10,
-            0,
-            10.25,
-            1
-          ]
+            "zoom"
+          ],
+          9,
+          0.05,
+          10.9,
+          0.5,
+          11,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4189,52 +3797,20 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0.05,
-              13.5,
-              0.5,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+            "zoom"
+          ],
+          13,
+          0.05,
+          13.5,
+          0.5,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4329,50 +3905,18 @@
         ],
         "line-color": "hsl(225, 47%, 47%)",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              13.9,
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+            "zoom"
+          ],
+          13.9,
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4465,52 +4009,20 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              9,
-              0.05,
-              10.9,
-              0.5,
-              11,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              8,
-              0,
-              8.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            8,
-            0,
-            8.25,
-            1
-          ]
+            "zoom"
+          ],
+          9,
+          0.05,
+          10.9,
+          0.5,
+          11,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4598,52 +4110,20 @@
         ],
         "line-color": "#405cb1",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              8,
-              0.05,
-              10,
-              0.5,
-              11,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              6,
-              0,
-              6.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            6,
-            0,
-            6.25,
-            1
-          ]
+            "zoom"
+          ],
+          8,
+          0.05,
+          10,
+          0.5,
+          11,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5474,45 +4954,13 @@
         ],
         "line-color": "hsl(224, 47%, 56%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       },
       "source-layer": "transportation"
@@ -5644,45 +5092,13 @@
           ]
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5789,45 +5205,13 @@
           ]
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              10,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          10,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6253,45 +5637,13 @@
         ],
         "line-color": "hsl(224, 47%, 56%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -7785,7 +7137,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label",
+      "id": "natural-line-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(224, 53%, 48%)",
@@ -7954,64 +7306,32 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label-2",
+      "id": "natural-point-label",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                5,
-                1
-              ],
-              17,
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                13,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              4,
-              0,
-              4.25,
-              1
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "step",
             [
-              "linear"
+              "get",
+              "sizerank"
             ],
-            [
-              "zoom"
-            ],
-            4,
             0,
-            4.25,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
             1
           ]
         ],
@@ -8062,7 +7382,7 @@
       "source-layer": "mountain_peak"
     },
     {
-      "id": "water-label-line",
+      "id": "water-line-label",
       "type": "symbol",
       "metadata": {
         "mapbox:featureComponent": "natural-features",
@@ -8208,7 +7528,7 @@
       }
     },
     {
-      "id": "water-label-point",
+      "id": "water-point-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -8867,53 +8187,13 @@
           11
         ],
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              3,
-              0,
-              3.25,
-              1,
-              12.75,
-              1,
-              13,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            3,
-            0,
-            3.25,
-            1,
-            12.75,
-            1,
-            13,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-opacity": [
           "interpolate",
@@ -9129,53 +8409,13 @@
           4
         ],
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              3,
-              0,
-              3.25,
-              1,
-              14.75,
-              1,
-              15,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            3,
-            0,
-            3.25,
-            1,
-            14.75,
-            1,
-            15,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -9199,13 +8439,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2024-12-20T10:23:38.401Z",
-  "modified": "2024-12-20T10:23:38.401Z",
-  "id": "cm4wlrmw1004301qybosm695m",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "projection": {
     "type": "globe"
   },

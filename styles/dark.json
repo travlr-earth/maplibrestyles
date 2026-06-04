@@ -55,7 +55,7 @@
   "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -72,50 +72,18 @@
       "paint": {
         "fill-color": "hsl(55, 1%, 20%)",
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.5
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0.3,
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              6.75,
-              1,
-              7,
-              0
-            ]
+            "exponential",
+            1.5
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            6.75,
-            1,
-            7,
-            0
-          ]
+            "zoom"
+          ],
+          2,
+          0.3,
+          7,
+          0
         ],
         "fill-antialias": false
       }
@@ -155,7 +123,7 @@
       }
     },
     {
-      "id": "landuse-park",
+      "id": "landuse",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -179,56 +147,24 @@
       "layout": {},
       "paint": {
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              6,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "ice",
-                0.5,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              5.25,
-              1
-            ]
+            "linear"
           ],
           [
-            "interpolate",
+            "zoom"
+          ],
+          5,
+          0,
+          6,
+          [
+            "match",
             [
-              "linear"
+              "get",
+              "class"
             ],
-            [
-              "zoom"
-            ],
-            5,
-            0,
-            5.25,
+            "ice",
+            0.5,
             1
           ]
         ],
@@ -704,45 +640,13 @@
         ],
         "line-color": "hsl(185, 2%, 15%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       }
     },
@@ -874,45 +778,13 @@
           ]
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ],
         "line-dasharray": [
           3,
@@ -1867,45 +1739,13 @@
         ],
         "line-color": "hsl(185, 2%, 15%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       }
     },
@@ -2154,45 +1994,13 @@
         ],
         "line-color": "hsl(0, 0%, 17%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              12,
-              0,
-              12.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            12,
-            0,
-            12.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       }
     },
@@ -2293,45 +2101,13 @@
           12
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ],
         "line-color": "hsl(0, 0%, 27%)"
       }
@@ -2409,45 +2185,13 @@
           18
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+          1,
+          14,
+          0
         ],
         "line-color": "hsl(0, 0%, 27%)"
       }
@@ -2564,45 +2308,13 @@
           12
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       }
     },
@@ -2694,45 +2406,13 @@
           18
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       }
     },
@@ -2991,45 +2671,13 @@
           18
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              11,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              10,
-              0,
-              10.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            10,
-            0,
-            10.25,
-            1
-          ]
+          0,
+          11,
+          1
         ]
       }
     },
@@ -3827,45 +3475,13 @@
         ],
         "line-color": "hsl(0, 0%, 27%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       }
     },
@@ -3943,45 +3559,13 @@
         ],
         "line-color": "hsl(0, 0%, 27%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       }
     },
@@ -4328,45 +3912,13 @@
           14.5
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ],
         "line-color": "hsl(0, 0%, 17%)"
       }
@@ -4485,45 +4037,13 @@
         ],
         "line-color": "hsl(0, 0%, 27%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       }
     },
@@ -4611,45 +4131,13 @@
           2
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ],
         "line-gap-width": [
           "interpolate",
@@ -4770,45 +4258,13 @@
           2
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              10,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          10,
+          1
         ],
         "line-gap-width": [
           "interpolate",
@@ -5680,45 +5136,13 @@
         ],
         "line-color": "hsl(0, 0%, 27%)",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       }
     },
@@ -7034,7 +6458,7 @@
       }
     },
     {
-      "id": "mountain-peak-label",
+      "id": "natural-line-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -7150,7 +6574,7 @@
       }
     },
     {
-      "id": "mountain-peak-label-2",
+      "id": "natural-point-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -7242,61 +6666,29 @@
       },
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                5,
-                1
-              ],
-              17,
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                13,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              4,
-              0,
-              4.25,
-              1
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "step",
             [
-              "linear"
+              "get",
+              "sizerank"
             ],
-            [
-              "zoom"
-            ],
-            4,
             0,
-            4.25,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
             1
           ]
         ],
@@ -7320,7 +6712,7 @@
       }
     },
     {
-      "id": "water-label-line",
+      "id": "water-line-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -7433,7 +6825,7 @@
       }
     },
     {
-      "id": "water-label-point",
+      "id": "water-point-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -8321,45 +7713,13 @@
         "text-halo-color": "hsla(0, 0%, 10%, 0.75)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              14.75,
-              1,
-              15,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            14.75,
-            1,
-            15,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -8378,7 +7738,7 @@
       }
     },
     {
-      "id": "place-state",
+      "id": "state-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -8532,7 +7892,7 @@
       }
     },
     {
-      "id": "place-country",
+      "id": "country-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -8747,61 +8107,21 @@
       },
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "case",
-                [
-                  "has",
-                  "text_anchor"
-                ],
-                1,
-                0
-              ],
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              1,
-              0,
-              1.25,
-              1,
-              9.75,
-              1,
-              10,
-              0
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "case",
             [
-              "linear"
-            ],
-            [
-              "zoom"
+              "has",
+              "text_anchor"
             ],
             1,
-            0,
-            1.25,
-            1,
-            9.75,
-            1,
-            10,
             0
-          ]
+          ],
+          7,
+          0
         ],
         "text-color": "hsl(0, 0%, 45%)",
         "text-halo-color": [
@@ -8838,13 +8158,6 @@
       }
     }
   ],
-  "created": "2025-12-09T12:48:40.907Z",
-  "modified": "2025-12-09T12:48:40.907Z",
-  "id": "cmiyktpsb001m01sah73nbyze",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "projection": {
     "type": "globe"
   },

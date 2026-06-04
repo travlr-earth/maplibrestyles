@@ -94,7 +94,7 @@
   "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "contour",
+      "id": "contour-line",
       "type": "line",
       "metadata": {
         "mapbox:group": "b384ef517debdb805c7cbbdf7d189322"
@@ -142,7 +142,7 @@
       }
     },
     {
-      "id": "Contour Fill",
+      "id": "contour-fill",
       "type": "hillshade",
       "metadata": {
         "mapbox:group": "b384ef517debdb805c7cbbdf7d189322"
@@ -155,7 +155,7 @@
       }
     },
     {
-      "id": "water",
+      "id": "water-fill",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7f23d1a82d2a310bbf0cf5ee6d713bd3"
@@ -218,7 +218,7 @@
       }
     },
     {
-      "id": "Border Shadow",
+      "id": "border-shadow",
       "type": "line",
       "metadata": {
         "mapbox:group": "27959c83ad4516848ce8b2c9ae0f9a29"
@@ -279,7 +279,7 @@
       }
     },
     {
-      "id": "Border",
+      "id": "border",
       "type": "line",
       "metadata": {
         "mapbox:group": "27959c83ad4516848ce8b2c9ae0f9a29"
@@ -349,7 +349,7 @@
       }
     },
     {
-      "id": "Minor Road alt zoom",
+      "id": "minor-road-alt-zoom",
       "type": "line",
       "metadata": {
         "mapbox:group": "27959c83ad4516848ce8b2c9ae0f9a29"
@@ -412,7 +412,7 @@
       }
     },
     {
-      "id": "Major Road",
+      "id": "major-road",
       "type": "line",
       "metadata": {
         "mapbox:group": "27959c83ad4516848ce8b2c9ae0f9a29"
@@ -468,7 +468,7 @@
       }
     },
     {
-      "id": "Paths",
+      "id": "paths",
       "type": "line",
       "metadata": {
         "mapbox:group": "27959c83ad4516848ce8b2c9ae0f9a29"
@@ -523,7 +523,7 @@
       }
     },
     {
-      "id": "building",
+      "id": "building-fill",
       "type": "fill",
       "metadata": {
         "mapbox:group": "7bf42852c42e0de37b8a1b177f34e3b3"
@@ -549,7 +549,7 @@
       }
     },
     {
-      "id": "building-outline",
+      "id": "building-line",
       "type": "line",
       "metadata": {
         "mapbox:group": "7bf42852c42e0de37b8a1b177f34e3b3"
@@ -591,7 +591,7 @@
       }
     },
     {
-      "id": "Railway Line",
+      "id": "railway-line",
       "type": "line",
       "metadata": {
         "mapbox:group": "73e07e44bd160a8a8721c56b1bf84334"
@@ -629,7 +629,7 @@
       }
     },
     {
-      "id": "Railway Dot",
+      "id": "railway-dot",
       "type": "circle",
       "metadata": {
         "mapbox:group": "73e07e44bd160a8a8721c56b1bf84334"
@@ -666,7 +666,7 @@
       }
     },
     {
-      "id": "Railway Line Dashed",
+      "id": "railway-line-dashed",
       "type": "line",
       "metadata": {
         "mapbox:group": "73e07e44bd160a8a8721c56b1bf84334"
@@ -721,7 +721,7 @@
       }
     },
     {
-      "id": "Railway Station",
+      "id": "railway-station",
       "type": "circle",
       "metadata": {
         "mapbox:group": "73e07e44bd160a8a8721c56b1bf84334"
@@ -812,7 +812,7 @@
       }
     },
     {
-      "id": "Trapper",
+      "id": "trapper",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "Tailor",
+      "id": "tailor",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -876,7 +876,7 @@
       }
     },
     {
-      "id": "Stagecoach",
+      "id": "stagecoach",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -908,7 +908,7 @@
       }
     },
     {
-      "id": "Stable",
+      "id": "stable",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -940,7 +940,7 @@
       }
     },
     {
-      "id": "Show",
+      "id": "show",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -977,7 +977,7 @@
       }
     },
     {
-      "id": "Saloon",
+      "id": "saloon",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1009,7 +1009,7 @@
       }
     },
     {
-      "id": "Post Office",
+      "id": "post-office",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1041,7 +1041,7 @@
       }
     },
     {
-      "id": "Photo Studio",
+      "id": "photo-studio",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1073,7 +1073,7 @@
       }
     },
     {
-      "id": "Hotel",
+      "id": "hotel",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1105,7 +1105,7 @@
       }
     },
     {
-      "id": "General Store",
+      "id": "general-store",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1142,7 +1142,7 @@
       }
     },
     {
-      "id": "Doctor",
+      "id": "doctor",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1179,7 +1179,7 @@
       }
     },
     {
-      "id": "Camp Site",
+      "id": "camp-site",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1211,7 +1211,7 @@
       }
     },
     {
-      "id": "Butcher",
+      "id": "butcher",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "id": "Baitshop",
+      "id": "baitshop",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1275,7 +1275,7 @@
       }
     },
     {
-      "id": "Barber",
+      "id": "barber",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "b44f449f37f59642785d4d5ce4eecbb6"
@@ -1307,7 +1307,7 @@
       }
     },
     {
-      "id": "Viewpoints",
+      "id": "viewpoints",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1368,7 +1368,7 @@
       }
     },
     {
-      "id": "mountain-peak-label",
+      "id": "natural-features",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1440,7 +1440,7 @@
       }
     },
     {
-      "id": "Forts",
+      "id": "forts",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1494,7 +1494,7 @@
       }
     },
     {
-      "id": "Prisons",
+      "id": "prisons",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1543,7 +1543,7 @@
       }
     },
     {
-      "id": "transit-label",
+      "id": "stations",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1665,7 +1665,7 @@
       }
     },
     {
-      "id": "water-label-point",
+      "id": "major-water-body",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1730,7 +1730,7 @@
       }
     },
     {
-      "id": "water-label-point-2",
+      "id": "minor-water-body",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1817,7 +1817,7 @@
       }
     },
     {
-      "id": "waterway-label",
+      "id": "rivers",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1882,7 +1882,7 @@
       }
     },
     {
-      "id": "settlement-major-label",
+      "id": "city-names",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "45182f0b32e64cb04f2dc024af183a56"
@@ -1998,7 +1998,7 @@
       }
     },
     {
-      "id": "Mission Circle",
+      "id": "mission-circle",
       "type": "circle",
       "metadata": {
         "mapbox:group": "58d9984242b82ae67e79ccd07750ffe5"
@@ -2027,7 +2027,7 @@
       }
     },
     {
-      "id": "Mission Text",
+      "id": "mission-text",
       "type": "symbol",
       "metadata": {
         "mapbox:group": "58d9984242b82ae67e79ccd07750ffe5"
@@ -2081,7 +2081,7 @@
       }
     },
     {
-      "id": "background-2",
+      "id": "texture",
       "type": "background",
       "layout": {},
       "paint": {
@@ -2102,13 +2102,6 @@
       }
     }
   ],
-  "created": "2024-12-19T21:50:54.659Z",
-  "modified": "2024-12-19T21:50:54.659Z",
-  "id": "cm4vuvmbn002v01s9a02a12qq",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "projection": {
     "type": "globe"
   },

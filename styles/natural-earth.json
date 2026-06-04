@@ -78,7 +78,7 @@
   },
   "layers": [
     {
-      "id": "background",
+      "id": "__ml-bg",
       "type": "background",
       "paint": {
         "background-color": "#fdf3ba"
@@ -139,7 +139,7 @@
       },
       "type": "symbol",
       "source": "ne_10m_geography_regions_points",
-      "id": "10m_geography_regions_points",
+      "id": "10m-geography-regions-points",
       "paint": {
         "text-halo-color": "hsl(208, 74%, 89%)",
         "text-halo-width": 1,
@@ -186,7 +186,7 @@
       ],
       "type": "symbol",
       "source": "ne_10m_geography_regions_polys",
-      "id": "10m_geography_regions_polys",
+      "id": "10m-geography-regions-polys",
       "paint": {
         "text-color": "#104634",
         "text-halo-width": 1,
@@ -221,7 +221,7 @@
       },
       "type": "symbol",
       "source": "ne_10m_geography_marine_polys",
-      "id": "Mountains",
+      "id": "mountains",
       "paint": {
         "text-color": "#104634",
         "text-halo-width": 1,
@@ -282,7 +282,7 @@
       ],
       "type": "symbol",
       "source": "ne_10m_geography_regions_elevation_points",
-      "id": "Elevation Points",
+      "id": "elevation-points",
       "paint": {
         "text-halo-width": 1,
         "text-halo-color": "#ffffff",
@@ -290,7 +290,7 @@
       }
     },
     {
-      "id": "10m_graticules_water",
+      "id": "10m-graticules-water",
       "type": "line",
       "paint": {
         "line-opacity": 0.6,
@@ -305,7 +305,7 @@
       },
       "type": "line",
       "source": "ne_10m_minor_islands_coastline",
-      "id": "Island Boundaries",
+      "id": "island-boundaries",
       "paint": {
         "line-color": "#1109f6",
         "line-opacity": 0.4,
@@ -323,7 +323,7 @@
       },
       "type": "line",
       "source": "ne_110m_geographic_lines",
-      "id": "110m_geographic_lines_shade",
+      "id": "110m-geographic-lines-shade",
       "paint": {
         "line-opacity": 0.2,
         "line-width": 8,
@@ -340,7 +340,7 @@
       },
       "type": "line",
       "source": "ne_110m_geographic_lines",
-      "id": "110m_geographic_lines",
+      "id": "110m-geographic-lines",
       "paint": {
         "line-opacity": 0.6,
         "line-color": "hsl(220, 81%, 32%)",
@@ -478,7 +478,7 @@
       },
       "type": "symbol",
       "source": "ne_110m_geographic_lines",
-      "id": "110m_geographic_lines_labels",
+      "id": "110m-geographic-lines-labels",
       "paint": {
         "text-halo-color": "#5155bd",
         "text-halo-width": 1,
@@ -491,7 +491,7 @@
       },
       "type": "line",
       "source": "ne_10m_reefs",
-      "id": "10m_reefs",
+      "id": "10m-reefs",
       "paint": {
         "line-color": "hsl(187, 94%, 65%)",
         "line-dasharray": [
@@ -501,7 +501,7 @@
       }
     },
     {
-      "id": "10m_rivers_centerlines",
+      "id": "10m-rivers-centerlines",
       "type": "line",
       "paint": {
         "line-color": "hsl(210, 78%, 56%)",
@@ -532,13 +532,6 @@
       "source": "ne_10m_rivers_lake_centerlines"
     }
   ],
-  "created": "2025-11-13T20:33:03.122Z",
-  "modified": "2025-11-19T15:57:53.548Z",
-  "id": "cmhxvyr2q002101s4f7sod73s",
-  "owner": "mapbox-map-design",
-  "visibility": "public",
-  "protected": false,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "hillshade",
+      "id": "__ml-hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -141,7 +141,7 @@
       }
     },
     {
-      "id": "wetland",
+      "id": "landuse-wetland",
       "type": "fill",
       "source": "composite",
       "source-layer": "park",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "landuse-park",
+      "id": "landuse-national-park",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -182,7 +182,7 @@
       }
     },
     {
-      "id": "landuse-pitch",
+      "id": "landuse-grass",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -205,7 +205,7 @@
       }
     },
     {
-      "id": "landuse-crop",
+      "id": "landuse-farmland",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -228,7 +228,7 @@
       }
     },
     {
-      "id": "landuse-wood",
+      "id": "landuse-forest",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -400,7 +400,7 @@
       }
     },
     {
-      "id": "building",
+      "id": "building-fill",
       "type": "fill",
       "source": "composite",
       "source-layer": "building",
@@ -866,7 +866,7 @@
       }
     },
     {
-      "id": "water-label-point",
+      "id": "waterway-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -962,8 +962,6 @@
           ],
           4,
           0,
-          4.25,
-          1,
           5,
           1
         ],
@@ -983,7 +981,7 @@
       }
     },
     {
-      "id": "mountain-peak-label",
+      "id": "natural-label-peak",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -1032,19 +1030,7 @@
         "text-color": "#e8d8a0",
         "text-halo-color": "#0a0800",
         "text-halo-width": 1.5,
-        "icon-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          7,
-          0,
-          7.25,
-          0.9
-        ],
+        "icon-opacity": 0.9,
         "text-opacity": [
           "interpolate",
           [
@@ -1061,7 +1047,7 @@
       }
     },
     {
-      "id": "poi-label",
+      "id": "poi-label-icon",
       "type": "symbol",
       "source": "composite",
       "source-layer": "poi",
@@ -1204,19 +1190,7 @@
         "text-color": "#ffc800",
         "text-halo-color": "#0a0800",
         "text-halo-width": 1.5,
-        "icon-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          12,
-          0,
-          12.25,
-          0.95
-        ],
+        "icon-opacity": 0.95,
         "text-opacity": [
           "interpolate",
           [
@@ -1233,7 +1207,7 @@
       }
     },
     {
-      "id": "poi-label-2",
+      "id": "poi-label-text-high",
       "type": "symbol",
       "source": "composite",
       "source-layer": "poi",
@@ -1280,8 +1254,6 @@
           ],
           10,
           0,
-          10.25,
-          1,
           11,
           1
         ],
@@ -1301,7 +1273,7 @@
       }
     },
     {
-      "id": "settlement-minor-label",
+      "id": "place-village",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1376,8 +1348,6 @@
           ],
           10,
           0,
-          10.25,
-          1,
           11,
           1
         ],
@@ -1391,15 +1361,13 @@
           ],
           10,
           0,
-          10.25,
-          1,
           11,
           1
         ]
       }
     },
     {
-      "id": "settlement-minor-label-2",
+      "id": "place-town",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1472,8 +1440,6 @@
           ],
           7,
           0,
-          7.25,
-          1,
           8,
           1
         ],
@@ -1487,15 +1453,13 @@
           ],
           7,
           0,
-          7.25,
-          1,
           8,
           1
         ]
       }
     },
     {
-      "id": "settlement-major-label",
+      "id": "place-city",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1612,8 +1576,6 @@
           ],
           4,
           0,
-          4.25,
-          1,
           5,
           1
         ],
@@ -1627,15 +1589,13 @@
           ],
           4,
           0,
-          4.25,
-          1,
           5,
           1
         ]
       }
     },
     {
-      "id": "place-state",
+      "id": "place-region",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1703,14 +1663,8 @@
           ],
           4,
           0,
-          4.25,
-          1,
           5,
-          1,
-          8.75,
-          1,
-          9,
-          0
+          1
         ],
         "icon-opacity": [
           "interpolate",
@@ -1815,14 +1769,8 @@
           ],
           1,
           0,
-          1.25,
-          1,
           2,
-          1,
-          6.75,
-          1,
-          7,
-          0
+          1
         ],
         "icon-opacity": [
           "interpolate",

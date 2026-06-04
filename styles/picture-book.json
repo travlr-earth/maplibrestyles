@@ -82,7 +82,7 @@
       }
     },
     {
-      "id": "hillshade",
+      "id": "__ml-hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -725,7 +725,7 @@
       }
     },
     {
-      "id": "mountain-peak-label",
+      "id": "natural-label-point",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -828,7 +828,7 @@
       }
     },
     {
-      "id": "mountain-peak-label-2",
+      "id": "natural-label-line",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -1501,7 +1501,7 @@
       }
     },
     {
-      "id": "background-2",
+      "id": "halftone-texture",
       "type": "background",
       "layout": {
         "visibility": "visible"
@@ -1601,7 +1601,7 @@
       }
     },
     {
-      "id": "park-label",
+      "id": "national-park-and-forest-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "poi",
@@ -1686,7 +1686,7 @@
       }
     },
     {
-      "id": "settlement-subdivision-label",
+      "id": "place-neighborhood-suburb-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1759,7 +1759,7 @@
       }
     },
     {
-      "id": "settlement-minor-label",
+      "id": "place-town-village-hamlet-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -1862,7 +1862,7 @@
       }
     },
     {
-      "id": "settlement-major-label",
+      "id": "city-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -2071,7 +2071,7 @@
       }
     },
     {
-      "id": "place-country",
+      "id": "country-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -2144,13 +2144,6 @@
       }
     }
   ],
-  "created": "2025-01-16T23:35:12.142Z",
-  "modified": "2025-01-16T23:35:12.142Z",
-  "id": "cm5zyxlam003v01sghha90pyr",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "projection": {
     "type": "globe"
   },

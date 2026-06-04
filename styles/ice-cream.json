@@ -103,7 +103,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover-grass",
+      "id": "landcover-foliage",
       "paint": {
         "fill-color": "#F4E7F8",
         "fill-opacity": [
@@ -206,7 +206,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-industrial",
+      "id": "industrial",
       "paint": {
         "fill-color": "#F4E7F8",
         "fill-outline-color": "#F4E7F8"
@@ -240,7 +240,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-school",
+      "id": "schools",
       "paint": {
         "fill-color": "#F4E7F8",
         "fill-opacity": 1,
@@ -276,7 +276,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-hospital",
+      "id": "hospitals",
       "paint": {
         "fill-color": "#F4E7F8",
         "fill-opacity": 1,
@@ -311,7 +311,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-cemetery",
+      "id": "cemeteries",
       "paint": {
         "fill-color": "#F4E7F8",
         "fill-opacity": [
@@ -346,7 +346,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-park",
+      "id": "parks",
       "paint": {
         "fill-color": "#F4E7F8",
         "fill-opacity": [
@@ -381,7 +381,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-pitch",
+      "id": "pitch",
       "paint": {
         "fill-color": "#F4E7F8",
         "fill-outline-color": "#F4E7F8"
@@ -403,7 +403,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-sand",
+      "id": "sand",
       "paint": {
         "fill-color": "#fff"
       },
@@ -1964,7 +1964,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "admin-0-boundary-bg",
+      "id": "admin-2-boundaries-bg",
       "paint": {
         "line-width": [
           "interpolate",
@@ -2028,12 +2028,12 @@
       "filter": [
         "all",
         [
-          "==",
+          "<=",
           [
             "get",
             "admin_level"
           ],
-          4
+          1
         ],
         [
           "==",
@@ -2042,11 +2042,19 @@
             "maritime"
           ],
           0
+        ],
+        [
+          ">=",
+          [
+            "get",
+            "admin_level"
+          ],
+          0
         ]
       ],
       "type": "line",
       "source": "composite",
-      "id": "admin-1-boundary",
+      "id": "admin-3-4-boundaries",
       "paint": {
         "line-dasharray": [
           "step",
@@ -2113,6 +2121,14 @@
       "filter": [
         "all",
         [
+          "<=",
+          [
+            "get",
+            "admin_level"
+          ],
+          1
+        ],
+        [
           "==",
           [
             "get",
@@ -2139,7 +2155,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "admin-0-boundary",
+      "id": "admin-2-boundaries",
       "paint": {
         "line-color": "#9469AE",
         "line-width": [
@@ -2216,7 +2232,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "admin-0-boundary-disputed",
+      "id": "admin-2-boundaries-dispute",
       "paint": {
         "line-dasharray": [
           1.5,
@@ -2435,7 +2451,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point",
+      "id": "water-label",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-blur": 0,
@@ -2525,7 +2541,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "poi-label",
+      "id": "poi-scalerank1",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -3277,7 +3293,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island",
+      "id": "place-islets-archipelago-aboriginal",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -3396,7 +3412,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island-2",
+      "id": "place-islets-archipelago-aboriginal-2",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -3510,7 +3526,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-subdivision-label",
+      "id": "place-neighbourhood",
       "paint": {
         "text-halo-color": "#fff",
         "text-halo-width": 3,
@@ -3627,7 +3643,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-subdivision-label-2",
+      "id": "place-suburb",
       "paint": {
         "text-halo-color": "#fff",
         "text-halo-width": 1,
@@ -3740,7 +3756,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-minor-label",
+      "id": "place-hamlet",
       "paint": {
         "text-halo-color": "#fff",
         "text-halo-width": 1.25,
@@ -3858,7 +3874,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-minor-label-2",
+      "id": "place-village",
       "paint": {
         "text-halo-color": "#fff",
         "text-halo-width": 1.25,
@@ -3977,7 +3993,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-minor-label-3",
+      "id": "place-town",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -3990,10 +4006,6 @@
           [
             "zoom"
           ],
-          7,
-          0,
-          7.25,
-          1,
           7.99,
           1,
           8,
@@ -4099,7 +4111,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island-3",
+      "id": "place-islands",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -4212,7 +4224,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-island-4",
+      "id": "place-islands-2",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -4343,7 +4355,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-major-label",
+      "id": "place-city-sm",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -4464,7 +4476,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-major-label-2",
+      "id": "place-city-md",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
@@ -4582,26 +4594,10 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "settlement-major-label-3",
+      "id": "place-city-lg",
       "paint": {
         "text-color": "#B18AC8",
-        "text-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          1,
-          0,
-          1.25,
-          1,
-          14.75,
-          1,
-          15,
-          0
-        ],
+        "text-opacity": 1,
         "text-halo-color": "#fff",
         "text-halo-width": 2,
         "icon-opacity": [
@@ -4612,10 +4608,6 @@
           [
             "zoom"
           ],
-          1,
-          0,
-          1.25,
-          1,
           7.99,
           1,
           8,
@@ -4714,7 +4706,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line-sm",
+      "id": "marine-label-sm-ln",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-blur": 0,
@@ -4830,7 +4822,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point-sm",
+      "id": "marine-label-sm-pt",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-blur": 0,
@@ -4956,7 +4948,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line-md",
+      "id": "marine-label-md-ln",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-blur": 0,
@@ -5080,7 +5072,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point-md",
+      "id": "marine-label-md-pt",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-blur": 0,
@@ -5202,7 +5194,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line-lg",
+      "id": "marine-label-lg-ln",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-blur": 0,
@@ -5323,7 +5315,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point-lg",
+      "id": "marine-label-lg-pt",
       "paint": {
         "text-color": "#B18AC8",
         "text-halo-blur": 0,
@@ -5441,25 +5433,9 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state-sm",
+      "id": "state-label-sm",
       "paint": {
-        "text-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          3,
-          0,
-          3.25,
-          1,
-          8.75,
-          1,
-          9,
-          0
-        ],
+        "text-opacity": 1,
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
@@ -5569,25 +5545,9 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state-md",
+      "id": "state-label-md",
       "paint": {
-        "text-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          3,
-          0,
-          3.25,
-          1,
-          7.75,
-          1,
-          8,
-          0
-        ],
+        "text-opacity": 1,
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
@@ -5690,25 +5650,9 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state-lg",
+      "id": "state-label-lg",
       "paint": {
-        "text-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          3,
-          0,
-          3.25,
-          1,
-          6.75,
-          1,
-          7,
-          0
-        ],
+        "text-opacity": 1,
         "text-color": "#B18AC8",
         "text-halo-color": "#fff",
         "text-halo-width": 1,
@@ -5788,7 +5732,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-sm",
+      "id": "country-label-sm",
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "#fff",
@@ -5912,7 +5856,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-md",
+      "id": "country-label-md",
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "#fff",
@@ -6027,7 +5971,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-lg",
+      "id": "country-label-lg",
       "paint": {
         "text-halo-width": 1.25,
         "text-halo-color": "#fff",
@@ -6071,13 +6015,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2025-12-09T13:08:53.341Z",
-  "modified": "2025-12-09T13:08:53.341Z",
-  "id": "cmiyljpb1000g01s8400wfn4j",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "projection": {
     "type": "globe"
   },

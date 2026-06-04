@@ -93,7 +93,6 @@
   "zoom": 2.397441393859252,
   "bearing": 0,
   "pitch": 0,
-  "lights": [],
   "sources": {
     "composite": {
       "type": "vector",
@@ -117,7 +116,7 @@
   },
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -145,50 +144,18 @@
       "paint": {
         "fill-color": "hsl(220, 23%, 95%)",
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.5
-              ],
-              [
-                "zoom"
-              ],
-              8,
-              0.4,
-              9,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              8.75,
-              1,
-              9,
-              0
-            ]
+            "exponential",
+            1.5
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            8.75,
-            1,
-            9,
-            0
-          ]
+            "zoom"
+          ],
+          8,
+          0.4,
+          9,
+          0
         ],
         "fill-antialias": false
       }
@@ -303,72 +270,40 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-park",
+      "id": "landuse",
       "paint": {
         "fill-color": "hsl(220, 27%, 94%)",
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              8,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                [
-                  "residential",
-                  "airport"
-                ],
-                0.8,
-                0.2
-              ],
-              12,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "residential",
-                0,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              5.25,
-              1
-            ]
+            "linear"
           ],
           [
-            "interpolate",
+            "zoom"
+          ],
+          8,
+          [
+            "match",
             [
-              "linear"
+              "get",
+              "class"
             ],
             [
-              "zoom"
+              "residential",
+              "airport"
             ],
-            5,
+            0.8,
+            0.2
+          ],
+          12,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            "residential",
             0,
-            5.25,
             1
           ]
         ]
@@ -549,7 +484,7 @@
       }
     },
     {
-      "id": "admin-0-boundary-fill",
+      "id": "country-boundaries",
       "type": "fill",
       "source": "composite",
       "source-layer": "boundary",
@@ -3306,19 +3241,7 @@
         "text-color": "hsl(220, 13%, 60%)",
         "text-halo-color": "hsl(220, 18%, 100%)",
         "text-halo-width": 1,
-        "icon-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          18,
-          0,
-          18.25,
-          0.4
-        ],
+        "icon-opacity": 0.4,
         "text-opacity": [
           "interpolate",
           [
@@ -3356,7 +3279,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "housenumber-label",
+      "id": "building-number-label",
       "paint": {
         "text-color": "hsl(220, 13%, 60%)",
         "text-halo-color": "hsl(220, 18%, 100%)",
@@ -3588,7 +3511,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label",
+      "id": "natural-line-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(220, 22%, 100%)",
@@ -3683,64 +3606,32 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label-2",
+      "id": "natural-point-label",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                5,
-                1
-              ],
-              17,
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                13,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              4,
-              0,
-              4.25,
-              1
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "step",
             [
-              "linear"
+              "get",
+              "sizerank"
             ],
-            [
-              "zoom"
-            ],
-            4,
             0,
-            4.25,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
             1
           ]
         ],
@@ -3848,7 +3739,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line",
+      "id": "water-line-label",
       "paint": {
         "text-color": "hsl(220, 23%, 59%)",
         "text-halo-color": "hsla(220, 22%, 100%, 0.5)",
@@ -3980,7 +3871,7 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-point",
+      "id": "water-point-label",
       "paint": {
         "text-color": "hsl(220, 23%, 59%)",
         "text-halo-color": "hsla(220, 22%, 100%, 0.5)",
@@ -4276,53 +4167,13 @@
         "text-halo-color": "hsl(220, 22%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              12.75,
-              1,
-              13,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            12.75,
-            1,
-            13,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -4488,53 +4339,13 @@
         "text-halo-color": "hsl(220, 22%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              14.75,
-              1,
-              15,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            14.75,
-            1,
-            15,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -4626,28 +4437,12 @@
       "filter": true,
       "type": "symbol",
       "source": "composite",
-      "id": "place-state",
+      "id": "state-label",
       "paint": {
         "text-color": "hsl(220, 24%, 50%)",
         "text-halo-color": "hsl(220, 22%, 100%)",
         "text-halo-width": 1,
-        "text-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          3,
-          0,
-          3.25,
-          0.5,
-          8.75,
-          0.5,
-          9,
-          0
-        ],
+        "text-opacity": 0.5,
         "icon-opacity": [
           "interpolate",
           [
@@ -4720,7 +4515,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-continent",
+      "id": "continent-label",
       "paint": {
         "text-color": "hsl(220, 24%, 50%)",
         "text-halo-color": "hsl(220, 22%, 100%)",
@@ -4733,9 +4528,7 @@
           [
             "zoom"
           ],
-          0.75,
           0,
-          1,
           0.8,
           1.5,
           0.5,
@@ -4763,13 +4556,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2025-05-12T13:26:13.147Z",
-  "modified": "2025-05-12T13:27:39.181Z",
-  "id": "cmal498yi007l01qz6pisgx8o",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": true,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

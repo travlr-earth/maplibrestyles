@@ -60,7 +60,6 @@
   "zoom": 0.6293565996216186,
   "bearing": 0,
   "pitch": 0,
-  "lights": [],
   "sources": {
     "composite": {
       "type": "vector",
@@ -84,7 +83,7 @@
   },
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -137,7 +136,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landcover-grass",
+      "id": "landcover",
       "paint": {
         "fill-color": [
           "match",
@@ -150,72 +149,40 @@
           "rgb(15, 46, 54)"
         ],
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.5
-              ],
-              [
-                "zoom"
-              ],
-              9,
-              0.4,
-              10,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "crop",
-                0,
-                0.4
-              ],
-              11,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "crop",
-                0,
-                0.4
-              ],
-              12,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11.75,
-              1,
-              12,
-              0
-            ]
+            "exponential",
+            1.5
           ],
           [
-            "interpolate",
+            "zoom"
+          ],
+          9,
+          0.4,
+          10,
+          [
+            "match",
             [
-              "linear"
+              "get",
+              "class"
             ],
+            "crop",
+            0,
+            0.4
+          ],
+          11,
+          [
+            "match",
             [
-              "zoom"
+              "get",
+              "class"
             ],
-            11.75,
-            1,
-            12,
-            0
-          ]
+            "crop",
+            0,
+            0.4
+          ],
+          12,
+          0
         ],
         "fill-antialias": false
       },
@@ -374,7 +341,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-park",
+      "id": "landuse",
       "paint": {
         "fill-color": [
           "match",
@@ -387,82 +354,50 @@
           "hsl(193, 63%, 29%)"
         ],
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              6,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "ice",
-                0.5,
-                0.5
-              ],
-              12,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "ice",
-                0.5,
-                "residential",
-                0,
-                0.5
-              ],
-              20,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "ice",
-                0.5,
-                "residential",
-                0,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              5.25,
-              1
-            ]
+            "linear"
           ],
           [
-            "interpolate",
+            "zoom"
+          ],
+          5,
+          0,
+          6,
+          [
+            "match",
             [
-              "linear"
+              "get",
+              "class"
             ],
+            "ice",
+            0.5,
+            0.5
+          ],
+          12,
+          [
+            "match",
             [
-              "zoom"
+              "get",
+              "class"
             ],
-            5,
+            "ice",
+            0.5,
+            "residential",
             0,
-            5.25,
+            0.5
+          ],
+          20,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            "ice",
+            0.5,
+            "residential",
+            0,
             1
           ]
         ],
@@ -601,7 +536,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "admin-0-boundary-fill",
+      "id": "country-boundaries",
       "paint": {
         "fill-opacity": 0,
         "fill-color": "#10333c",
@@ -675,7 +610,7 @@
       "minzoom": 12
     },
     {
-      "id": "admin-1-boundary",
+      "id": "admin",
       "type": "line",
       "paint": {
         "line-color": [
@@ -725,25 +660,33 @@
       "filter": [
         "all",
         [
-          "==",
+          "match",
           [
             "get",
             "admin_level"
           ],
-          4
+          [
+            4
+          ],
+          true,
+          false
         ],
         [
-          "==",
+          "match",
           [
             "get",
             "maritime"
           ],
-          0
+          [
+            0
+          ],
+          true,
+          false
         ]
       ]
     },
     {
-      "id": "admin-0-boundary",
+      "id": "country-borders",
       "type": "line",
       "paint": {
         "line-color": "#0a8d99",
@@ -765,34 +708,7 @@
       },
       "layout": {},
       "source": "composite",
-      "source-layer": "boundary",
-      "filter": [
-        "all",
-        [
-          "==",
-          [
-            "get",
-            "admin_level"
-          ],
-          2
-        ],
-        [
-          "==",
-          [
-            "get",
-            "disputed"
-          ],
-          0
-        ],
-        [
-          "==",
-          [
-            "get",
-            "maritime"
-          ],
-          0
-        ]
-      ]
+      "source-layer": "boundary"
     },
     {
       "minzoom": 10,
@@ -1063,41 +979,9 @@
         "text-color": "rgb(217, 255, 26)",
         "text-halo-color": "rgb(6, 21, 25)",
         "text-halo-width": 1,
-        "icon-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          2,
-          0,
-          2.25,
-          0.45,
-          12.75,
-          0.45,
-          13,
-          0
-        ],
+        "icon-opacity": 0.45,
         "text-halo-blur": 1,
-        "text-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          2,
-          0,
-          2.25,
-          0.77,
-          12.75,
-          0.77,
-          13,
-          0
-        ]
+        "text-opacity": 0.77
       },
       "source-layer": "place"
     },
@@ -1233,53 +1117,13 @@
         "text-halo-color": "rgb(6, 21, 25)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              14.75,
-              1,
-              15,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            14.75,
-            1,
-            15,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -1354,7 +1198,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-continent",
+      "id": "continent-label",
       "paint": {
         "text-color": "rgb(217, 255, 26)",
         "text-halo-color": [
@@ -1379,9 +1223,7 @@
           [
             "zoom"
           ],
-          0.75,
           0,
-          1,
           0.8,
           1.5,
           0.5,
@@ -1409,13 +1251,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2024-12-06T11:21:01.769Z",
-  "modified": "2025-05-12T13:36:26.375Z",
-  "id": "cm4cnnih400j501qt0a281n5e",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": true,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

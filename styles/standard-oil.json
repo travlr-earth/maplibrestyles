@@ -207,7 +207,7 @@
   "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -295,7 +295,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-park",
+      "id": "landuse",
       "paint": {
         "fill-color": "hsl(0, 87%, 85%)",
         "fill-pattern": "",
@@ -332,7 +332,7 @@
       ],
       "type": "line",
       "source": "composite",
-      "id": "landuse-pitch-outline",
+      "id": "pitch-outline",
       "paint": {
         "line-color": "rgb(214, 208, 209)",
         "line-opacity": [
@@ -465,7 +465,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-hospital",
+      "id": "hospital-base",
       "paint": {
         "fill-color": "hsl(0, 87%, 85%)",
         "fill-opacity": [
@@ -505,7 +505,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-hospital-2",
+      "id": "school-hospital",
       "paint": {
         "fill-pattern": "yellow-pattern",
         "fill-color": "hsl(0, 0%, 0%)",
@@ -547,7 +547,7 @@
       ],
       "type": "fill",
       "source": "composite",
-      "id": "landuse-park-2",
+      "id": "park",
       "paint": {
         "fill-pattern": "gray-pattern",
         "fill-color": "hsl(0, 0%, 0%)",
@@ -568,7 +568,7 @@
       "source-layer": "landuse"
     },
     {
-      "id": "landuse-wood",
+      "id": "wood",
       "type": "fill",
       "metadata": {
         "mapbox:group": "b897ef646496180d5c284d147802b68e"
@@ -603,50 +603,18 @@
       "paint": {
         "fill-pattern": "yellow-pattern",
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              10.75,
-              1,
-              11,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1
-          ]
+            "zoom"
+          ],
+          10.75,
+          1,
+          11,
+          0
         ],
         "fill-color": "hsl(0, 0%, 0%)"
       }
@@ -990,45 +958,13 @@
         ],
         "line-color": "#f0e9d8",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       },
       "source-layer": "transportation"
@@ -1158,45 +1094,13 @@
           ]
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ],
         "line-dasharray": [
           3,
@@ -2329,45 +2233,13 @@
           "#d14747"
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -3607,50 +3479,18 @@
           1
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.5
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              12,
-              0,
-              12.25,
-              1
-            ]
+            "exponential",
+            1.5
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            12,
-            0,
-            12.25,
-            1
-          ]
+            "zoom"
+          ],
+          13,
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4079,45 +3919,13 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       },
       "source-layer": "transportation"
@@ -4251,45 +4059,13 @@
           12
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4385,45 +4161,13 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       },
       "source-layer": "transportation"
@@ -4533,45 +4277,13 @@
           18
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4796,45 +4508,13 @@
           32
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              10,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              7,
-              0,
-              7.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            7,
-            0,
-            7.25,
-            1
-          ]
+          0,
+          10,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -4944,45 +4624,13 @@
           18
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              11,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              10,
-              0,
-              10.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            10,
-            0,
-            10.25,
-            1
-          ]
+          0,
+          11,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5518,50 +5166,18 @@
         ],
         "line-color": "#d14545",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              14.9,
-              0,
-              15,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+            "zoom"
+          ],
+          14.9,
+          0,
+          15,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5640,50 +5256,18 @@
         ],
         "line-color": "hsl(0, 60%, 55%)",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              11.9,
-              0,
-              12,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              11,
-              0,
-              11.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            11,
-            0,
-            11.25,
-            1
-          ]
+            "zoom"
+          ],
+          11.9,
+          0,
+          12,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -5852,50 +5436,18 @@
         ],
         "line-color": "#d14545",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1
-              ],
-              [
-                "zoom"
-              ],
-              6.9,
-              0,
-              7,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              6,
-              0,
-              6.25,
-              1
-            ]
+            "exponential",
+            1
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            6,
-            0,
-            6.25,
-            1
-          ]
+            "zoom"
+          ],
+          6.9,
+          0,
+          7,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -6447,50 +5999,18 @@
           3
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.5
-              ],
-              [
-                "zoom"
-              ],
-              13.9,
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "exponential",
+            1.5
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+            "zoom"
+          ],
+          13.9,
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -7750,45 +7270,13 @@
         ],
         "line-color": "#d14747",
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              14,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          1,
+          14,
+          0
         ]
       },
       "source-layer": "transportation"
@@ -7920,45 +7408,13 @@
           ]
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -8042,45 +7498,13 @@
           16
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              10,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          10,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -8623,45 +8047,13 @@
           "#d14747"
         ],
         "line-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              14,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+          0,
+          14,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -9517,50 +8909,18 @@
           1.5
         ],
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.5
-              ],
-              [
-                "zoom"
-              ],
-              12.9,
-              0,
-              13,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              13,
-              0,
-              13.25,
-              1
-            ]
+            "exponential",
+            1.5
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            13,
-            0,
-            13.25,
-            1
-          ]
+            "zoom"
+          ],
+          12.9,
+          0,
+          13,
+          1
         ]
       },
       "source-layer": "transportation"
@@ -9655,7 +9015,7 @@
       "source-layer": "transportation"
     },
     {
-      "id": "building-outline-2",
+      "id": "building-outlines",
       "type": "line",
       "metadata": {
         "mapbox:group": "3d82e049e23b5b4cae864e56bd5292f5"
@@ -9772,7 +9132,7 @@
       }
     },
     {
-      "id": "admin-1-boundary-bg-2",
+      "id": "admin-1-boundary-case",
       "type": "line",
       "metadata": {
         "mapbox:group": "572397b991c1301870b4b6dd960bed6d"
@@ -10315,7 +9675,7 @@
       "source-layer": "boundary"
     },
     {
-      "id": "housenumber-label",
+      "id": "building-number-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "housenumber",
@@ -10929,129 +10289,65 @@
       "paint": {
         "text-color": "hsl(0, 60%, 55%)",
         "text-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              6.9,
-              0,
-              7,
-              [
-                "match",
-                [
-                  "get",
-                  "shield"
-                ],
-                [
-                  "us-highway",
-                  "us-highway-bypass",
-                  "us-highway-truck",
-                  "us-highway-business",
-                  "us-highway-duplex",
-                  "us-highway-alternate",
-                  "us-interstate",
-                  "us-interstate-duplex",
-                  "us-interstate-business",
-                  "us-interstate-truck"
-                ],
-                1,
-                0
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              6,
-              0,
-              6.25,
-              1
-            ]
+            "zoom"
           ],
+          0,
+          6.9,
+          0,
+          7,
           [
-            "interpolate",
+            "match",
             [
-              "linear"
+              "get",
+              "shield"
             ],
             [
-              "zoom"
+              "us-highway",
+              "us-highway-bypass",
+              "us-highway-truck",
+              "us-highway-business",
+              "us-highway-duplex",
+              "us-highway-alternate",
+              "us-interstate",
+              "us-interstate-duplex",
+              "us-interstate-business",
+              "us-interstate-truck"
             ],
-            6,
-            0,
-            6.25,
-            1
+            1,
+            0
           ]
         ],
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              6.9,
-              0,
-              7,
-              [
-                "match",
-                [
-                  "get",
-                  "shield"
-                ],
-                [
-                  "us-highway",
-                  "us-highway-bypass",
-                  "us-highway-truck",
-                  "us-highway-business",
-                  "us-highway-duplex",
-                  "us-highway-alternate",
-                  "us-interstate",
-                  "us-interstate-duplex",
-                  "us-interstate-business",
-                  "us-interstate-truck"
-                ],
-                1,
-                0
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              6,
-              0,
-              6.25,
-              1
-            ]
+            "zoom"
           ],
+          0,
+          6.9,
+          0,
+          7,
           [
-            "interpolate",
+            "match",
             [
-              "linear"
+              "get",
+              "shield"
             ],
             [
-              "zoom"
+              "us-highway",
+              "us-highway-bypass",
+              "us-highway-truck",
+              "us-highway-business",
+              "us-highway-duplex",
+              "us-highway-alternate",
+              "us-interstate",
+              "us-interstate-duplex",
+              "us-interstate-business",
+              "us-interstate-truck"
             ],
-            6,
-            0,
-            6.25,
-            1
+            1,
+            0
           ]
         ]
       },
@@ -11102,7 +10398,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "road-label-2",
+      "id": "road-exit-shield",
       "paint": {
         "text-color": "rgb(255, 255, 255)",
         "text-translate": [
@@ -11249,209 +10545,145 @@
       "paint": {
         "text-color": "#d14545",
         "text-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              6.9,
-              0,
-              7,
-              [
-                "match",
-                [
-                  "get",
-                  "shield"
-                ],
-                [
-                  "us-highway",
-                  "tw-provincial-expy",
-                  "br-federal",
-                  "ro-communal",
-                  "default",
-                  "ch-motorway",
-                  "ro-national",
-                  "za-provincial",
-                  "rectangle-green",
-                  "kr-local",
-                  "de-motorway",
-                  "ae-s-route",
-                  "au-national-route",
-                  "tw-county-township",
-                  "cn-provincial-expy",
-                  "in-state",
-                  "tw-provincial",
-                  "au-national-highway",
-                  "pe-national",
-                  "rectangle-white",
-                  "rectangle-orange",
-                  "circle-white",
-                  "kr-natl-hwy",
-                  "mx-state",
-                  "nz-state",
-                  "si-motorway",
-                  "kr-metropolitan",
-                  "rectangle-yellow",
-                  "hk-strategic-route",
-                  "rectangle-red",
-                  "br-state",
-                  "cn-nths-expy",
-                  "kr-metro-expy",
-                  "pe-regional",
-                  "ae-d-route",
-                  "za-national",
-                  "au-state",
-                  "rectangle-blue",
-                  "kr-natl-expy",
-                  "ae-f-route",
-                  "hu-main",
-                  "au-tourist",
-                  "in-national",
-                  "ro-county",
-                  "hu-motorway",
-                  "mx-federal",
-                  "ae-national",
-                  "gr-motorway",
-                  "tw-national",
-                  "hr-motorway"
-                ],
-                1,
-                0
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              5.25,
-              1
-            ]
+            "zoom"
           ],
+          0,
+          6.9,
+          0,
+          7,
           [
-            "interpolate",
+            "match",
             [
-              "linear"
+              "get",
+              "shield"
             ],
             [
-              "zoom"
+              "us-highway",
+              "tw-provincial-expy",
+              "br-federal",
+              "ro-communal",
+              "default",
+              "ch-motorway",
+              "ro-national",
+              "za-provincial",
+              "rectangle-green",
+              "kr-local",
+              "de-motorway",
+              "ae-s-route",
+              "au-national-route",
+              "tw-county-township",
+              "cn-provincial-expy",
+              "in-state",
+              "tw-provincial",
+              "au-national-highway",
+              "pe-national",
+              "rectangle-white",
+              "rectangle-orange",
+              "circle-white",
+              "kr-natl-hwy",
+              "mx-state",
+              "nz-state",
+              "si-motorway",
+              "kr-metropolitan",
+              "rectangle-yellow",
+              "hk-strategic-route",
+              "rectangle-red",
+              "br-state",
+              "cn-nths-expy",
+              "kr-metro-expy",
+              "pe-regional",
+              "ae-d-route",
+              "za-national",
+              "au-state",
+              "rectangle-blue",
+              "kr-natl-expy",
+              "ae-f-route",
+              "hu-main",
+              "au-tourist",
+              "in-national",
+              "ro-county",
+              "hu-motorway",
+              "mx-federal",
+              "ae-national",
+              "gr-motorway",
+              "tw-national",
+              "hr-motorway"
             ],
-            5,
-            0,
-            5.25,
-            1
+            1,
+            0
           ]
         ],
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              0,
-              6.9,
-              0,
-              7,
-              [
-                "match",
-                [
-                  "get",
-                  "shield"
-                ],
-                [
-                  "us-highway",
-                  "tw-provincial-expy",
-                  "br-federal",
-                  "ro-communal",
-                  "default",
-                  "ch-motorway",
-                  "ro-national",
-                  "za-provincial",
-                  "rectangle-green",
-                  "kr-local",
-                  "de-motorway",
-                  "ae-s-route",
-                  "au-national-route",
-                  "tw-county-township",
-                  "cn-provincial-expy",
-                  "in-state",
-                  "tw-provincial",
-                  "au-national-highway",
-                  "pe-national",
-                  "rectangle-white",
-                  "rectangle-orange",
-                  "circle-white",
-                  "kr-natl-hwy",
-                  "mx-state",
-                  "nz-state",
-                  "si-motorway",
-                  "kr-metropolitan",
-                  "rectangle-yellow",
-                  "hk-strategic-route",
-                  "rectangle-red",
-                  "br-state",
-                  "cn-nths-expy",
-                  "kr-metro-expy",
-                  "pe-regional",
-                  "ae-d-route",
-                  "za-national",
-                  "au-state",
-                  "rectangle-blue",
-                  "kr-natl-expy",
-                  "ae-f-route",
-                  "hu-main",
-                  "au-tourist",
-                  "in-national",
-                  "ro-county",
-                  "hu-motorway",
-                  "mx-federal",
-                  "ae-national",
-                  "gr-motorway",
-                  "tw-national",
-                  "hr-motorway"
-                ],
-                1,
-                0
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              5.25,
-              1
-            ]
+            "zoom"
           ],
+          0,
+          6.9,
+          0,
+          7,
           [
-            "interpolate",
+            "match",
             [
-              "linear"
+              "get",
+              "shield"
             ],
             [
-              "zoom"
+              "us-highway",
+              "tw-provincial-expy",
+              "br-federal",
+              "ro-communal",
+              "default",
+              "ch-motorway",
+              "ro-national",
+              "za-provincial",
+              "rectangle-green",
+              "kr-local",
+              "de-motorway",
+              "ae-s-route",
+              "au-national-route",
+              "tw-county-township",
+              "cn-provincial-expy",
+              "in-state",
+              "tw-provincial",
+              "au-national-highway",
+              "pe-national",
+              "rectangle-white",
+              "rectangle-orange",
+              "circle-white",
+              "kr-natl-hwy",
+              "mx-state",
+              "nz-state",
+              "si-motorway",
+              "kr-metropolitan",
+              "rectangle-yellow",
+              "hk-strategic-route",
+              "rectangle-red",
+              "br-state",
+              "cn-nths-expy",
+              "kr-metro-expy",
+              "pe-regional",
+              "ae-d-route",
+              "za-national",
+              "au-state",
+              "rectangle-blue",
+              "kr-natl-expy",
+              "ae-f-route",
+              "hu-main",
+              "au-tourist",
+              "in-national",
+              "ro-county",
+              "hu-motorway",
+              "mx-federal",
+              "ae-national",
+              "gr-motorway",
+              "tw-national",
+              "hr-motorway"
             ],
-            5,
-            0,
-            5.25,
-            1
+            1,
+            0
           ]
         ]
       },
@@ -11866,7 +11098,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label",
+      "id": "natural-line-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "rgb(255, 255, 255)",
@@ -12124,64 +11356,32 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label-2",
+      "id": "natural-point-label",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                5,
-                1
-              ],
-              17,
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                13,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              4,
-              0,
-              4.25,
-              1
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "step",
             [
-              "linear"
+              "get",
+              "sizerank"
             ],
-            [
-              "zoom"
-            ],
-            4,
             0,
-            4.25,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
             1
           ]
         ],
@@ -12232,7 +11432,7 @@
       "source-layer": "mountain_peak"
     },
     {
-      "id": "water-label-line",
+      "id": "water-line-label",
       "type": "symbol",
       "metadata": {
         "mapbox:featureComponent": "natural-features",
@@ -12325,7 +11525,7 @@
       }
     },
     {
-      "id": "water-label-point",
+      "id": "water-point-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -12598,61 +11798,29 @@
       "id": "poi-label",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                5,
-                1
-              ],
-              17,
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                13,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              6,
-              0,
-              6.25,
-              1
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "step",
             [
-              "linear"
+              "get",
+              "sizerank"
             ],
-            [
-              "zoom"
-            ],
-            6,
             0,
-            6.25,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
             1
           ]
         ],
@@ -13149,53 +12317,13 @@
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 2,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              3,
-              0,
-              3.25,
-              1,
-              12.75,
-              1,
-              13,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            3,
-            0,
-            3.25,
-            1,
-            12.75,
-            1,
-            13,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-opacity": [
           "interpolate",
@@ -13527,53 +12655,13 @@
         "text-halo-color": "#f0e9d8",
         "text-halo-width": 2,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              3,
-              0,
-              3.25,
-              1,
-              14.75,
-              1,
-              15,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            3,
-            0,
-            3.25,
-            1,
-            14.75,
-            1,
-            15,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-opacity": [
           "interpolate",
@@ -13713,7 +12801,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state",
+      "id": "state-label",
       "paint": {
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
@@ -13856,64 +12944,24 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country",
+      "id": "country-label",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "case",
-                [
-                  "has",
-                  "text_anchor"
-                ],
-                1,
-                0
-              ],
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              1,
-              0,
-              1.25,
-              1,
-              9.75,
-              1,
-              10,
-              0
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "case",
             [
-              "linear"
-            ],
-            [
-              "zoom"
+              "has",
+              "text_anchor"
             ],
             1,
-            0,
-            1.25,
-            1,
-            9.75,
-            1,
-            10,
             0
-          ]
+          ],
+          7,
+          0
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
@@ -14043,64 +13091,24 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-sm",
+      "id": "country-label-small",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "case",
-                [
-                  "has",
-                  "text_anchor"
-                ],
-                1,
-                0
-              ],
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              1,
-              0,
-              1.25,
-              1,
-              9.75,
-              1,
-              10,
-              0
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "case",
             [
-              "linear"
-            ],
-            [
-              "zoom"
+              "has",
+              "text_anchor"
             ],
             1,
-            0,
-            1.25,
-            1,
-            9.75,
-            1,
-            10,
             0
-          ]
+          ],
+          7,
+          0
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
@@ -14228,64 +13236,24 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-md",
+      "id": "country-label-medium",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "case",
-                [
-                  "has",
-                  "text_anchor"
-                ],
-                1,
-                0
-              ],
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              1,
-              0,
-              1.25,
-              1,
-              9.75,
-              1,
-              10,
-              0
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "case",
             [
-              "linear"
-            ],
-            [
-              "zoom"
+              "has",
+              "text_anchor"
             ],
             1,
-            0,
-            1.25,
-            1,
-            9.75,
-            1,
-            10,
             0
-          ]
+          ],
+          7,
+          0
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
@@ -14413,64 +13381,24 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country-lg",
+      "id": "country-label-big",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "case",
-                [
-                  "has",
-                  "text_anchor"
-                ],
-                1,
-                0
-              ],
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              1,
-              0,
-              1.25,
-              1,
-              9.75,
-              1,
-              10,
-              0
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "case",
             [
-              "linear"
-            ],
-            [
-              "zoom"
+              "has",
+              "text_anchor"
             ],
             1,
-            0,
-            1.25,
-            1,
-            9.75,
-            1,
-            10,
             0
-          ]
+          ],
+          7,
+          0
         ],
         "text-color": "#d14545",
         "text-halo-color": "#f0e9d8",
@@ -14496,13 +13424,6 @@
       "source-layer": "place"
     }
   ],
-  "created": "2024-12-13T15:11:57.849Z",
-  "modified": "2024-12-13T15:11:57.849Z",
-  "id": "cm4mvzgk9000q01r5fym1htb7",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "projection": {
     "type": "globe"
   },

@@ -104,7 +104,7 @@
   },
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -156,7 +156,7 @@
       }
     },
     {
-      "id": "landuse-park",
+      "id": "landuse",
       "type": "fill",
       "source": "composite",
       "source-layer": "landuse",
@@ -300,78 +300,46 @@
           ]
         ],
         "fill-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "residential",
-                1,
-                0
-              ],
-              6,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "ice",
-                0.5,
-                1
-              ],
-              12,
-              [
-                "match",
-                [
-                  "get",
-                  "class"
-                ],
-                "ice",
-                0.5,
-                "residential",
-                0,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              5,
-              0,
-              5.25,
-              1
-            ]
+            "linear"
           ],
           [
-            "interpolate",
+            "zoom"
+          ],
+          5,
+          [
+            "match",
             [
-              "linear"
+              "get",
+              "class"
             ],
+            "residential",
+            1,
+            0
+          ],
+          6,
+          [
+            "match",
             [
-              "zoom"
+              "get",
+              "class"
             ],
-            5,
+            "ice",
+            0.5,
+            1
+          ],
+          12,
+          [
+            "match",
+            [
+              "get",
+              "class"
+            ],
+            "ice",
+            0.5,
+            "residential",
             0,
-            5.25,
             1
           ]
         ]
@@ -382,7 +350,7 @@
       }
     },
     {
-      "id": "landuse-pitch-outline",
+      "id": "pitch-outline",
       "type": "line",
       "source": "composite",
       "source-layer": "landuse",
@@ -3512,7 +3480,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label",
+      "id": "natural-line-label",
       "paint": {
         "text-halo-width": 0.5,
         "text-halo-color": "hsl(187, 34%, 100%)",
@@ -3574,7 +3542,7 @@
       "source-layer": "mountain_peak"
     },
     {
-      "id": "mountain-peak-label-2",
+      "id": "natural-point-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "mountain_peak",
@@ -3755,61 +3723,29 @@
       },
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                5,
-                1
-              ],
-              17,
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                13,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              4,
-              0,
-              4.25,
-              1
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "step",
             [
-              "linear"
+              "get",
+              "sizerank"
             ],
-            [
-              "zoom"
-            ],
-            4,
             0,
-            4.25,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
             1
           ]
         ],
@@ -3986,7 +3922,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "water-label-line",
+      "id": "water-line-label",
       "paint": {
         "text-color": [
           "match",
@@ -4033,7 +3969,7 @@
       "source-layer": "water_name"
     },
     {
-      "id": "water-label-point",
+      "id": "water-point-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "water_name",
@@ -4399,61 +4335,29 @@
       },
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                5,
-                1
-              ],
-              17,
-              [
-                "step",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                0,
-                13,
-                1
-              ]
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              6,
-              0,
-              6.25,
-              1
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "step",
             [
-              "linear"
+              "get",
+              "sizerank"
             ],
-            [
-              "zoom"
-            ],
-            6,
             0,
-            6.25,
+            5,
+            1
+          ],
+          17,
+          [
+            "step",
+            [
+              "get",
+              "sizerank"
+            ],
+            0,
+            13,
             1
           ]
         ],
@@ -5047,53 +4951,13 @@
         "text-halo-color": "hsl(187, 34%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              12.75,
-              1,
-              13,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            12.75,
-            1,
-            13,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -5356,53 +5220,13 @@
         "text-halo-color": "hsl(187, 34%, 100%)",
         "text-halo-width": 1,
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              1,
-              8,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              2,
-              0,
-              2.25,
-              1,
-              14.75,
-              1,
-              15,
-              0
-            ]
+            "zoom"
           ],
-          [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            2,
-            0,
-            2.25,
-            1,
-            14.75,
-            1,
-            15,
-            0
-          ]
+          1,
+          8,
+          0
         ],
         "text-halo-blur": 1,
         "text-opacity": [
@@ -5543,7 +5367,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state",
+      "id": "state-label",
       "paint": {
         "text-color": "hsl(169, 8%, 34%)",
         "text-halo-color": "hsl(187, 34%, 100%)",
@@ -5680,64 +5504,24 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-country",
+      "id": "country-label",
       "paint": {
         "icon-opacity": [
-          "min",
+          "step",
           [
-            "*",
-            [
-              "step",
-              [
-                "zoom"
-              ],
-              [
-                "case",
-                [
-                  "has",
-                  "text_anchor"
-                ],
-                1,
-                0
-              ],
-              7,
-              0
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              1,
-              0,
-              1.25,
-              1,
-              9.75,
-              1,
-              10,
-              0
-            ]
+            "zoom"
           ],
           [
-            "interpolate",
+            "case",
             [
-              "linear"
-            ],
-            [
-              "zoom"
+              "has",
+              "text_anchor"
             ],
             1,
-            0,
-            1.25,
-            1,
-            9.75,
-            1,
-            10,
             0
-          ]
+          ],
+          7,
+          0
         ],
         "text-color": "hsl(169, 8%, 34%)",
         "text-halo-color": [
@@ -5825,7 +5609,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-continent",
+      "id": "continent-label",
       "paint": {
         "text-color": "hsl(169, 8%, 34%)",
         "text-halo-color": [
@@ -5850,9 +5634,7 @@
           [
             "zoom"
           ],
-          0.75,
           0,
-          1,
           0.8,
           1.5,
           0.5,
@@ -5884,13 +5666,6 @@
       }
     }
   ],
-  "created": "2024-11-25T19:35:45.880Z",
-  "modified": "2024-11-25T19:35:45.880Z",
-  "id": "cm3xfhdjs00ad01qu0hyp8v5h",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

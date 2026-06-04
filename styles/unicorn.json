@@ -496,7 +496,7 @@
   },
   "layers": [
     {
-      "id": "background",
+      "id": "land",
       "type": "background",
       "layout": {},
       "paint": {
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "hillshade",
+      "id": "__ml-hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -661,7 +661,7 @@
       }
     },
     {
-      "id": "water-line",
+      "id": "land-outline",
       "type": "line",
       "source": "composite",
       "source-layer": "water",
@@ -672,13 +672,6 @@
       }
     }
   ],
-  "created": "2024-12-20T10:23:10.808Z",
-  "modified": "2024-12-20T10:23:10.808Z",
-  "id": "cm4wlr1lk004g01qwdij9dndr",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }

@@ -91,7 +91,7 @@
       "paint": {}
     },
     {
-      "id": "water-line",
+      "id": "water-border",
       "type": "line",
       "source": "composite",
       "source-layer": "water",
@@ -1277,7 +1277,7 @@
       }
     },
     {
-      "id": "admin-1-boundary",
+      "id": "admin-boundaries-states",
       "type": "line",
       "source": "composite",
       "source-layer": "boundary",
@@ -1290,6 +1290,14 @@
             "admin_level"
           ],
           4
+        ],
+        [
+          "==",
+          [
+            "get",
+            "disputed"
+          ],
+          0
         ],
         [
           "==",
@@ -1681,7 +1689,7 @@
       }
     },
     {
-      "id": "Afica-ME-SA-1",
+      "id": "afica-me-sa-1",
       "type": "line",
       "metadata": {
         "mapbox:group": "fe2e8de522c0c65c21faf531405b9782"
@@ -1744,7 +1752,7 @@
       }
     },
     {
-      "id": "Africa-ME-SA-2",
+      "id": "africa-me-sa-2",
       "type": "line",
       "metadata": {
         "mapbox:group": "fe2e8de522c0c65c21faf531405b9782"
@@ -1806,7 +1814,7 @@
       }
     },
     {
-      "id": "Africa-ME-3",
+      "id": "africa-me-3",
       "type": "line",
       "metadata": {
         "mapbox:group": "fe2e8de522c0c65c21faf531405b9782"
@@ -1862,7 +1870,7 @@
       }
     },
     {
-      "id": "admin-0-boundary",
+      "id": "admin",
       "type": "line",
       "source": "composite",
       "source-layer": "boundary",
@@ -2121,7 +2129,7 @@
       }
     },
     {
-      "id": "settlement-subdivision-label",
+      "id": "neighbourhood-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -2399,7 +2407,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "place-state",
+      "id": "state-label",
       "paint": {
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 1.5,
@@ -2433,7 +2441,7 @@
       "source-layer": "place"
     },
     {
-      "id": "place-country",
+      "id": "country-label",
       "type": "symbol",
       "source": "composite",
       "source-layer": "place",
@@ -2544,13 +2552,6 @@
       }
     }
   ],
-  "created": "2024-12-20T10:51:14.002Z",
-  "modified": "2024-12-20T10:51:14.002Z",
-  "id": "cm4wmr4cy004h01qw3j4xdj1q",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "projection": {
     "type": "globe"
   },

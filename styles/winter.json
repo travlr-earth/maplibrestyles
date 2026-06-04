@@ -56,14 +56,14 @@
   },
   "layers": [
     {
-      "id": "background",
+      "id": "__ml-bg",
       "type": "background",
       "paint": {
         "background-color": "hsl(38, 31%, 87%)"
       }
     },
     {
-      "id": "water",
+      "id": "__ml-water",
       "type": "fill",
       "source": "composite",
       "source-layer": "water",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "id": "hillshade",
+      "id": "__ml-hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "paint": {
@@ -93,50 +93,18 @@
       "paint": {
         "line-color": "hsla(196, 36%, 25%, 0.5)",
         "line-opacity": [
-          "min",
+          "interpolate",
           [
-            "*",
-            [
-              "interpolate",
-              [
-                "exponential",
-                1.75
-              ],
-              [
-                "zoom"
-              ],
-              9.5,
-              0,
-              12.5,
-              1
-            ],
-            [
-              "interpolate",
-              [
-                "linear"
-              ],
-              [
-                "zoom"
-              ],
-              10,
-              0,
-              10.25,
-              1
-            ]
+            "exponential",
+            1.75
           ],
           [
-            "interpolate",
-            [
-              "linear"
-            ],
-            [
-              "zoom"
-            ],
-            10,
-            0,
-            10.25,
-            1
-          ]
+            "zoom"
+          ],
+          9.5,
+          0,
+          12.5,
+          1
         ],
         "line-width": [
           "case",
@@ -342,7 +310,7 @@
       ],
       "type": "symbol",
       "source": "composite",
-      "id": "mountain-peak-label",
+      "id": "natural-label-peak",
       "paint": {
         "text-halo-color": "hsl(20, 20%, 100%)",
         "text-halo-blur": 0.5,
@@ -976,7 +944,7 @@
       "filter": true,
       "type": "symbol",
       "source": "__ml-contours",
-      "id": "contour-label",
+      "id": "contour-labels",
       "paint": {
         "text-color": "hsl(196, 36%, 25%)",
         "text-opacity": [
@@ -987,10 +955,6 @@
           [
             "zoom"
           ],
-          11,
-          0,
-          11.25,
-          1,
           11.5,
           0,
           12,
@@ -1251,13 +1215,6 @@
       "source-layer": "transportation"
     }
   ],
-  "created": "2025-11-21T15:32:46.834Z",
-  "modified": "2025-11-21T15:32:46.834Z",
-  "id": "cmi90reya00c201r1hhxj1d3c",
-  "owner": "matsmiersen",
-  "visibility": "private",
-  "protected": false,
-  "draft": false,
   "sky": {
     "atmosphere-blend": 0.8
   }
