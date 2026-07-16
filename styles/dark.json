@@ -1,35 +1,6 @@
 {
   "version": 8,
   "name": "Mapbox Dark",
-  "metadata": {
-    "mapbox:type": "default",
-    "mapbox:origin": "dark-v10",
-    "mapbox:autocomposite": true,
-    "mapbox:groups": {
-      "1444855786460.0557": {
-        "name": "Roads",
-        "collapsed": true
-      },
-      "1444934295202.7542": {
-        "name": "Admin boundaries",
-        "collapsed": true
-      },
-      "1444855799204.86": {
-        "name": "Bridges",
-        "collapsed": true
-      },
-      "1444855769305.6016": {
-        "name": "Tunnels",
-        "collapsed": true
-      }
-    },
-    "mapbox:sdk-support": {
-      "js": "3.17.0",
-      "android": "11.17.0",
-      "ios": "11.17.0"
-    },
-    "_mlSpaceColor": "#0a0a14"
-  },
   "center": [
     15.293,
     50.8476
@@ -43,16 +14,35 @@
     "__ml-terrain": {
       "type": "raster-dem",
       "tiles": [
-        "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/terrain/{z}/{x}/{y}.png"
+        "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
       ],
       "encoding": "terrarium",
-      "tileSize": 256,
-      "maxzoom": 5,
-      "attribution": "Terrain: SRTM (NASA/USGS), public domain"
+      "tileSize": 512,
+      "maxzoom": 12,
+      "attribution": "Terrain: Mapzen/AWS Open Data (SRTM, NASA/USGS)"
+    },
+    "__ml-contours": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/contours.pmtiles",
+      "maxzoom": 8,
+      "minzoom": 8,
+      "attribution": "Contours: SRTM (NASA/USGS), pre-generated"
+    },
+    "__ml-bathymetry": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/bathymetry.pmtiles",
+      "attribution": "Bathymetry: Natural Earth"
+    },
+    "__ml-ne-landcover": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 6,
+      "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
-  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/dark/sprite/sprite",
-  "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://travlr-tiles.matsmiersen.workers.dev/styles/dark/sprite/sprite",
+  "glyphs": "https://travlr-tiles.matsmiersen.workers.dev/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "land",
@@ -86,6 +76,80 @@
           0
         ],
         "fill-antialias": false
+      }
+    },
+    {
+      "id": "__ml-lc-tundra",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "tundra"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(150, 15%, 20%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-scrub",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "scrub"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(62, 26%, 18%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
       }
     },
     {
@@ -123,6 +187,117 @@
       }
     },
     {
+      "id": "__ml-lc-desert",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "desert"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(132, 2%, 20%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-wood",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "wood"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(122, 32%, 13%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-glaciated",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "glaciated"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(200,14%,55%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "id": "landuse",
       "type": "fill",
       "source": "composite",
@@ -137,7 +312,6 @@
         [
           "park",
           "airport",
-          "ice",
           "pitch",
           "sand"
         ],
@@ -156,17 +330,10 @@
           ],
           5,
           0,
+          5.25,
+          1,
           6,
-          [
-            "match",
-            [
-              "get",
-              "class"
-            ],
-            "ice",
-            0.5,
-            1
-          ]
+          1
         ],
         "fill-color": "hsl(132, 2%, 20%)"
       }
@@ -294,14 +461,46 @@
       }
     },
     {
+      "id": "__ml-bathymetry",
+      "type": "fill",
+      "source": "__ml-bathymetry",
+      "source-layer": "bathymetry",
+      "maxzoom": 7,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": "hsl(210, 50%, 35%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "get",
+            "depth"
+          ],
+          200,
+          0.04,
+          3000,
+          0.18,
+          6000,
+          0.32,
+          10000,
+          0.5
+        ]
+      }
+    },
+    {
       "id": "hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
       "maxzoom": 16,
       "paint": {
-        "hillshade-exaggeration": 0.4,
+        "hillshade-shadow-color": "hsl(0, 0%, 16%)",
+        "hillshade-highlight-color": "hsla(0, 0%, 100%, 0.25)",
         "hillshade-illumination-anchor": "map",
-        "hillshade-shadow-color": "hsl(0,0%,0%)"
+        "hillshade-exaggeration": 0.1
       }
     },
     {
@@ -323,7 +522,7 @@
           "match",
           [
             "get",
-            "type"
+            "class"
           ],
           [
             "runway",
@@ -383,7 +582,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "runway",
             1,
@@ -396,7 +595,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "runway",
             80,
@@ -427,25 +626,7 @@
       "source": "composite",
       "source-layer": "building",
       "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "!=",
-          [
-            "get",
-            "type"
-          ],
-          "building:part"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "underground"
-          ],
-          "false"
-        ]
-      ],
+      "filter": true,
       "layout": {},
       "paint": {
         "line-color": "hsl(55, 1%, 15%)",
@@ -481,30 +662,46 @@
       }
     },
     {
+      "id": "__ml-buildings-lod",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "building",
+      "minzoom": 13.5,
+      "maxzoom": 15,
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(55, 1%, 17%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13.5,
+          0,
+          13.75,
+          0.6,
+          14,
+          0,
+          14.3,
+          0.6,
+          14.75,
+          0.6,
+          15,
+          0
+        ]
+      }
+    },
+    {
       "id": "building",
       "type": "fill",
       "source": "composite",
       "source-layer": "building",
       "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          "!=",
-          [
-            "get",
-            "type"
-          ],
-          "building:part"
-        ],
-        [
-          "==",
-          [
-            "get",
-            "underground"
-          ],
-          "false"
-        ]
-      ],
+      "filter": true,
       "layout": {},
       "paint": {
         "fill-outline-color": "hsl(55, 1%, 15%)",
@@ -527,11 +724,61 @@
       }
     },
     {
+      "id": "__ml-urban-lod",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landuse",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "match",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "residential",
+          "commercial",
+          "industrial",
+          "retail",
+          "suburb",
+          "neighbourhood",
+          "garages",
+          "quarter"
+        ],
+        true,
+        false
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(43, 5%, 29%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          0.5,
+          10.5,
+          0.5,
+          13,
+          0.5,
+          13.75,
+          0.23750000000000004,
+          14,
+          0
+        ]
+      }
+    },
+    {
       "id": "tunnel-street-minor-low",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -653,9 +900,6 @@
     {
       "id": "tunnel-street-minor-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -795,9 +1039,6 @@
     {
       "id": "tunnel-primary-secondary-tertiary-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -931,9 +1172,6 @@
     {
       "id": "tunnel-major-link-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -954,7 +1192,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -1026,9 +1264,6 @@
     {
       "id": "tunnel-motorway-trunk-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -1119,9 +1354,6 @@
     {
       "id": "tunnel-construction",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 14,
@@ -1231,9 +1463,6 @@
     {
       "id": "tunnel-path",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -1259,7 +1488,7 @@
           "!=",
           [
             "get",
-            "type"
+            "subclass"
           ],
           "steps"
         ],
@@ -1345,9 +1574,6 @@
     {
       "id": "tunnel-steps",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 14,
@@ -1453,9 +1679,6 @@
     {
       "id": "tunnel-major-link",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -1476,7 +1699,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -1530,9 +1753,6 @@
     {
       "id": "tunnel-pedestrian",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -1628,9 +1848,6 @@
     {
       "id": "tunnel-street-minor",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -1752,9 +1969,6 @@
     {
       "id": "tunnel-primary-secondary-tertiary",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -1856,9 +2070,6 @@
     {
       "id": "tunnel-motorway-trunk",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855769305.6016"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -1931,9 +2142,6 @@
     {
       "id": "road-pedestrian-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 12,
@@ -2007,9 +2215,6 @@
     {
       "id": "road-minor-low",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -2115,9 +2320,6 @@
     {
       "id": "road-street-low",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 11,
@@ -2199,9 +2401,6 @@
     {
       "id": "road-minor-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -2321,9 +2520,6 @@
     {
       "id": "road-street-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 11,
@@ -2419,9 +2615,6 @@
     {
       "id": "road-secondary-tertiary-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "filter": [
@@ -2505,9 +2698,6 @@
     {
       "id": "road-primary-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "filter": [
@@ -2586,9 +2776,6 @@
     {
       "id": "road-major-link-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 10,
@@ -2601,7 +2788,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -2684,9 +2871,6 @@
     {
       "id": "road-motorway-trunk-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "filter": [
@@ -2788,9 +2972,6 @@
     {
       "id": "road-construction",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 14,
@@ -2911,9 +3092,6 @@
     {
       "id": "road-path",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 12,
@@ -2938,7 +3116,7 @@
               "match",
               [
                 "get",
-                "type"
+                "subclass"
               ],
               [
                 "steps",
@@ -2954,7 +3132,7 @@
             "!=",
             [
               "get",
-              "type"
+              "subclass"
             ],
             "steps"
           ]
@@ -3064,9 +3242,6 @@
     {
       "id": "road-steps",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 14,
@@ -3076,7 +3251,7 @@
           "==",
           [
             "get",
-            "type"
+            "subclass"
           ],
           "steps"
         ],
@@ -3183,9 +3358,6 @@
     {
       "id": "road-major-link",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 10,
@@ -3198,7 +3370,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -3271,9 +3443,6 @@
     {
       "id": "road-pedestrian",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 12,
@@ -3380,9 +3549,6 @@
     {
       "id": "road-minor",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -3488,9 +3654,6 @@
     {
       "id": "road-street",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 11,
@@ -3572,9 +3735,6 @@
     {
       "id": "road-secondary-tertiary",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "filter": [
@@ -3644,9 +3804,6 @@
     {
       "id": "road-primary",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "filter": [
@@ -3711,9 +3868,6 @@
     {
       "id": "road-motorway-trunk",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "filter": [
@@ -3783,9 +3937,6 @@
     {
       "id": "road-rail",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855786460.0557"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -3861,9 +4012,6 @@
     {
       "id": "bridge-pedestrian-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -3926,9 +4074,6 @@
     {
       "id": "bridge-street-minor-low",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -4050,9 +4195,6 @@
     {
       "id": "bridge-street-minor-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -4187,9 +4329,6 @@
     {
       "id": "bridge-primary-secondary-tertiary-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -4314,9 +4453,6 @@
     {
       "id": "bridge-major-link-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -4337,7 +4473,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -4412,9 +4548,6 @@
     {
       "id": "bridge-motorway-trunk-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -4508,9 +4641,6 @@
     {
       "id": "bridge-construction",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 14,
@@ -4620,9 +4750,6 @@
     {
       "id": "bridge-path",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -4648,7 +4775,7 @@
           "!=",
           [
             "get",
-            "type"
+            "subclass"
           ],
           "steps"
         ],
@@ -4734,9 +4861,6 @@
     {
       "id": "bridge-steps",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 14,
@@ -4746,7 +4870,7 @@
           "==",
           [
             "get",
-            "type"
+            "subclass"
           ],
           "steps"
         ],
@@ -4842,9 +4966,6 @@
     {
       "id": "bridge-major-link",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -4865,7 +4986,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -4927,9 +5048,6 @@
     {
       "id": "bridge-pedestrian",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5025,9 +5143,6 @@
     {
       "id": "bridge-street-minor",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5149,9 +5264,6 @@
     {
       "id": "bridge-primary-secondary-tertiary",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5253,9 +5365,6 @@
     {
       "id": "bridge-motorway-trunk",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5336,9 +5445,6 @@
     {
       "id": "bridge-rail",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5403,9 +5509,6 @@
     {
       "id": "bridge-major-link-2-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5434,7 +5537,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -5501,9 +5604,6 @@
     {
       "id": "bridge-motorway-trunk-2-case",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5597,9 +5697,6 @@
     {
       "id": "bridge-major-link-2",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5628,7 +5725,7 @@
             "class"
           ],
           [
-            "motorway",
+            "motorway_link",
             "trunk_link"
           ],
           true,
@@ -5682,9 +5779,6 @@
     {
       "id": "bridge-motorway-trunk-2",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444855799204.86"
-      },
       "source": "composite",
       "source-layer": "transportation",
       "minzoom": 13,
@@ -5765,9 +5859,6 @@
     {
       "id": "admin-1-boundary-bg",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444934295202.7542"
-      },
       "source": "composite",
       "source-layer": "boundary",
       "filter": [
@@ -5846,9 +5937,6 @@
     {
       "id": "admin-0-boundary-bg",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444934295202.7542"
-      },
       "source": "composite",
       "source-layer": "boundary",
       "minzoom": 1,
@@ -5926,9 +6014,6 @@
     {
       "id": "admin-1-boundary",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444934295202.7542"
-      },
       "source": "composite",
       "source-layer": "boundary",
       "filter": [
@@ -6022,9 +6107,6 @@
     {
       "id": "admin-0-boundary",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444934295202.7542"
-      },
       "source": "composite",
       "source-layer": "boundary",
       "minzoom": 1,
@@ -6092,9 +6174,6 @@
     {
       "id": "admin-0-boundary-disputed",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444934295202.7542"
-      },
       "source": "composite",
       "source-layer": "boundary",
       "minzoom": 1,
@@ -6163,10 +6242,177 @@
       }
     },
     {
+      "id": "__ml-contour",
+      "type": "line",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(26, 30%, 35%, 0.35)",
+        "line-width": 0.7,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-contour-index",
+      "type": "line",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "filter": [
+        "==",
+        [
+          "get",
+          "level"
+        ],
+        1
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(26, 30%, 35%, 0.55)",
+        "line-width": 1.2,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-ferry",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "transportation",
+      "minzoom": 6,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "ferry"
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(205, 60%, 45%, 0.7)",
+        "line-width": 1.2,
+        "line-dasharray": [
+          3,
+          3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          6.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-contour-label",
+      "type": "symbol",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 11,
+      "filter": [
+        "==",
+        [
+          "get",
+          "level"
+        ],
+        1
+      ],
+      "layout": {
+        "visibility": "none",
+        "symbol-placement": "line",
+        "text-field": [
+          "concat",
+          [
+            "to-string",
+            [
+              "get",
+              "ele"
+            ]
+          ],
+          " m"
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10,
+        "text-rotation-alignment": "map"
+      },
+      "paint": {
+        "text-color": "hsl(26, 30%, 35%)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.7)",
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ]
+      }
+    },
+    {
       "id": "road-label",
       "type": "symbol",
       "source": "composite",
-      "source-layer": "transportation",
+      "source-layer": "transportation_name",
       "minzoom": 10,
       "filter": [
         "step",
@@ -6248,6 +6494,7 @@
             ],
             10,
             [
+              "motorway_link",
               "trunk_link",
               "primary_link",
               "secondary_link",
@@ -6274,6 +6521,7 @@
             ],
             16,
             [
+              "motorway_link",
               "trunk_link",
               "primary_link",
               "secondary_link",
@@ -6484,14 +6732,6 @@
             "geometry-type"
           ],
           "LineString"
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "filterrank"
-          ],
-          1
         ]
       ],
       "layout": {
@@ -6504,7 +6744,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             5,
@@ -6515,7 +6755,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             13,
@@ -6603,14 +6843,6 @@
             "geometry-type"
           ],
           "Point"
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "filterrank"
-          ],
-          1
         ]
       ],
       "layout": {
@@ -6623,7 +6855,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             5,
@@ -6634,7 +6866,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             13,
@@ -6674,7 +6906,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             0,
             5,
@@ -6685,7 +6917,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             0,
             13,
@@ -6756,9 +6988,9 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
-            24,
+            20,
             6,
             18,
             12,
@@ -6769,7 +7001,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             9,
@@ -6780,7 +7012,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             9,
@@ -6870,9 +7102,9 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
-            24,
+            20,
             6,
             18,
             12,
@@ -6883,7 +7115,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             9,
@@ -6947,14 +7179,7 @@
       "source": "composite",
       "source-layer": "poi",
       "minzoom": 6,
-      "filter": [
-        "<=",
-        [
-          "get",
-          "filterrank"
-        ],
-        1
-      ],
+      "filter": true,
       "layout": {
         "text-size": [
           "step",
@@ -6965,7 +7190,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             5,
@@ -6976,7 +7201,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             18,
             13,
@@ -7011,7 +7236,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             "hsl(0, 0%, 50%)",
             5,
@@ -7022,7 +7247,7 @@
             "step",
             [
               "get",
-              "sizerank"
+              "rank"
             ],
             "hsl(0, 0%, 50%)",
             13,
@@ -7065,39 +7290,14 @@
       "minzoom": 8,
       "layout": {
         "text-line-height": 1.1,
-        "text-size": [
-          "step",
-          [
-            "get",
-            "sizerank"
-          ],
-          18,
-          9,
-          12
-        ],
+        "text-size": 18,
         "icon-image": [
-          "step",
+          "concat",
           [
             "get",
-            "sizerank"
+            "maki"
           ],
-          [
-            "concat",
-            [
-              "get",
-              "maki"
-            ],
-            "-15"
-          ],
-          9,
-          [
-            "concat",
-            [
-              "get",
-              "maki"
-            ],
-            "-11"
-          ]
+          "-15"
         ],
         "text-font": [
           "Open Sans Regular"
@@ -7109,26 +7309,14 @@
         "text-rotation-alignment": "viewport",
         "text-anchor": "top",
         "text-field": [
-          "step",
+          "coalesce",
           [
             "get",
-            "sizerank"
+            "name_en"
           ],
-          [
-            "coalesce",
-            [
-              "get",
-              "name_en"
-            ],
-            [
-              "get",
-              "name"
-            ]
-          ],
-          15,
           [
             "get",
-            "ref"
+            "name"
           ]
         ],
         "text-letter-spacing": 0.01,
@@ -7174,29 +7362,18 @@
       "minzoom": 10,
       "maxzoom": 15,
       "filter": [
-        "all",
+        "in",
         [
-          "in",
-          [
-            "get",
-            "class"
-          ],
-          [
-            "literal",
-            [
-              "suburb",
-              "neighbourhood",
-              "quarter"
-            ]
-          ]
+          "get",
+          "class"
         ],
         [
-          "<=",
+          "literal",
           [
-            "get",
-            "rank"
-          ],
-          4
+            "suburb",
+            "neighbourhood",
+            "quarter"
+          ]
         ]
       ],
       "layout": {
@@ -7219,7 +7396,7 @@
           "match",
           [
             "get",
-            "type"
+            "class"
           ],
           "suburb",
           0.15,
@@ -7249,7 +7426,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "suburb",
             11,
@@ -7265,7 +7442,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "suburb",
             17,
@@ -7327,14 +7504,6 @@
       "maxzoom": 15,
       "filter": [
         "all",
-        [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          3
-        ],
         [
           "in",
           [
@@ -7419,13 +7588,13 @@
               "get",
               "rank"
             ],
-            28,
+            20,
             9,
-            26,
+            20,
             10,
-            23,
+            20,
             11,
-            21,
+            20,
             12,
             20,
             13,
@@ -7466,31 +7635,7 @@
           [
             "zoom"
           ],
-          [
-            "match",
-            [
-              "get",
-              "text_anchor"
-            ],
-            [
-              "bottom",
-              "top"
-            ],
-            "center",
-            [
-              "left",
-              "bottom-left",
-              "top-left"
-            ],
-            "left",
-            [
-              "right",
-              "bottom-right",
-              "top-right"
-            ],
-            "right",
-            "center"
-          ],
+          "center",
           8,
           "center"
         ],
@@ -7507,159 +7652,17 @@
             ],
             2,
             [
-              "match",
+              "literal",
               [
-                "get",
-                "text_anchor"
-              ],
-              "bottom",
-              [
-                "literal",
-                [
-                  0,
-                  -0.3
-                ]
-              ],
-              "bottom-left",
-              [
-                "literal",
-                [
-                  0.3,
-                  -0.1
-                ]
-              ],
-              "left",
-              [
-                "literal",
-                [
-                  0.45,
-                  0.1
-                ]
-              ],
-              "top-left",
-              [
-                "literal",
-                [
-                  0.3,
-                  0.1
-                ]
-              ],
-              "top",
-              [
-                "literal",
-                [
-                  0,
-                  0.3
-                ]
-              ],
-              "top-right",
-              [
-                "literal",
-                [
-                  -0.3,
-                  0.1
-                ]
-              ],
-              "right",
-              [
-                "literal",
-                [
-                  -0.45,
-                  0
-                ]
-              ],
-              "bottom-right",
-              [
-                "literal",
-                [
-                  -0.3,
-                  -0.1
-                ]
-              ],
-              [
-                "literal",
-                [
-                  0,
-                  -0.3
-                ]
+                0,
+                -0.3
               ]
             ],
             [
-              "match",
+              "literal",
               [
-                "get",
-                "text_anchor"
-              ],
-              "bottom",
-              [
-                "literal",
-                [
-                  0,
-                  -0.25
-                ]
-              ],
-              "bottom-left",
-              [
-                "literal",
-                [
-                  0.2,
-                  -0.05
-                ]
-              ],
-              "left",
-              [
-                "literal",
-                [
-                  0.4,
-                  0.05
-                ]
-              ],
-              "top-left",
-              [
-                "literal",
-                [
-                  0.2,
-                  0.05
-                ]
-              ],
-              "top",
-              [
-                "literal",
-                [
-                  0,
-                  0.25
-                ]
-              ],
-              "top-right",
-              [
-                "literal",
-                [
-                  -0.2,
-                  0.05
-                ]
-              ],
-              "right",
-              [
-                "literal",
-                [
-                  -0.4,
-                  0.05
-                ]
-              ],
-              "bottom-right",
-              [
-                "literal",
-                [
-                  -0.2,
-                  -0.05
-                ]
-              ],
-              [
-                "literal",
-                [
-                  0,
-                  -0.25
-                ]
+                0,
+                -0.25
               ]
             ]
           ],
@@ -7785,7 +7788,7 @@
               "get",
               "rank"
             ],
-            24,
+            20,
             6,
             18,
             7,
@@ -7823,7 +7826,7 @@
               "coalesce",
               [
                 "get",
-                "abbr"
+                "name:latin"
               ],
               [
                 "get",
@@ -7940,11 +7943,11 @@
               "get",
               "rank"
             ],
-            28,
+            20,
             4,
-            22,
+            20,
             5,
-            21
+            20
           ]
         ],
         "icon-image": "dot-11",
@@ -7956,31 +7959,7 @@
           [
             "zoom"
           ],
-          [
-            "match",
-            [
-              "get",
-              "text_anchor"
-            ],
-            [
-              "bottom",
-              "top"
-            ],
-            "center",
-            [
-              "left",
-              "bottom-left",
-              "top-left"
-            ],
-            "left",
-            [
-              "right",
-              "bottom-right",
-              "top-right"
-            ],
-            "right",
-            "center"
-          ],
+          "center",
           7,
           "center"
         ],
@@ -7990,81 +7969,10 @@
             "zoom"
           ],
           [
-            "match",
+            "literal",
             [
-              "get",
-              "text_anchor"
-            ],
-            "bottom",
-            [
-              "literal",
-              [
-                0,
-                -0.25
-              ]
-            ],
-            "bottom-left",
-            [
-              "literal",
-              [
-                0.2,
-                -0.05
-              ]
-            ],
-            "left",
-            [
-              "literal",
-              [
-                0.4,
-                0.05
-              ]
-            ],
-            "top-left",
-            [
-              "literal",
-              [
-                0.2,
-                0.05
-              ]
-            ],
-            "top",
-            [
-              "literal",
-              [
-                0,
-                0.25
-              ]
-            ],
-            "top-right",
-            [
-              "literal",
-              [
-                -0.2,
-                0.05
-              ]
-            ],
-            "right",
-            [
-              "literal",
-              [
-                -0.4,
-                0.05
-              ]
-            ],
-            "bottom-right",
-            [
-              "literal",
-              [
-                -0.2,
-                -0.05
-              ]
-            ],
-            [
-              "literal",
-              [
-                0,
-                -0.25
-              ]
+              0,
+              -0.25
             ]
           ],
           7,
@@ -8156,6 +8064,55 @@
           0
         ]
       }
+    },
+    {
+      "id": "__ml-housenumbers",
+      "type": "symbol",
+      "source": "composite",
+      "source-layer": "housenumber",
+      "minzoom": 17,
+      "layout": {
+        "visibility": "none",
+        "text-field": [
+          "get",
+          "housenumber"
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10
+      },
+      "paint": {
+        "text-color": "hsla(0, 0%, 40%, 0.9)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.7)",
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ]
+      }
     }
   ],
   "projection": {
@@ -8163,5 +8120,8 @@
   },
   "sky": {
     "atmosphere-blend": 0.8
+  },
+  "metadata": {
+    "_mlSpaceColor": "#0a0a14"
   }
 }

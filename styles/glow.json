@@ -1,58 +1,6 @@
 {
   "version": 8,
   "name": "Glow V2-Miguel",
-  "metadata": {
-    "mapbox:print": {
-      "width": 8.5,
-      "height": 11,
-      "units": "in",
-      "format": "png",
-      "resolution": 300
-    },
-    "mapbox:type": "template",
-    "mapbox:trackposition": true,
-    "mapbox:autocomposite": true,
-    "mapbox:sdk-support": {
-      "android": "latest",
-      "ios": "latest",
-      "js": "2.12.1"
-    },
-    "mapbox:groups": {
-      "Land & water, land": {
-        "name": "Land & water, land",
-        "collapsed": false
-      },
-      "Land & water, water": {
-        "name": "Land & water, water",
-        "collapsed": false
-      },
-      "Land & water, built": {
-        "name": "Land & water, built",
-        "collapsed": true
-      },
-      "Place labels, place-labels": {
-        "collapsed": false,
-        "name": "Place labels, place-labels"
-      },
-      "Terrain, land": {
-        "collapsed": false,
-        "name": "Terrain, land"
-      },
-      "Land, water, & sky, land": {
-        "collapsed": true,
-        "name": "Land, water, & sky, land"
-      },
-      "Land, water, & sky, water": {
-        "collapsed": true,
-        "name": "Land, water, & sky, water"
-      },
-      "Land, water, & sky, built": {
-        "collapsed": true,
-        "name": "Land, water, & sky, built"
-      }
-    },
-    "_mlSpaceColor": "hsl(220, 20%, 15%)"
-  },
   "center": [
     49.116359405030494,
     44.71183269812212
@@ -68,16 +16,35 @@
     "__ml-terrain": {
       "type": "raster-dem",
       "tiles": [
-        "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/terrain/{z}/{x}/{y}.png"
+        "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
       ],
       "encoding": "terrarium",
-      "tileSize": 256,
-      "maxzoom": 5,
-      "attribution": "Terrain: SRTM (NASA/USGS), public domain"
+      "tileSize": 512,
+      "maxzoom": 12,
+      "attribution": "Terrain: Mapzen/AWS Open Data (SRTM, NASA/USGS)"
+    },
+    "__ml-contours": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/contours.pmtiles",
+      "maxzoom": 8,
+      "minzoom": 8,
+      "attribution": "Contours: SRTM (NASA/USGS), pre-generated"
+    },
+    "__ml-bathymetry": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/bathymetry.pmtiles",
+      "attribution": "Bathymetry: Natural Earth"
+    },
+    "__ml-ne-landcover": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 6,
+      "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
-  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/glow/sprite/sprite",
-  "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://travlr-tiles.matsmiersen.workers.dev/styles/glow/sprite/sprite",
+  "glyphs": "https://travlr-tiles.matsmiersen.workers.dev/styles/fonts/{fontstack}/{range}.pbf",
   "projection": {
     "type": "globe"
   },
@@ -100,18 +67,121 @@
           13,
           "hsl(193, 100%, 20%)"
         ]
-      },
-      "metadata": {
-        "mapbox:featureComponent": "land-and-water",
-        "mapbox:group": "Land & water, land"
+      }
+    },
+    {
+      "id": "__ml-lc-tundra",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "tundra"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "rgb(15, 46, 54)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-scrub",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "scrub"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "rgb(15, 46, 54)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-glaciated",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "glaciated"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(193, 27%, 40%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
       }
     },
     {
       "layout": {},
-      "metadata": {
-        "mapbox:featureComponent": "land-and-water",
-        "mapbox:group": "Land & water, land"
-      },
       "maxzoom": 12,
       "filter": [
         "match",
@@ -191,10 +261,6 @@
     {
       "minzoom": 5,
       "layout": {},
-      "metadata": {
-        "mapbox:featureComponent": "land-and-water",
-        "mapbox:group": "Land & water, land"
-      },
       "filter": [
         "==",
         [
@@ -229,25 +295,84 @@
       "source-layer": "park"
     },
     {
+      "id": "__ml-lc-wood",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "wood"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(126, 42%, 46%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-desert",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "desert"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(193, 63%, 29%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "minzoom": 5,
       "layout": {},
-      "metadata": {
-        "mapbox:featureComponent": "land-and-water",
-        "mapbox:group": "Land & water, land"
-      },
       "filter": [
         "all",
-        [
-          ">=",
-          [
-            "to-number",
-            [
-              "get",
-              "sizerank"
-            ]
-          ],
-          0
-        ],
         [
           "match",
           [
@@ -255,10 +380,8 @@
             "class"
           ],
           [
-            "farmland",
-            "forest",
+            "agriculture",
             "grass",
-            "ice",
             "pitch",
             "sand"
           ],
@@ -294,14 +417,7 @@
             8,
             [
               "case",
-              [
-                "==",
-                [
-                  "get",
-                  "sizerank"
-                ],
-                1
-              ],
+              true,
               true,
               false
             ],
@@ -343,16 +459,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": [
-          "match",
-          [
-            "get",
-            "class"
-          ],
-          "ice",
-          "hsl(193, 37%, 33%)",
-          "hsl(193, 63%, 29%)"
-        ],
+        "fill-color": "hsl(193, 63%, 29%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -364,16 +471,7 @@
           5,
           0,
           6,
-          [
-            "match",
-            [
-              "get",
-              "class"
-            ],
-            "ice",
-            0.5,
-            0.5
-          ],
+          0.5,
           12,
           [
             "match",
@@ -381,8 +479,6 @@
               "get",
               "class"
             ],
-            "ice",
-            0.5,
             "residential",
             0,
             0.5
@@ -394,8 +490,6 @@
               "get",
               "class"
             ],
-            "ice",
-            0.5,
             "residential",
             0,
             1
@@ -406,18 +500,15 @@
       "source-layer": "landuse"
     },
     {
-      "metadata": {
-        "mapbox:featureComponent": "land-and-water",
-        "mapbox:group": "Land & water, land"
-      },
       "maxzoom": 16,
       "type": "hillshade",
       "source": "__ml-terrain",
       "id": "hillshade",
       "paint": {
-        "hillshade-exaggeration": 0.4,
+        "hillshade-shadow-color": "rgba(40, 107, 125, 1)",
+        "hillshade-highlight-color": "rgba(28, 88, 104, 1)",
         "hillshade-illumination-anchor": "map",
-        "hillshade-shadow-color": "hsl(0,0%,0%)"
+        "hillshade-exaggeration": 0.06
       }
     },
     {
@@ -500,10 +591,6 @@
           8.5,
           0
         ]
-      },
-      "metadata": {
-        "mapbox:featureComponent": "land-and-water",
-        "mapbox:group": "Land & water, water"
       }
     },
     {
@@ -514,10 +601,37 @@
       "layout": {},
       "paint": {
         "fill-color": "hsl(193, 57%, 15%)"
+      }
+    },
+    {
+      "id": "__ml-bathymetry",
+      "type": "fill",
+      "source": "__ml-bathymetry",
+      "source-layer": "bathymetry",
+      "maxzoom": 7,
+      "layout": {
+        "visibility": "none"
       },
-      "metadata": {
-        "mapbox:featureComponent": "land-and-water",
-        "mapbox:group": "Land & water, water"
+      "paint": {
+        "fill-color": "hsl(210, 50%, 35%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "get",
+            "depth"
+          ],
+          200,
+          0.04,
+          3000,
+          0.18,
+          6000,
+          0.32,
+          10000,
+          0.5
+        ]
       }
     },
     {
@@ -543,6 +657,59 @@
         "fill-outline-color": "rgba(0, 0, 0, 0)"
       },
       "source-layer": "boundary"
+    },
+    {
+      "id": "__ml-urban-lod",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landuse",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "match",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "residential",
+          "commercial",
+          "industrial",
+          "retail",
+          "suburb",
+          "neighbourhood",
+          "garages",
+          "quarter"
+        ],
+        true,
+        false
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(35, 18%, 80%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          0.5,
+          10.5,
+          0.5,
+          13,
+          0.5,
+          13.75,
+          0.23750000000000004,
+          14,
+          0
+        ]
+      }
     },
     {
       "id": "road",
@@ -711,6 +878,261 @@
       "source-layer": "boundary"
     },
     {
+      "id": "__ml-contour",
+      "type": "line",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(26, 30%, 35%, 0.35)",
+        "line-width": 0.7,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-contour-index",
+      "type": "line",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "filter": [
+        "==",
+        [
+          "get",
+          "level"
+        ],
+        1
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(26, 30%, 35%, 0.55)",
+        "line-width": 1.2,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-rail",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "rail"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "yard"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "siding"
+        ]
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(0, 0%, 35%, 0.7)",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0.6,
+          14,
+          1.4,
+          18,
+          3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-rail-hatch",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "transportation",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "rail"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "yard"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "siding"
+        ]
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(0, 0%, 35%, 0.7)",
+        "line-width": 3,
+        "line-dasharray": [
+          0.1,
+          3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-contour-label",
+      "type": "symbol",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 11,
+      "filter": [
+        "==",
+        [
+          "get",
+          "level"
+        ],
+        1
+      ],
+      "layout": {
+        "visibility": "none",
+        "symbol-placement": "line",
+        "text-field": [
+          "concat",
+          [
+            "to-string",
+            [
+              "get",
+              "ele"
+            ]
+          ],
+          " m"
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10,
+        "text-rotation-alignment": "map"
+      },
+      "paint": {
+        "text-color": "hsl(26, 30%, 35%)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.7)",
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ]
+      }
+    },
+    {
       "minzoom": 10,
       "layout": {
         "text-field": [
@@ -732,7 +1154,7 @@
           "match",
           [
             "get",
-            "type"
+            "class"
           ],
           "suburb",
           0.15,
@@ -757,7 +1179,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "suburb",
             11,
@@ -768,7 +1190,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "suburb",
             15,
@@ -776,10 +1198,6 @@
           ]
         ],
         "visibility": "none"
-      },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
       },
       "maxzoom": 15,
       "filter": true,
@@ -890,9 +1308,9 @@
               "get",
               "rank"
             ],
-            24.200000000000003,
+            20,
             9,
-            22,
+            20,
             12,
             17.6,
             15,
@@ -966,10 +1384,6 @@
         ],
         "text-max-width": 7
       },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
-      },
       "maxzoom": 13,
       "filter": true,
       "type": "symbol",
@@ -1032,7 +1446,7 @@
               "get",
               "rank"
             ],
-            22,
+            20,
             9,
             17.6,
             10,
@@ -1045,9 +1459,9 @@
               "get",
               "rank"
             ],
-            26.400000000000002,
+            20,
             9,
-            22,
+            20,
             12,
             17.6,
             15,
@@ -1102,10 +1516,6 @@
           ]
         ],
         "text-max-width": 7
-      },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
       },
       "maxzoom": 15,
       "filter": true,
@@ -1183,10 +1593,6 @@
         "text-letter-spacing": 0.05,
         "visibility": "none"
       },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
-      },
       "maxzoom": 3,
       "filter": [
         "==",
@@ -1249,9 +1655,131 @@
         ]
       },
       "source-layer": "place"
+    },
+    {
+      "id": "__ml-street-labels",
+      "type": "symbol",
+      "source": "composite",
+      "source-layer": "transportation_name",
+      "minzoom": 13,
+      "layout": {
+        "visibility": "none",
+        "symbol-placement": "line",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:latin"
+          ],
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          10,
+          18,
+          13
+        ],
+        "text-rotation-alignment": "map"
+      },
+      "paint": {
+        "text-color": "hsl(0, 0%, 25%)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.85)",
+        "text-halo-width": 1.2,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-housenumbers",
+      "type": "symbol",
+      "source": "composite",
+      "source-layer": "housenumber",
+      "minzoom": 17,
+      "layout": {
+        "visibility": "none",
+        "text-field": [
+          "get",
+          "housenumber"
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10
+      },
+      "paint": {
+        "text-color": "hsla(0, 0%, 40%, 0.9)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.7)",
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ]
+      }
     }
   ],
   "sky": {
     "atmosphere-blend": 0.8
+  },
+  "metadata": {
+    "_mlSpaceColor": "hsl(220, 20%, 15%)"
   }
 }

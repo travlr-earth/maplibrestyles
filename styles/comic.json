@@ -1,14 +1,6 @@
 {
   "version": 8,
   "name": "Runner",
-  "metadata": {
-    "mapbox:sdk-support": {
-      "js": "3.8.0",
-      "android": "11.9.0",
-      "ios": "11.9.0"
-    },
-    "_mlSpaceColor": "#0a0a14"
-  },
   "center": [
     -82.36775260227454,
     23.14180783915353
@@ -23,11 +15,11 @@
     },
     "__ml-ne-land": {
       "type": "geojson",
-      "data": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/natural-earth/data/ne_110m_land.geojson"
+      "data": "https://travlr-tiles.matsmiersen.workers.dev/styles/natural-earth/data/ne_110m_land.geojson"
     },
     "__ml-contours": {
       "type": "vector",
-      "url": "pmtiles://https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/contours.pmtiles",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/contours.pmtiles",
       "maxzoom": 8,
       "minzoom": 7,
       "attribution": "Contours: SRTM (NASA/USGS), pre-generated"
@@ -35,16 +27,28 @@
     "__ml-terrain": {
       "type": "raster-dem",
       "tiles": [
-        "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/tiles/terrain/{z}/{x}/{y}.png"
+        "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
       ],
       "encoding": "terrarium",
-      "tileSize": 256,
-      "maxzoom": 5,
-      "attribution": "Terrain: SRTM (NASA/USGS), public domain"
+      "tileSize": 512,
+      "maxzoom": 12,
+      "attribution": "Terrain: Mapzen/AWS Open Data (SRTM, NASA/USGS)"
+    },
+    "__ml-bathymetry": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/bathymetry.pmtiles",
+      "attribution": "Bathymetry: Natural Earth"
+    },
+    "__ml-ne-landcover": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 6,
+      "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
-  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/comic/sprite/sprite",
-  "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://travlr-tiles.matsmiersen.workers.dev/styles/comic/sprite/sprite",
+  "glyphs": "https://travlr-tiles.matsmiersen.workers.dev/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -52,6 +56,43 @@
       "paint": {
         "background-color": "rgba(245,241,237,1)",
         "background-opacity": 1
+      }
+    },
+    {
+      "id": "__ml-lc-glaciated",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "glaciated"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "#f4f8ff",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.55,
+          7,
+          0.55,
+          8.75,
+          0.06874999999999998,
+          9,
+          0
+        ]
       }
     },
     {
@@ -87,6 +128,80 @@
         "fill-color": "rgba(172,217,104,1)"
       },
       "source-layer": "landcover"
+    },
+    {
+      "id": "__ml-lc-tundra",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "tundra"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "rgba(172,217,104,1)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.4,
+          7,
+          0.4,
+          8.75,
+          0.04999999999999999,
+          9,
+          0
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-scrub",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "scrub"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "rgba(172,217,104,1)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.55,
+          7,
+          0.55,
+          8.75,
+          0.06874999999999998,
+          9,
+          0
+        ]
+      }
     },
     {
       "filter": [
@@ -149,6 +264,43 @@
       "source-layer": "landcover"
     },
     {
+      "id": "__ml-lc-wood",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "wood"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "rgba(172,217,104,1)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.75,
+          7,
+          0.75,
+          8.75,
+          0.09375,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "filter": [
         "==",
         [
@@ -185,7 +337,7 @@
           "get",
           "class"
         ],
-        "forest"
+        "wood"
       ],
       "type": "fill",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -193,7 +345,7 @@
       "paint": {
         "fill-color": "#cee2bd"
       },
-      "source-layer": "landuse"
+      "source-layer": "landcover"
     },
     {
       "filter": [
@@ -210,7 +362,7 @@
       "paint": {
         "fill-color": "#dfe5c8"
       },
-      "source-layer": "landuse"
+      "source-layer": "landcover"
     },
     {
       "filter": [
@@ -227,7 +379,7 @@
       "paint": {
         "fill-color": "#e6e6cc"
       },
-      "source-layer": "landuse"
+      "source-layer": "landcover"
     },
     {
       "filter": [
@@ -236,7 +388,7 @@
           "get",
           "class"
         ],
-        "crop"
+        "farmland"
       ],
       "type": "fill",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -256,7 +408,7 @@
           "#eeeed4"
         ]
       },
-      "source-layer": "landuse"
+      "source-layer": "landcover"
     },
     {
       "filter": [
@@ -273,24 +425,7 @@
       "paint": {
         "fill-color": "#ddd"
       },
-      "source-layer": "landuse"
-    },
-    {
-      "filter": [
-        "==",
-        [
-          "get",
-          "class"
-        ],
-        "snow"
-      ],
-      "type": "fill",
-      "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
-      "id": "landuse-snow",
-      "paint": {
-        "fill-color": "#f4f8ff"
-      },
-      "source-layer": "landuse"
+      "source-layer": "landcover"
     },
     {
       "filter": [
@@ -375,6 +510,43 @@
       "source-layer": "landuse"
     },
     {
+      "id": "__ml-lc-desert",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "desert"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "#ffd",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.6,
+          7,
+          0.6,
+          8.75,
+          0.07499999999999996,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "filter": [
         "==",
         [
@@ -389,7 +561,7 @@
       "paint": {
         "fill-color": "#ffd"
       },
-      "source-layer": "landuse"
+      "source-layer": "landcover"
     },
     {
       "filter": [
@@ -451,7 +623,7 @@
         "match",
         [
           "get",
-          "type"
+          "class"
         ],
         [
           "canal",
@@ -489,7 +661,7 @@
         "==",
         [
           "get",
-          "type"
+          "class"
         ],
         "stream"
       ],
@@ -576,60 +748,12 @@
       "source": "__ml-terrain",
       "id": "hillshade-highlight-bright",
       "paint": {
-        "hillshade-exaggeration": 0.4,
+        "hillshade-shadow-color": "#216",
+        "hillshade-highlight-color": "#ffd",
         "hillshade-illumination-anchor": "map",
-        "hillshade-highlight-color": "#ffd"
-      }
-    },
-    {
-      "type": "hillshade",
-      "source": "__ml-terrain",
-      "id": "hillshade-highlight-med",
-      "paint": {
-        "hillshade-exaggeration": 0.4,
-        "hillshade-illumination-anchor": "map",
-        "hillshade-highlight-color": "#ffd"
-      }
-    },
-    {
-      "type": "hillshade",
-      "source": "__ml-terrain",
-      "id": "hillshade-shadow-faint",
-      "paint": {
-        "hillshade-exaggeration": 0.4,
-        "hillshade-illumination-anchor": "map",
-        "hillshade-shadow-color": "#216"
-      }
-    },
-    {
-      "type": "hillshade",
-      "source": "__ml-terrain",
-      "id": "hillshade-shadow-med",
-      "paint": {
-        "hillshade-exaggeration": 0.4,
-        "hillshade-illumination-anchor": "map",
-        "hillshade-shadow-color": "#216"
-      }
-    },
-    {
-      "type": "hillshade",
-      "source": "__ml-terrain",
-      "id": "hillshade-shadow-dark",
-      "paint": {
-        "hillshade-exaggeration": 0.4,
-        "hillshade-illumination-anchor": "map",
-        "hillshade-shadow-color": "#216"
-      }
-    },
-    {
-      "type": "hillshade",
-      "source": "__ml-terrain",
-      "id": "hillshade-shadow-extreme",
-      "paint": {
-        "hillshade-exaggeration": 0.4,
-        "hillshade-illumination-anchor": "map",
-        "hillshade-shadow-color": "#216"
-      }
+        "hillshade-exaggeration": 0.15
+      },
+      "maxzoom": 16
     },
     {
       "filter": [
@@ -704,6 +828,37 @@
       }
     },
     {
+      "id": "__ml-bathymetry",
+      "type": "fill",
+      "source": "__ml-bathymetry",
+      "source-layer": "bathymetry",
+      "maxzoom": 7,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": "hsl(210, 50%, 35%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "get",
+            "depth"
+          ],
+          200,
+          0.04,
+          3000,
+          0.18,
+          6000,
+          0.32,
+          10000,
+          0.5
+        ]
+      }
+    },
+    {
       "filter": [
         "match",
         [
@@ -749,14 +904,6 @@
       "source-layer": "park"
     },
     {
-      "type": "fill",
-      "source": "__ml-ne-land",
-      "id": "barrier-line-land-fill",
-      "paint": {
-        "fill-color": "#f4efe1"
-      }
-    },
-    {
       "type": "line",
       "source": "__ml-ne-land",
       "id": "barrier-line-land",
@@ -792,7 +939,7 @@
           "==",
           [
             "get",
-            "type"
+            "class"
           ],
           "runway"
         ]
@@ -833,7 +980,7 @@
           "==",
           [
             "get",
-            "type"
+            "class"
           ],
           "taxiway"
         ]
@@ -867,7 +1014,7 @@
           "!=",
           [
             "get",
-            "type"
+            "class"
           ],
           "apron"
         ],
@@ -886,6 +1033,59 @@
         "fill-color": "#ddd"
       },
       "source-layer": "aeroway"
+    },
+    {
+      "id": "__ml-urban-lod",
+      "type": "fill",
+      "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
+      "source-layer": "landuse",
+      "minzoom": 9,
+      "maxzoom": 14,
+      "filter": [
+        "match",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "residential",
+          "commercial",
+          "industrial",
+          "retail",
+          "suburb",
+          "neighbourhood",
+          "garages",
+          "quarter"
+        ],
+        true,
+        false
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(35, 12%, 81%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          9.25,
+          0.5,
+          10.5,
+          0.5,
+          13,
+          0.5,
+          13.75,
+          0.23750000000000004,
+          14,
+          0
+        ]
+      }
     },
     {
       "filter": [
@@ -947,7 +1147,7 @@
             "get",
             "class"
           ],
-          "motorway"
+          "motorway_link"
         ]
       ],
       "type": "line",
@@ -1299,7 +1499,7 @@
             "get",
             "class"
           ],
-          "motorway"
+          "motorway_link"
         ]
       ],
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -1653,7 +1853,7 @@
           "==",
           [
             "get",
-            "type"
+            "subclass"
           ],
           "pedestrian"
         ]
@@ -1704,7 +1904,7 @@
         "==",
         [
           "get",
-          "type"
+          "subclass"
         ],
         "piste"
       ],
@@ -1742,7 +1942,7 @@
           "get",
           "class"
         ],
-        "motorway"
+        "motorway_link"
       ],
       "type": "line",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -2039,7 +2239,7 @@
           "get",
           "class"
         ],
-        "motorway"
+        "motorway_link"
       ],
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
       "source-layer": "transportation"
@@ -2378,7 +2578,7 @@
         "match",
         [
           "get",
-          "type"
+          "subclass"
         ],
         [
           "footway",
@@ -2419,7 +2619,7 @@
         "match",
         [
           "get",
-          "type"
+          "subclass"
         ],
         [
           "hiking",
@@ -2459,7 +2659,7 @@
         "==",
         [
           "get",
-          "type"
+          "subclass"
         ],
         "cycleway"
       ],
@@ -2494,7 +2694,7 @@
         "==",
         [
           "get",
-          "type"
+          "subclass"
         ],
         "mtb"
       ],
@@ -2552,7 +2752,7 @@
         "==",
         [
           "get",
-          "type"
+          "subclass"
         ],
         "piste"
       ],
@@ -2564,7 +2764,7 @@
         "==",
         [
           "get",
-          "type"
+          "subclass"
         ],
         "steps"
       ],
@@ -2653,7 +2853,7 @@
             "get",
             "class"
           ],
-          "motorway"
+          "motorway_link"
         ]
       ],
       "type": "line",
@@ -2985,7 +3185,7 @@
             "get",
             "class"
           ],
-          "motorway"
+          "motorway_link"
         ]
       ],
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -3666,13 +3866,52 @@
       "source-layer": "boundary"
     },
     {
+      "id": "__ml-ferry",
+      "type": "line",
+      "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
+      "source-layer": "transportation",
+      "minzoom": 6,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "ferry"
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(205, 60%, 45%, 0.7)",
+        "line-width": 1.2,
+        "line-dasharray": [
+          3,
+          3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          6,
+          0,
+          6.25,
+          1
+        ]
+      }
+    },
+    {
       "minzoom": 16,
       "layout": {
         "icon-image": [
           "concat",
           [
             "get",
-            "maki"
+            "class"
           ],
           "-12"
         ],
@@ -3707,7 +3946,7 @@
           "==",
           [
             "get",
-            "scalerank"
+            "rank"
           ],
           4
         ]
@@ -3755,7 +3994,7 @@
           "concat",
           [
             "get",
-            "maki"
+            "class"
           ],
           "-12"
         ],
@@ -3802,7 +4041,7 @@
           "==",
           [
             "get",
-            "scalerank"
+            "rank"
           ],
           3
         ]
@@ -3850,7 +4089,7 @@
           "concat",
           [
             "get",
-            "maki"
+            "class"
           ],
           "-12"
         ],
@@ -3897,7 +4136,7 @@
           "match",
           [
             "get",
-            "scalerank"
+            "rank"
           ],
           [
             1,
@@ -4270,7 +4509,7 @@
           12,
           11,
           17,
-          40
+          20
         ]
       },
       "maxzoom": 17,
@@ -4287,7 +4526,7 @@
           "match",
           [
             "get",
-            "type"
+            "class"
           ],
           [
             "hamlet",
@@ -4377,7 +4616,7 @@
           "==",
           [
             "get",
-            "type"
+            "class"
           ],
           "village"
         ]
@@ -4445,7 +4684,7 @@
           9,
           12,
           15,
-          22
+          20
         ]
       },
       "maxzoom": 16,
@@ -4462,7 +4701,7 @@
           "==",
           [
             "get",
-            "type"
+            "class"
           ],
           "town"
         ]
@@ -4555,7 +4794,7 @@
             "match",
             [
               "get",
-              "scalerank"
+              "rank"
             ],
             [
               0,
@@ -4570,7 +4809,7 @@
             "==",
             [
               "get",
-              "type"
+              "class"
             ],
             "city"
           ]
@@ -4638,9 +4877,9 @@
           4,
           11,
           10,
-          26,
+          20,
           14,
-          38
+          20
         ]
       },
       "maxzoom": 14,
@@ -4659,7 +4898,7 @@
             "<=",
             [
               "get",
-              "scalerank"
+              "rank"
             ],
             3
           ],
@@ -4667,7 +4906,7 @@
             "==",
             [
               "get",
-              "type"
+              "class"
             ],
             "city"
           ]
@@ -4823,28 +5062,11 @@
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
+          "geometry-type"
         ],
-        [
-          "match",
-          [
-            "get",
-            "labelrank"
-          ],
-          [
-            4,
-            5,
-            6
-          ],
-          true,
-          false
-        ]
+        "Point"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -4886,22 +5108,11 @@
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
+          "geometry-type"
         ],
-        [
-          "==",
-          [
-            "get",
-            "labelrank"
-          ],
-          3
-        ]
+        "Point"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -4939,26 +5150,15 @@
           3,
           14,
           5,
-          24
+          20
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
+          "geometry-type"
         ],
-        [
-          "==",
-          [
-            "get",
-            "labelrank"
-          ],
-          2
-        ]
+        "Point"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -4993,28 +5193,17 @@
             "zoom"
           ],
           3,
-          25,
+          20,
           4,
-          30
+          20
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
+          "geometry-type"
         ],
-        [
-          "==",
-          [
-            "get",
-            "labelrank"
-          ],
-          1
-        ]
+        "Point"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -5053,28 +5242,11 @@
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "LineString"
+          "geometry-type"
         ],
-        [
-          "match",
-          [
-            "get",
-            "labelrank"
-          ],
-          [
-            4,
-            5,
-            6
-          ],
-          true,
-          false
-        ]
+        "LineString"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -5114,22 +5286,11 @@
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "LineString"
+          "geometry-type"
         ],
-        [
-          "==",
-          [
-            "get",
-            "labelrank"
-          ],
-          3
-        ]
+        "LineString"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -5165,26 +5326,15 @@
           3,
           14,
           5,
-          24
+          20
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "LineString"
+          "geometry-type"
         ],
-        [
-          "==",
-          [
-            "get",
-            "labelrank"
-          ],
-          2
-        ]
+        "LineString"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -5218,28 +5368,17 @@
             "zoom"
           ],
           3,
-          25,
+          20,
           4,
-          30
+          20
         ]
       },
       "filter": [
-        "all",
+        "==",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "LineString"
+          "geometry-type"
         ],
-        [
-          "==",
-          [
-            "get",
-            "labelrank"
-          ],
-          1
-        ]
+        "LineString"
       ],
       "type": "symbol",
       "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
@@ -5305,6 +5444,55 @@
         "text-halo-blur": 1
       },
       "source-layer": "place"
+    },
+    {
+      "id": "__ml-housenumbers",
+      "type": "symbol",
+      "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
+      "source-layer": "housenumber",
+      "minzoom": 17,
+      "layout": {
+        "visibility": "none",
+        "text-field": [
+          "get",
+          "housenumber"
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10
+      },
+      "paint": {
+        "text-color": "hsla(0, 0%, 40%, 0.9)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.7)",
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ]
+      }
     }
   ],
   "projection": {
@@ -5312,5 +5500,8 @@
   },
   "sky": {
     "atmosphere-blend": 0.8
+  },
+  "metadata": {
+    "_mlSpaceColor": "#0a0a14"
   }
 }

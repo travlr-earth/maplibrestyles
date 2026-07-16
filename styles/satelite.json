@@ -1,67 +1,6 @@
 {
   "version": 8,
   "name": "Satelite V2-Miguel",
-  "metadata": {
-    "mapbox:print": {
-      "width": 8.5,
-      "height": 11,
-      "units": "in",
-      "format": "png",
-      "resolution": 300
-    },
-    "mapbox:type": "default",
-    "mapbox:trackposition": false,
-    "mapbox:autocomposite": true,
-    "mapbox:sdk-support": {
-      "android": "latest",
-      "ios": "10.9.0",
-      "js": "2.12.1"
-    },
-    "mapbox:origin": "satellite-streets-v12",
-    "mapbox:groups": {
-      "Transit, transit-labels": {
-        "name": "Transit, transit-labels",
-        "collapsed": true
-      },
-      "Administrative boundaries, admin": {
-        "name": "Administrative boundaries, admin",
-        "collapsed": false
-      },
-      "Walking, cycling, etc., barriers-bridges": {
-        "name": "Walking, cycling, etc., barriers-bridges",
-        "collapsed": true
-      },
-      "Place labels, place-labels": {
-        "collapsed": false,
-        "name": "Place labels, place-labels"
-      },
-      "Transit, elevated": {
-        "name": "Transit, elevated",
-        "collapsed": true
-      },
-      "Walking, cycling, etc., tunnels": {
-        "name": "Walking, cycling, etc., tunnels",
-        "collapsed": true
-      },
-      "Walking, cycling, etc., walking-cycling-labels": {
-        "name": "Walking, cycling, etc., walking-cycling-labels",
-        "collapsed": true
-      },
-      "Walking, cycling, etc., surface": {
-        "name": "Walking, cycling, etc., surface",
-        "collapsed": true
-      },
-      "Satellite imagery, land": {
-        "name": "Satellite imagery, land",
-        "collapsed": false
-      },
-      "Transit, ferry-aerialway-labels": {
-        "name": "Transit, ferry-aerialway-labels",
-        "collapsed": true
-      }
-    },
-    "_mlSpaceColor": "hsl(240, 0%, 0%)"
-  },
   "center": [
     0,
     0
@@ -83,10 +22,32 @@
       "maxzoom": 19,
       "minzoom": 0,
       "attribution": "Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, GIS User Community"
+    },
+    "__ml-terrain": {
+      "type": "raster-dem",
+      "tiles": [
+        "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
+      ],
+      "encoding": "terrarium",
+      "tileSize": 512,
+      "maxzoom": 12,
+      "attribution": "Terrain: Mapzen/AWS Open Data (SRTM, NASA/USGS)"
+    },
+    "__ml-contours": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/contours.pmtiles",
+      "maxzoom": 8,
+      "minzoom": 8,
+      "attribution": "Contours: SRTM (NASA/USGS), pre-generated"
+    },
+    "__ml-bathymetry": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/bathymetry.pmtiles",
+      "attribution": "Bathymetry: Natural Earth"
     }
   },
-  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/satelite/sprite/sprite",
-  "glyphs": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://travlr-tiles.matsmiersen.workers.dev/styles/satelite/sprite/sprite",
+  "glyphs": "https://travlr-tiles.matsmiersen.workers.dev/styles/fonts/{fontstack}/{range}.pbf",
   "projection": {
     "type": "globe"
   },
@@ -98,11 +59,52 @@
       "paint": {
         "background-color": "hsl(222, 0%, 0%)",
         "background-opacity": 0.9
-      },
-      "metadata": {
-        "mapbox:featureComponent": "satellite",
-        "mapbox:group": "Satellite imagery, land"
       }
+    },
+    {
+      "id": "__ml-bathymetry",
+      "type": "fill",
+      "source": "__ml-bathymetry",
+      "source-layer": "bathymetry",
+      "maxzoom": 7,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "fill-color": "hsl(210, 50%, 35%)",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "get",
+            "depth"
+          ],
+          200,
+          0.04,
+          3000,
+          0.18,
+          6000,
+          0.32,
+          10000,
+          0.5
+        ]
+      }
+    },
+    {
+      "id": "__ml-hillshade",
+      "type": "hillshade",
+      "source": "__ml-terrain",
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "hillshade-shadow-color": "hsl(0, 0%, 25%)",
+        "hillshade-highlight-color": "hsl(0, 0%, 100%)",
+        "hillshade-exaggeration": 0.25
+      },
+      "maxzoom": 16
     },
     {
       "id": "satellite",
@@ -120,10 +122,6 @@
           22,
           "linear"
         ]
-      },
-      "metadata": {
-        "mapbox:featureComponent": "satellite",
-        "mapbox:group": "Satellite imagery, land"
       }
     },
     {
@@ -309,6 +307,261 @@
       "source-layer": "boundary"
     },
     {
+      "id": "__ml-contour",
+      "type": "line",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(26, 30%, 35%, 0.35)",
+        "line-width": 0.7,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-contour-index",
+      "type": "line",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 8,
+      "filter": [
+        "==",
+        [
+          "get",
+          "level"
+        ],
+        1
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(26, 30%, 35%, 0.55)",
+        "line-width": 1.2,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-rail",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "transportation",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "rail"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "yard"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "siding"
+        ]
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(0, 0%, 35%, 0.7)",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.5
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0.6,
+          14,
+          1.4,
+          18,
+          3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-rail-hatch",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "transportation",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "rail"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "yard"
+        ],
+        [
+          "!=",
+          [
+            "get",
+            "service"
+          ],
+          "siding"
+        ]
+      ],
+      "layout": {
+        "visibility": "none"
+      },
+      "paint": {
+        "line-color": "hsla(0, 0%, 35%, 0.7)",
+        "line-width": 3,
+        "line-dasharray": [
+          0.1,
+          3
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-contour-label",
+      "type": "symbol",
+      "source": "__ml-contours",
+      "source-layer": "contours",
+      "minzoom": 11,
+      "filter": [
+        "==",
+        [
+          "get",
+          "level"
+        ],
+        1
+      ],
+      "layout": {
+        "visibility": "none",
+        "symbol-placement": "line",
+        "text-field": [
+          "concat",
+          [
+            "to-string",
+            [
+              "get",
+              "ele"
+            ]
+          ],
+          " m"
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10,
+        "text-rotation-alignment": "map"
+      },
+      "paint": {
+        "text-color": "hsl(26, 30%, 35%)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.7)",
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          11,
+          0,
+          11.25,
+          1
+        ]
+      }
+    },
+    {
       "minzoom": 10,
       "layout": {
         "text-field": [
@@ -330,7 +583,7 @@
           "match",
           [
             "get",
-            "type"
+            "class"
           ],
           "suburb",
           0.15,
@@ -355,7 +608,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "suburb",
             11,
@@ -366,7 +619,7 @@
             "match",
             [
               "get",
-              "type"
+              "class"
             ],
             "suburb",
             15,
@@ -374,35 +627,20 @@
           ]
         ]
       },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
-      },
       "maxzoom": 15,
       "filter": [
-        "all",
+        "match",
         [
-          "match",
-          [
-            "get",
-            "class"
-          ],
-          [
-            "suburb",
-            "neighbourhood",
-            "quarter"
-          ],
-          true,
-          false
+          "get",
+          "class"
         ],
         [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          3
-        ]
+          "suburb",
+          "neighbourhood",
+          "quarter"
+        ],
+        true,
+        false
       ],
       "type": "symbol",
       "source": "composite",
@@ -511,7 +749,7 @@
               "get",
               "rank"
             ],
-            22,
+            20,
             9,
             20,
             12,
@@ -568,21 +806,9 @@
         ],
         "text-max-width": 7
       },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
-      },
       "maxzoom": 13,
       "filter": [
         "all",
-        [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          2
-        ],
         [
           "match",
           [
@@ -764,7 +990,7 @@
               "get",
               "rank"
             ],
-            24,
+            20,
             9,
             20,
             12,
@@ -821,21 +1047,9 @@
         ],
         "text-max-width": 7
       },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
-      },
       "maxzoom": 15,
       "filter": [
         "all",
-        [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          2
-        ],
         [
           "match",
           [
@@ -1013,10 +1227,6 @@
         "text-transform": "uppercase",
         "text-letter-spacing": 0.05
       },
-      "metadata": {
-        "mapbox:featureComponent": "place-labels",
-        "mapbox:group": "Place labels, place-labels"
-      },
       "maxzoom": 3,
       "filter": [
         "==",
@@ -1079,9 +1289,131 @@
         ]
       },
       "source-layer": "place"
+    },
+    {
+      "id": "__ml-street-labels",
+      "type": "symbol",
+      "source": "composite",
+      "source-layer": "transportation_name",
+      "minzoom": 13,
+      "layout": {
+        "visibility": "none",
+        "symbol-placement": "line",
+        "text-field": [
+          "coalesce",
+          [
+            "get",
+            "name:latin"
+          ],
+          [
+            "get",
+            "name"
+          ]
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          10,
+          18,
+          13
+        ],
+        "text-rotation-alignment": "map"
+      },
+      "paint": {
+        "text-color": "hsl(0, 0%, 25%)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.85)",
+        "text-halo-width": 1.2,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          1
+        ]
+      }
+    },
+    {
+      "id": "__ml-housenumbers",
+      "type": "symbol",
+      "source": "composite",
+      "source-layer": "housenumber",
+      "minzoom": 17,
+      "layout": {
+        "visibility": "none",
+        "text-field": [
+          "get",
+          "housenumber"
+        ],
+        "text-font": [
+          "Open Sans Regular"
+        ],
+        "text-size": 10
+      },
+      "paint": {
+        "text-color": "hsla(0, 0%, 40%, 0.9)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.7)",
+        "text-halo-width": 1,
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ],
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          17,
+          0,
+          17.25,
+          1
+        ]
+      }
     }
   ],
   "sky": {
     "atmosphere-blend": 0.8
+  },
+  "metadata": {
+    "_mlSpaceColor": "hsl(240, 0%, 0%)"
   }
 }
