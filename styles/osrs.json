@@ -39,7 +39,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -228,7 +228,7 @@
         "national_park"
       ],
       "paint": {
-        "fill-color": "#2a5a1e",
+        "fill-color": "hsl(94, 54%, 35%)",
         "fill-opacity": 0.8
       }
     },
@@ -248,7 +248,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#5a8a35",
+        "fill-color": "hsl(103, 49%, 34%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -260,10 +260,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -285,7 +285,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#5a8a35",
+        "fill-color": "hsl(94, 54%, 35%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -297,10 +297,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]
@@ -326,7 +326,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#5a8a35"
+        "fill-color": "hsl(94, 54%, 35%)"
       }
     },
     {
@@ -345,7 +345,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#6a9030"
+        "fill-color": "hsl(94, 54%, 35%)"
       }
     },
     {
@@ -364,7 +364,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#1e3c14",
+        "fill-color": "hsl(99, 55%, 36%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -376,10 +376,10 @@
           ],
           0,
           0.75,
-          7,
+          8,
           0.75,
           8.75,
-          0.09375,
+          0.1875,
           9,
           0
         ]
@@ -401,7 +401,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(200,14%,55%)",
+        "fill-color": "hsl(106, 47%, 40%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -413,10 +413,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]
@@ -438,7 +438,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#1e3c14"
+        "fill-color": "hsl(99, 55%, 36%)"
       }
     },
     {
@@ -460,7 +460,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#3a6020"
+        "fill-color": "hsl(94, 54%, 35%)"
       }
     },
     {
@@ -479,7 +479,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#c8a050",
+        "fill-color": "hsl(88, 55%, 34%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -491,10 +491,10 @@
           ],
           0,
           0.6,
-          7,
+          8,
           0.6,
           8.75,
-          0.07499999999999996,
+          0.15000000000000002,
           9,
           0
         ]
@@ -519,7 +519,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#c8a050"
+        "fill-color": "hsl(88, 55%, 34%)"
       }
     },
     {
@@ -542,7 +542,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#786458"
+        "fill-color": "hsl(88, 55%, 34%)"
       }
     },
     {
@@ -564,7 +564,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#3e6820",
+        "fill-color": "hsl(94, 54%, 35%)",
         "fill-opacity": 0.6
       }
     },
@@ -587,7 +587,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#505040",
+        "fill-color": "hsl(94, 54%, 35%)",
         "fill-opacity": 0.5
       }
     },
@@ -611,7 +611,7 @@
         false
       ],
       "paint": {
-        "fill-color": "#5a5048"
+        "fill-color": "hsl(94, 54%, 35%)"
       }
     },
     {
@@ -628,7 +628,7 @@
         "cemetery"
       ],
       "paint": {
-        "fill-color": "#3a4e24"
+        "fill-color": "hsl(94, 54%, 35%)"
       }
     },
     {

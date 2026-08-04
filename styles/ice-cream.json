@@ -42,7 +42,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -87,7 +87,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(255, 31%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -99,10 +99,10 @@
           ],
           0,
           0.1,
-          7,
+          8,
           0.1,
           8.75,
-          0.012499999999999997,
+          0.024999999999999994,
           9,
           0
         ]
@@ -124,7 +124,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -136,10 +136,10 @@
           ],
           0,
           0.1,
-          7,
+          8,
           0.1,
           8.75,
-          0.012499999999999997,
+          0.024999999999999994,
           9,
           0
         ]
@@ -161,7 +161,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(242, 37%, 93%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -173,10 +173,10 @@
           ],
           0,
           0.1,
-          7,
+          8,
           0.1,
           8.75,
-          0.012499999999999997,
+          0.024999999999999994,
           9,
           0
         ]
@@ -204,7 +204,7 @@
       "source": "composite",
       "id": "landcover-foliage",
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -270,7 +270,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#fff",
+        "fill-color": "hsl(258, 29%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -282,10 +282,10 @@
           ],
           0,
           0.1,
-          7,
+          8,
           0.1,
           8.75,
-          0.012499999999999997,
+          0.024999999999999994,
           9,
           0
         ]
@@ -315,7 +315,7 @@
       "source": "composite",
       "id": "landcover-snow",
       "paint": {
-        "fill-color": "#fff",
+        "fill-color": "hsl(258, 29%, 97%)",
         "fill-opacity": 0.1,
         "fill-antialias": false
       },
@@ -335,7 +335,7 @@
       "source": "composite",
       "id": "industrial",
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-outline-color": "#F4E7F8"
       },
       "source-layer": "landuse"
@@ -366,7 +366,7 @@
       "source": "composite",
       "id": "schools",
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-opacity": 1,
         "fill-outline-color": "#fff",
         "fill-antialias": true
@@ -399,7 +399,7 @@
       "source": "composite",
       "id": "hospitals",
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-opacity": 1,
         "fill-outline-color": "#fff",
         "fill-antialias": true
@@ -431,7 +431,7 @@
       "source": "composite",
       "id": "cemeteries",
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -463,7 +463,7 @@
       "source": "composite",
       "id": "parks",
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -495,7 +495,7 @@
       "source": "composite",
       "id": "pitch",
       "paint": {
-        "fill-color": "#F4E7F8",
+        "fill-color": "hsl(243, 36%, 94%)",
         "fill-outline-color": "#F4E7F8"
       },
       "source-layer": "landuse"
@@ -516,7 +516,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#fff",
+        "fill-color": "hsl(285, 37%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -528,10 +528,10 @@
           ],
           0,
           0.1,
-          7,
+          8,
           0.1,
           8.75,
-          0.012499999999999997,
+          0.024999999999999994,
           9,
           0
         ]
@@ -551,7 +551,7 @@
       "source": "composite",
       "id": "sand",
       "paint": {
-        "fill-color": "#fff"
+        "fill-color": "hsl(285, 37%, 95%)"
       },
       "source-layer": "landcover"
     },

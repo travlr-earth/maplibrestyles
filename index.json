@@ -1,12 +1,12 @@
 [
   {
     "id": "basic",
-    "layers": 58,
+    "layers": 62,
     "name": "Mapbox Basic Overcast"
   },
   {
     "id": "blue-print",
-    "layers": 93,
+    "layers": 97,
     "name": "Blueprint"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "id": "dark",
-    "layers": 94,
+    "layers": 98,
     "name": "Mapbox Dark"
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "id": "golden-age-travel",
-    "layers": 82,
+    "layers": 86,
     "name": "Golden Age of Travel"
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "id": "north-star",
-    "layers": 156,
+    "layers": 160,
     "name": "North Star"
   },
   {
@@ -71,12 +71,12 @@
   },
   {
     "id": "picture-book",
-    "layers": 52,
+    "layers": 56,
     "name": "Picture Book"
   },
   {
     "id": "purple",
-    "layers": 46,
+    "layers": 50,
     "name": "notable-bg-labels"
   },
   {
@@ -96,7 +96,7 @@
   },
   {
     "id": "stranger-things",
-    "layers": 50,
+    "layers": 54,
     "name": "Upside-down"
   },
   {
@@ -121,7 +121,7 @@
   },
   {
     "id": "western",
-    "layers": 52,
+    "layers": 56,
     "name": "Western"
   },
   {

@@ -47,7 +47,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -60,6 +60,160 @@
       "layout": {},
       "paint": {
         "background-color": "#dec29b"
+      }
+    },
+    {
+      "id": "__ml-lc-hi-sand",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landcover",
+      "minzoom": 8,
+      "filter": [
+        "in",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "literal",
+          [
+            "sand",
+            "rock"
+          ]
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(36, 54%, 72%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          0.4,
+          9,
+          0.4
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-hi-grass",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landcover",
+      "minzoom": 8,
+      "filter": [
+        "in",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "literal",
+          [
+            "grass",
+            "scrub",
+            "farmland",
+            "meadow"
+          ]
+        ]
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(41, 53%, 71%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          0.4,
+          9,
+          0.4
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-hi-wood",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landcover",
+      "minzoom": 8,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "wood"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(48, 54%, 70%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          0.5,
+          9,
+          0.5
+        ]
+      }
+    },
+    {
+      "id": "__ml-lc-hi-ice",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landcover",
+      "minzoom": 8,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "ice"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(52, 46%, 78%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          0,
+          8.25,
+          0.5,
+          9,
+          0.5
+        ]
       }
     },
     {
@@ -78,7 +232,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 52%, 74%)",
+        "fill-color": "hsl(36, 54%, 72%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -90,10 +244,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -115,7 +269,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(130, 20%, 70%)",
+        "fill-color": "hsl(49, 48%, 72%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -127,10 +281,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -152,7 +306,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(59, 34%, 64%)",
+        "fill-color": "hsl(41, 53%, 71%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -164,10 +318,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -238,7 +392,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(118, 42%, 46%)",
+        "fill-color": "hsl(48, 54%, 70%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -250,10 +404,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -275,7 +429,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(200,14%,92%)",
+        "fill-color": "hsl(52, 46%, 78%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -287,10 +441,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]

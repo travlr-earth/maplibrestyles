@@ -39,7 +39,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -76,7 +76,7 @@
       "source-layer": "landcover",
       "maxzoom": 9,
       "paint": {
-        "fill-color": "hsl(220, 23%, 95%)",
+        "fill-color": "hsl(204, 41%, 97%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -144,7 +144,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(220, 27%, 94%)",
+        "fill-color": "hsl(194, 42%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -156,10 +156,10 @@
           ],
           0,
           0.6,
-          7,
+          8,
           0.6,
           8.75,
-          0.07499999999999996,
+          0.15000000000000002,
           9,
           0
         ]
@@ -181,7 +181,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(220, 27%, 94%)",
+        "fill-color": "hsl(216, 36%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -193,10 +193,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -218,7 +218,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(220, 27%, 94%)",
+        "fill-color": "hsl(204, 41%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -230,10 +230,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]
@@ -304,7 +304,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": "hsl(220, 27%, 94%)",
+        "fill-color": "hsl(204, 41%, 97%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -445,7 +445,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(127, 42%, 46%)",
+        "fill-color": "hsl(205, 42%, 96%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -457,10 +457,10 @@
           ],
           0,
           0.75,
-          7,
+          8,
           0.75,
           8.75,
-          0.09375,
+          0.1875,
           9,
           0
         ]
@@ -482,7 +482,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(200,14%,92%)",
+        "fill-color": "hsl(219, 34%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -494,10 +494,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]

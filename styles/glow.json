@@ -39,7 +39,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -85,7 +85,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "rgb(15, 46, 54)",
+        "fill-color": "hsl(191, 98%, 22%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -97,10 +97,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -122,7 +122,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "rgb(15, 46, 54)",
+        "fill-color": "hsl(180, 100%, 23%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -134,10 +134,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -159,7 +159,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(193, 27%, 40%)",
+        "fill-color": "hsl(194, 96%, 28%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -171,10 +171,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -215,7 +215,7 @@
             "class"
           ],
           "ice",
-          "hsl(193, 27%, 40%)",
+          "hsl(194, 96%, 28%)",
           "rgb(15, 46, 54)"
         ],
         "fill-opacity": [
@@ -310,7 +310,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(126, 42%, 46%)",
+        "fill-color": "hsl(182, 100%, 24%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -322,10 +322,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -347,7 +347,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(193, 63%, 29%)",
+        "fill-color": "hsl(171, 100%, 22%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -359,10 +359,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -459,7 +459,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": "hsl(193, 63%, 29%)",
+        "fill-color": "hsl(180, 100%, 23%)",
         "fill-opacity": [
           "interpolate",
           [

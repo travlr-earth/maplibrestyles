@@ -39,7 +39,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -73,7 +73,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#dee5e8",
+        "fill-color": "hsl(183, 16%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -85,10 +85,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]
@@ -107,7 +107,7 @@
             "class"
           ],
           "ice",
-          "#dee5e8",
+          "hsl(183, 16%, 97%)",
           "hsl(60, 0%, 100%)"
         ],
         "fill-opacity": [
@@ -141,7 +141,7 @@
             "class"
           ],
           "ice",
-          "#b2c6cd",
+          "hsl(183, 16%, 97%)",
           "hsl(60, 0%, 100%)"
         ],
         "fill-opacity": [
@@ -283,7 +283,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#ffffff",
+        "fill-color": "hsl(160, 24%, 96%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -295,10 +295,10 @@
           ],
           0,
           0.6,
-          7,
+          8,
           0.6,
           8.75,
-          0.07499999999999996,
+          0.15000000000000002,
           9,
           0
         ]
@@ -320,7 +320,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#ffffff",
+        "fill-color": "hsl(180, 18%, 96%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -332,10 +332,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -357,7 +357,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "#ffffff",
+        "fill-color": "hsl(169, 23%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -369,10 +369,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]
@@ -489,7 +489,7 @@
       "id": "landuse-background",
       "paint": {
         "fill-antialias": false,
-        "fill-color": "#ffffff",
+        "fill-color": "hsl(169, 23%, 95%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -623,32 +623,19 @@
             "class"
           ],
           "grass",
-          "hsla(60, 0%, 90%, 0.6)",
+          "hsl(169, 23%, 95%)",
           "agriculture",
-          "hsla(60, 0%, 96%, 0.6)",
+          "hsl(169, 23%, 95%)",
           "park",
-          [
-            "match",
-            [
-              "get",
-              "class"
-            ],
-            [
-              "garden",
-              "playground",
-              "zoo"
-            ],
-            "hsl(60, 0%, 98%)",
-            "hsl(60, 0%, 100%)"
-          ],
+          "hsl(169, 23%, 95%)",
           "cemetery",
-          "hsl(60, 0%, 100%)",
+          "hsl(169, 23%, 95%)",
           "pitch",
-          "hsl(50, 10%, 100%)",
+          "hsl(169, 23%, 95%)",
           "sand",
-          "hsl(0, 5%, 94%)",
+          "hsl(160, 24%, 96%)",
           "rock",
-          "hsl(60, 0%, 100%)",
+          "hsl(160, 24%, 96%)",
           "residential",
           "#ffe5e5",
           "hsl(60, 0%, 95%)"
@@ -726,7 +713,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(118, 42%, 46%)",
+        "fill-color": "hsl(171, 24%, 94%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -738,10 +725,10 @@
           ],
           0,
           0.75,
-          7,
+          8,
           0.75,
           8.75,
-          0.09375,
+          0.1875,
           9,
           0
         ]
@@ -899,7 +886,7 @@
       "source": "composite",
       "id": "landuse-(1)",
       "paint": {
-        "fill-color": "#757575",
+        "fill-color": "hsl(169, 23%, 95%)",
         "fill-opacity": [
           "step",
           [

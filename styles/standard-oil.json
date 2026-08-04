@@ -47,7 +47,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -146,7 +146,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": "hsl(0, 87%, 85%)",
+        "fill-color": "hsl(48, 46%, 86%)",
         "fill-pattern": "",
         "fill-opacity": [
           "interpolate",
@@ -332,7 +332,7 @@
       "source": "composite",
       "id": "hospital-base",
       "paint": {
-        "fill-color": "hsl(0, 87%, 85%)",
+        "fill-color": "hsl(48, 46%, 86%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -370,7 +370,7 @@
       "id": "school-hospital",
       "paint": {
         "fill-pattern": "yellow-pattern",
-        "fill-color": "hsl(0, 0%, 0%)",
+        "fill-color": "hsl(48, 46%, 86%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -403,7 +403,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 52%, 74%)",
+        "fill-color": "hsl(43, 47%, 87%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -415,10 +415,10 @@
           ],
           0,
           0.6,
-          7,
+          8,
           0.6,
           8.75,
-          0.07499999999999996,
+          0.15000000000000002,
           9,
           0
         ]
@@ -440,7 +440,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(0, 0%, 0%)",
+        "fill-color": "hsl(56, 41%, 87%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -452,10 +452,10 @@
           ],
           0,
           0.4,
-          7,
+          8,
           0.4,
           8.75,
-          0.04999999999999999,
+          0.09999999999999998,
           9,
           0
         ]
@@ -477,7 +477,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(0, 0%, 0%)",
+        "fill-color": "hsl(48, 46%, 86%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -489,10 +489,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]
@@ -520,7 +520,7 @@
       "id": "park",
       "paint": {
         "fill-pattern": "gray-pattern",
-        "fill-color": "hsl(0, 0%, 0%)",
+        "fill-color": "hsl(48, 46%, 86%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -553,7 +553,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(118, 42%, 46%)",
+        "fill-color": "hsl(55, 47%, 85%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -565,10 +565,10 @@
           ],
           0,
           0.75,
-          7,
+          8,
           0.75,
           8.75,
-          0.09375,
+          0.1875,
           9,
           0
         ]
@@ -591,7 +591,8 @@
       ],
       "layout": {},
       "paint": {
-        "fill-pattern": "gray-pattern"
+        "fill-pattern": "gray-pattern",
+        "fill-color": "hsl(55, 47%, 85%)"
       }
     },
     {
@@ -610,7 +611,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(200,14%,92%)",
+        "fill-color": "hsl(59, 39%, 93%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -622,10 +623,10 @@
           ],
           0,
           0.55,
-          7,
+          8,
           0.55,
           8.75,
-          0.06874999999999998,
+          0.1375,
           9,
           0
         ]

@@ -16911,7 +16911,7 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
       "minzoom": 0,
-      "maxzoom": 6,
+      "maxzoom": 7,
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
@@ -17032,7 +17032,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "rgba(255,255,255,1)",
+        "fill-color": "hsl(57, 8%, 96%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17044,10 +17044,10 @@
           ],
           0,
           0.25,
-          7,
+          8,
           0.25,
           8.75,
-          0.03125,
+          0.0625,
           9,
           0
         ]
@@ -17069,7 +17069,7 @@
       "source": "mapbox-streets-v6",
       "id": "snow-copy",
       "paint": {
-        "fill-color": "rgba(255,255,255,1)"
+        "fill-color": "hsl(57, 8%, 96%)"
       },
       "source-layer": "landcover"
     },
@@ -17124,7 +17124,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(47, 52%, 74%)",
+        "fill-color": "hsl(41, 16%, 90%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17136,10 +17136,10 @@
           ],
           0,
           0.25,
-          7,
+          8,
           0.25,
           8.75,
-          0.03125,
+          0.0625,
           9,
           0
         ]
@@ -17161,7 +17161,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "rgba(167,36,237,1)",
+        "fill-color": "hsl(54, 10%, 90%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17173,10 +17173,10 @@
           ],
           0,
           0.25,
-          7,
+          8,
           0.25,
           8.75,
-          0.03125,
+          0.0625,
           9,
           0
         ]
@@ -17198,7 +17198,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "rgba(167,36,237,1)",
+        "fill-color": "hsl(45, 15%, 89%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17210,10 +17210,10 @@
           ],
           0,
           0.25,
-          7,
+          8,
           0.25,
           8.75,
-          0.03125,
+          0.0625,
           9,
           0
         ]
@@ -17240,7 +17240,7 @@
       "source": "mapbox-streets-v6",
       "id": "highlight-89-copy-2",
       "paint": {
-        "fill-color": "rgba(167,36,237,1)",
+        "fill-color": "hsl(45, 15%, 89%)",
         "fill-pattern": "paleblue-lines-32",
         "fill-opacity": 0.25
       },
@@ -17262,7 +17262,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(126, 42%, 46%)",
+        "fill-color": "hsl(52, 16%, 88%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17274,10 +17274,10 @@
           ],
           0,
           0.25,
-          7,
+          8,
           0.25,
           8.75,
-          0.03125,
+          0.0625,
           9,
           0
         ]
@@ -17286,7 +17286,7 @@
     {
       "id": "highlight-89-copy",
       "paint": {
-        "fill-color": "#fff",
+        "fill-color": "hsl(45, 15%, 89%)",
         "fill-opacity": 0.5
       },
       "layout": {
