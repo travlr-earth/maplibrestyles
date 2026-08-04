@@ -452,6 +452,43 @@
       }
     },
     {
+      "id": "__ml-lc-urban",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "urban"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(53, 0%, 25%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.5,
+          8,
+          0.5,
+          8.75,
+          0.125,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "id": "landuse",
       "type": "fill",
       "source": "composite",
@@ -775,6 +812,38 @@
       }
     },
     {
+      "id": "__ml-buildings-lod",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "building",
+      "minzoom": 13,
+      "maxzoom": 15,
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(55, 1%, 15%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          0.6,
+          13.3,
+          0.6,
+          14.75,
+          0.6,
+          15,
+          0
+        ]
+      }
+    },
+    {
       "id": "building-outline",
       "type": "line",
       "source": "composite",
@@ -812,40 +881,6 @@
           1,
           16,
           1
-        ]
-      }
-    },
-    {
-      "id": "__ml-buildings-lod",
-      "type": "fill",
-      "source": "composite",
-      "source-layer": "building",
-      "minzoom": 13.5,
-      "maxzoom": 15,
-      "layout": {},
-      "paint": {
-        "fill-color": "hsl(55, 1%, 17%)",
-        "fill-antialias": false,
-        "fill-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          13.5,
-          0,
-          13.75,
-          0.6,
-          14,
-          0,
-          14.3,
-          0.6,
-          14.75,
-          0.6,
-          15,
-          0
         ]
       }
     },

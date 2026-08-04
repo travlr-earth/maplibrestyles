@@ -766,6 +766,43 @@
       "source-layer": "landuse"
     },
     {
+      "id": "__ml-lc-urban",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "urban"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(168, 17%, 93%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.5,
+          8,
+          0.5,
+          8.75,
+          0.125,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "maxzoom": 16,
       "type": "hillshade",
       "source": "__ml-terrain",

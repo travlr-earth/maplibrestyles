@@ -416,6 +416,43 @@
       }
     },
     {
+      "id": "__ml-lc-urban",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "urban"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(96, 40%, 63%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.5,
+          8,
+          0.5,
+          8.75,
+          0.125,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "id": "__ml-hillshade",
       "type": "hillshade",
       "source": "__ml-terrain",
@@ -908,6 +945,33 @@
           0,
           0.25,
           1
+        ]
+      }
+    },
+    {
+      "id": "__ml-buildings",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "building",
+      "minzoom": 13,
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(66, 18%, 59%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          0.35,
+          13.5,
+          0.35
         ]
       }
     },

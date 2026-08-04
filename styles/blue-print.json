@@ -484,6 +484,43 @@
       }
     },
     {
+      "id": "__ml-lc-urban",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "urban"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(237, 43%, 42%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.5,
+          8,
+          0.5,
+          8.75,
+          0.125,
+          9,
+          0
+        ]
+      }
+    },
+    {
       "id": "water",
       "type": "fill",
       "source": "composite",
@@ -743,6 +780,38 @@
         ],
         4
       ]
+    },
+    {
+      "id": "__ml-buildings-lod",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "building",
+      "minzoom": 13,
+      "maxzoom": 15,
+      "layout": {},
+      "paint": {
+        "fill-color": "#e4eaf6",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          0,
+          13.25,
+          0.6,
+          13.3,
+          0.6,
+          14.75,
+          0.6,
+          15,
+          0
+        ]
+      }
     },
     {
       "minzoom": 15,

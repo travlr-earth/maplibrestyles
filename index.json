@@ -1,82 +1,82 @@
 [
   {
     "id": "basic",
-    "layers": 62,
+    "layers": 63,
     "name": "Mapbox Basic Overcast"
   },
   {
     "id": "blue-print",
-    "layers": 97,
+    "layers": 99,
     "name": "Blueprint"
   },
   {
     "id": "comic",
-    "layers": 123,
+    "layers": 124,
     "name": "Runner"
   },
   {
     "id": "dark",
-    "layers": 98,
+    "layers": 99,
     "name": "Mapbox Dark"
   },
   {
     "id": "decimal",
-    "layers": 109,
+    "layers": 110,
     "name": "Decimal"
   },
   {
     "id": "dune",
-    "layers": 45,
+    "layers": 46,
     "name": "DUNE"
   },
   {
     "id": "glow",
-    "layers": 30,
+    "layers": 31,
     "name": "Glow V2-Miguel"
   },
   {
     "id": "golden-age-travel",
-    "layers": 86,
+    "layers": 87,
     "name": "Golden Age of Travel"
   },
   {
     "id": "ice-cream",
-    "layers": 80,
+    "layers": 82,
     "name": "Ice Cream"
   },
   {
     "id": "light",
-    "layers": 60,
+    "layers": 61,
     "name": "Light V2-Miguel 2"
   },
   {
     "id": "mineral",
-    "layers": 44,
+    "layers": 45,
     "name": "Mineral"
   },
   {
     "id": "moonlight",
-    "layers": 145,
+    "layers": 146,
     "name": "Moonlight"
   },
   {
     "id": "north-star",
-    "layers": 160,
+    "layers": 161,
     "name": "North Star"
   },
   {
     "id": "osrs",
-    "layers": 54,
+    "layers": 55,
     "name": "OSRS Gielinor"
   },
   {
     "id": "picture-book",
-    "layers": 56,
+    "layers": 58,
     "name": "Picture Book"
   },
   {
     "id": "purple",
-    "layers": 50,
+    "layers": 51,
     "name": "notable-bg-labels"
   },
   {
@@ -86,47 +86,47 @@
   },
   {
     "id": "ski",
-    "layers": 63,
+    "layers": 64,
     "name": "Swiss ski"
   },
   {
     "id": "standard-oil",
-    "layers": 139,
+    "layers": 140,
     "name": "Standard Oil Company"
   },
   {
     "id": "stranger-things",
-    "layers": 54,
+    "layers": 55,
     "name": "Upside-down"
   },
   {
     "id": "streets",
-    "layers": 87,
+    "layers": 88,
     "name": "Streets V2-Miguel"
   },
   {
     "id": "topo",
-    "layers": 150,
+    "layers": 151,
     "name": "finn_topo_2"
   },
   {
     "id": "unicorn",
-    "layers": 70,
+    "layers": 71,
     "name": "Unicorn"
   },
   {
     "id": "vintage",
-    "layers": 37,
+    "layers": 39,
     "name": "Vintage"
   },
   {
     "id": "western",
-    "layers": 56,
+    "layers": 57,
     "name": "Western"
   },
   {
     "id": "winter",
-    "layers": 70,
+    "layers": 71,
     "name": "Outdoors Winter"
   }
 ]

@@ -37,6 +37,13 @@
       "type": "vector",
       "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/bathymetry.pmtiles",
       "attribution": "Bathymetry: Natural Earth"
+    },
+    "__ml-ne-landcover": {
+      "type": "vector",
+      "url": "pmtiles://https://travlr-tiles.matsmiersen.workers.dev/styles/tiles/ne-landcover.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 7,
+      "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
   "sprite": "https://travlr-tiles.matsmiersen.workers.dev/styles/moonlight/sprite/sprite",
@@ -258,6 +265,43 @@
         "fill-color": "hsl(345, 0%, 94%)",
         "fill-opacity": 0.05,
         "fill-antialias": false
+      }
+    },
+    {
+      "id": "__ml-lc-urban",
+      "type": "fill",
+      "source": "__ml-ne-landcover",
+      "source-layer": "landcover",
+      "maxzoom": 9,
+      "filter": [
+        "==",
+        [
+          "get",
+          "class"
+        ],
+        "urban"
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(2, 0%, 85%)",
+        "fill-antialias": false,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          0.5,
+          8,
+          0.5,
+          8.75,
+          0.125,
+          9,
+          0
+        ]
       }
     },
     {
@@ -1007,7 +1051,7 @@
       "type": "fill",
       "source": "composite",
       "source-layer": "building",
-      "minzoom": 13.5,
+      "minzoom": 13,
       "maxzoom": 15,
       "layout": {},
       "paint": {
@@ -1021,13 +1065,11 @@
           [
             "zoom"
           ],
-          13.5,
+          13,
           0,
-          13.75,
+          13.25,
           0.6,
-          14,
-          0,
-          14.3,
+          13.3,
           0.6,
           14.75,
           0.6,
