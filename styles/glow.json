@@ -641,6 +641,17 @@
       }
     },
     {
+      "id": "__ml-water-line",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "water",
+      "layout": {},
+      "paint": {
+        "line-color": "#0a8d99",
+        "line-width": 0.5
+      }
+    },
+    {
       "id": "__ml-bathymetry",
       "type": "fill",
       "source": "__ml-bathymetry",

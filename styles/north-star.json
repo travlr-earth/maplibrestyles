@@ -884,6 +884,17 @@
       }
     },
     {
+      "id": "__ml-water-line",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "water",
+      "layout": {},
+      "paint": {
+        "line-color": "hsl(0, 0%, 90%)",
+        "line-width": 0.5
+      }
+    },
+    {
       "minzoom": 3,
       "layout": {
         "visibility": "visible"

@@ -137,6 +137,17 @@
       }
     },
     {
+      "id": "__ml-water-line",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "water",
+      "layout": {},
+      "paint": {
+        "line-color": "hsla(0, 0%, 30%, 0.7)",
+        "line-width": 0.5
+      }
+    },
+    {
       "id": "__ml-urban-lod",
       "type": "fill",
       "source": "composite",

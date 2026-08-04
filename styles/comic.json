@@ -865,6 +865,17 @@
       }
     },
     {
+      "id": "__ml-water-line",
+      "type": "line",
+      "source": "mapbox-terrain-v2-mapbox-mapbox-streets-v6",
+      "source-layer": "water",
+      "layout": {},
+      "paint": {
+        "line-color": "#88a",
+        "line-width": 0.5
+      }
+    },
+    {
       "id": "__ml-bathymetry",
       "type": "fill",
       "source": "__ml-bathymetry",

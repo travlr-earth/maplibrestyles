@@ -332,13 +332,14 @@
       }
     },
     {
-      "id": "lakes",
-      "type": "fill",
-      "source": "__ml-priv-picture-book",
-      "source-layer": "ne_10m_lakes-7ne5co",
+      "id": "__ml-water-line",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "water",
       "layout": {},
       "paint": {
-        "fill-color": "#6abebe"
+        "line-color": "hsla(0, 0%, 30%, 0.7)",
+        "line-width": 0.5
       }
     },
     {
@@ -450,6 +451,16 @@
           9,
           0
         ]
+      }
+    },
+    {
+      "id": "lakes",
+      "type": "fill",
+      "source": "__ml-priv-picture-book",
+      "source-layer": "ne_10m_lakes-7ne5co",
+      "layout": {},
+      "paint": {
+        "fill-color": "#6abebe"
       }
     },
     {
