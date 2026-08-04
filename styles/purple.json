@@ -91,7 +91,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(264, 72%, 49%)",
+        "fill-color": "hsl(239, 72%, 49%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -134,7 +134,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(221, 71%, 48%)",
+        "fill-color": "hsl(239, 71%, 48%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -169,7 +169,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(221, 72%, 47%)",
+        "fill-color": "hsl(239, 72%, 47%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -204,7 +204,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(236, 64%, 55%)",
+        "fill-color": "hsl(239, 64%, 55%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -253,7 +253,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(233, 66%, 49%)",
+        "fill-color": "hsl(239, 66%, 49%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -290,7 +290,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(221, 71%, 48%)",
+        "fill-color": "hsl(239, 71%, 48%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -363,7 +363,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(264, 72%, 49%)",
+        "fill-color": "hsl(239, 72%, 49%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -400,7 +400,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(221, 72%, 47%)",
+        "fill-color": "hsl(239, 72%, 47%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -437,7 +437,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(236, 64%, 55%)",
+        "fill-color": "hsl(239, 64%, 55%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -474,7 +474,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(251, 65%, 46%)",
+        "fill-color": "hsl(239, 65%, 46%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -561,7 +561,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": "hsl(221, 71%, 48%)",
+        "fill-color": "hsl(239, 71%, 48%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -999,7 +999,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(35, 18%, 80%)",
+        "fill-color": "hsl(239, 70%, 42%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",

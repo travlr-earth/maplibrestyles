@@ -77,7 +77,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(166, 31%, 92%)",
+        "fill-color": "hsl(187, 31%, 92%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -120,7 +120,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(175, 30%, 91%)",
+        "fill-color": "hsl(187, 30%, 91%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -155,7 +155,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(177, 31%, 90%)",
+        "fill-color": "hsl(187, 31%, 90%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -190,7 +190,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(189, 23%, 97%)",
+        "fill-color": "hsl(187, 23%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -239,7 +239,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(186, 25%, 92%)",
+        "fill-color": "hsl(187, 25%, 92%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -276,7 +276,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(175, 30%, 91%)",
+        "fill-color": "hsl(187, 30%, 91%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -349,7 +349,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(166, 31%, 92%)",
+        "fill-color": "hsl(187, 31%, 92%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -386,7 +386,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(177, 31%, 90%)",
+        "fill-color": "hsl(187, 31%, 90%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -423,7 +423,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(189, 23%, 97%)",
+        "fill-color": "hsl(187, 23%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -460,7 +460,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(174, 24%, 89%)",
+        "fill-color": "hsl(187, 24%, 89%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -552,7 +552,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(175, 30%, 91%)",
+        "fill-color": "hsl(187, 30%, 91%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -971,7 +971,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(109, 18%, 85%)",
+        "fill-color": "hsl(187, 29%, 85%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",

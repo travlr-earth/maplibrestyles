@@ -87,7 +87,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(255, 31%, 95%)",
+        "fill-color": "hsl(264, 31%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -124,7 +124,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -161,7 +161,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(242, 37%, 93%)",
+        "fill-color": "hsl(264, 37%, 93%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -204,7 +204,7 @@
       "source": "composite",
       "id": "landcover-foliage",
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -270,7 +270,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(258, 29%, 97%)",
+        "fill-color": "hsl(264, 29%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -307,7 +307,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(274, 30%, 92%)",
+        "fill-color": "hsl(264, 30%, 92%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -352,7 +352,7 @@
       "source": "composite",
       "id": "landcover-snow",
       "paint": {
-        "fill-color": "hsl(258, 29%, 97%)",
+        "fill-color": "hsl(264, 29%, 97%)",
         "fill-opacity": 0.1,
         "fill-antialias": false
       },
@@ -372,7 +372,7 @@
       "source": "composite",
       "id": "industrial",
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-outline-color": "#F4E7F8"
       },
       "source-layer": "landuse"
@@ -403,7 +403,7 @@
       "source": "composite",
       "id": "schools",
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-opacity": 1,
         "fill-outline-color": "#fff",
         "fill-antialias": true
@@ -436,7 +436,7 @@
       "source": "composite",
       "id": "hospitals",
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-opacity": 1,
         "fill-outline-color": "#fff",
         "fill-antialias": true
@@ -468,7 +468,7 @@
       "source": "composite",
       "id": "cemeteries",
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -500,7 +500,7 @@
       "source": "composite",
       "id": "parks",
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -532,7 +532,7 @@
       "source": "composite",
       "id": "pitch",
       "paint": {
-        "fill-color": "hsl(243, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 94%)",
         "fill-outline-color": "#F4E7F8"
       },
       "source-layer": "landuse"
@@ -553,7 +553,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(285, 37%, 95%)",
+        "fill-color": "hsl(264, 37%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -588,7 +588,7 @@
       "source": "composite",
       "id": "sand",
       "paint": {
-        "fill-color": "hsl(285, 37%, 95%)"
+        "fill-color": "hsl(264, 37%, 95%)"
       },
       "source-layer": "landcover"
     },
@@ -918,7 +918,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(147, 18%, 88%)",
+        "fill-color": "hsl(264, 35%, 88%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -2478,7 +2478,7 @@
       "minzoom": 13,
       "layout": {},
       "paint": {
-        "fill-color": "hsl(147, 18%, 88%)",
+        "fill-color": "hsl(264, 35%, 88%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",

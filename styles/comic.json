@@ -1099,7 +1099,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(35, 12%, 81%)",
+        "fill-color": "hsl(40, 10%, 81%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",

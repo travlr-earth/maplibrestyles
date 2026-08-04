@@ -146,7 +146,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": "hsl(48, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 86%)",
         "fill-pattern": "",
         "fill-opacity": [
           "interpolate",
@@ -332,7 +332,7 @@
       "source": "composite",
       "id": "hospital-base",
       "paint": {
-        "fill-color": "hsl(48, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 86%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -370,7 +370,7 @@
       "id": "school-hospital",
       "paint": {
         "fill-pattern": "yellow-pattern",
-        "fill-color": "hsl(48, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 86%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -440,7 +440,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(56, 41%, 87%)",
+        "fill-color": "hsl(43, 41%, 87%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -477,7 +477,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(48, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 86%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -520,7 +520,7 @@
       "id": "park",
       "paint": {
         "fill-pattern": "gray-pattern",
-        "fill-color": "hsl(48, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 86%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -553,7 +553,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(55, 47%, 85%)",
+        "fill-color": "hsl(43, 47%, 85%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -592,7 +592,7 @@
       "layout": {},
       "paint": {
         "fill-pattern": "gray-pattern",
-        "fill-color": "hsl(55, 47%, 85%)"
+        "fill-color": "hsl(43, 47%, 85%)"
       }
     },
     {
@@ -611,7 +611,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(59, 39%, 93%)",
+        "fill-color": "hsl(43, 39%, 93%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -648,7 +648,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(42, 40%, 84%)",
+        "fill-color": "hsl(43, 40%, 84%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -931,7 +931,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(37, 18%, 80%)",
+        "fill-color": "hsl(43, 45%, 80%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",

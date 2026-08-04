@@ -85,7 +85,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(191, 98%, 22%)",
+        "fill-color": "hsl(193, 98%, 22%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -122,7 +122,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(180, 100%, 23%)",
+        "fill-color": "hsl(193, 100%, 23%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -159,7 +159,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(194, 96%, 28%)",
+        "fill-color": "hsl(193, 96%, 28%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -215,7 +215,7 @@
             "class"
           ],
           "ice",
-          "hsl(194, 96%, 28%)",
+          "hsl(193, 96%, 28%)",
           "rgb(15, 46, 54)"
         ],
         "fill-opacity": [
@@ -310,7 +310,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(182, 100%, 24%)",
+        "fill-color": "hsl(193, 100%, 24%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -347,7 +347,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(180, 97%, 25%)",
+        "fill-color": "hsl(193, 97%, 25%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -384,7 +384,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(171, 100%, 22%)",
+        "fill-color": "hsl(193, 100%, 22%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -496,7 +496,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": "hsl(180, 100%, 23%)",
+        "fill-color": "hsl(193, 100%, 23%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -723,7 +723,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(35, 18%, 80%)",
+        "fill-color": "hsl(40, 10%, 81%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",

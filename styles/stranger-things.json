@@ -101,7 +101,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(7, 4%, 97%)",
+        "fill-color": "hsl(0, 4%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -144,7 +144,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(10, 3%, 97%)",
+        "fill-color": "hsl(0, 3%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -179,7 +179,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(18, 4%, 96%)",
+        "fill-color": "hsl(0, 4%, 96%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -214,7 +214,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(345, 0%, 97%)",
+        "fill-color": "hsl(0, 0%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -249,7 +249,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(7, 4%, 97%)",
+        "fill-color": "hsl(0, 4%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -286,7 +286,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(18, 0%, 97%)",
+        "fill-color": "hsl(0, 0%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -323,7 +323,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(10, 3%, 97%)",
+        "fill-color": "hsl(0, 3%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -382,7 +382,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(18, 4%, 96%)",
+        "fill-color": "hsl(0, 4%, 96%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -419,7 +419,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(345, 0%, 97%)",
+        "fill-color": "hsl(0, 0%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -456,7 +456,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(2, 0%, 95%)",
+        "fill-color": "hsl(0, 0%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -987,7 +987,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(35, 18%, 80%)",
+        "fill-color": "hsl(0, 2%, 91%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",

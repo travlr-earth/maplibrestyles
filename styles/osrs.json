@@ -228,7 +228,7 @@
         "national_park"
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 35%)",
         "fill-opacity": 0.8
       }
     },
@@ -248,7 +248,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(103, 49%, 34%)",
+        "fill-color": "hsl(95, 49%, 34%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -285,7 +285,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 35%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -326,7 +326,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 35%)"
       }
     },
     {
@@ -345,7 +345,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 35%)"
       }
     },
     {
@@ -364,7 +364,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(99, 55%, 36%)",
+        "fill-color": "hsl(95, 55%, 36%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -401,7 +401,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(106, 47%, 40%)",
+        "fill-color": "hsl(95, 47%, 40%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -438,7 +438,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(90, 48%, 37%)",
+        "fill-color": "hsl(95, 48%, 37%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -475,7 +475,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(99, 55%, 36%)"
+        "fill-color": "hsl(95, 55%, 36%)"
       }
     },
     {
@@ -497,7 +497,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 35%)"
       }
     },
     {
@@ -516,7 +516,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(88, 55%, 34%)",
+        "fill-color": "hsl(95, 55%, 34%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -556,7 +556,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(88, 55%, 34%)"
+        "fill-color": "hsl(95, 55%, 34%)"
       }
     },
     {
@@ -579,7 +579,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(88, 55%, 34%)"
+        "fill-color": "hsl(95, 55%, 34%)"
       }
     },
     {
@@ -601,7 +601,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 35%)",
         "fill-opacity": 0.6
       }
     },
@@ -624,7 +624,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 35%)",
         "fill-opacity": 0.5
       }
     },
@@ -648,7 +648,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 35%)"
       }
     },
     {
@@ -665,7 +665,7 @@
         "cemetery"
       ],
       "paint": {
-        "fill-color": "hsl(94, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 35%)"
       }
     },
     {
@@ -747,7 +747,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(63, 18%, 41%)",
+        "fill-color": "hsl(95, 53%, 41%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
