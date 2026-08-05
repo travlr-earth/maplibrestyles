@@ -239,7 +239,7 @@
         "national_park"
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 36%)",
         "fill-opacity": 0.8
       }
     },
@@ -259,7 +259,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(95, 49%, 34%)",
+        "fill-color": "hsl(95, 49%, 35%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -273,8 +273,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]
@@ -296,7 +294,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 36%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -310,8 +308,6 @@
           0.55,
           8,
           0.55,
-          8.75,
-          0.1375,
           9,
           0
         ]
@@ -337,7 +333,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 36%)"
       }
     },
     {
@@ -356,7 +352,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 36%)"
       }
     },
     {
@@ -375,7 +371,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(95, 55%, 36%)",
+        "fill-color": "hsl(95, 55%, 38%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -389,8 +385,6 @@
           0.75,
           8,
           0.75,
-          8.75,
-          0.1875,
           9,
           0
         ]
@@ -412,7 +406,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(95, 47%, 40%)",
+        "fill-color": "hsl(95, 47%, 42%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -426,8 +420,6 @@
           0.55,
           8,
           0.55,
-          8.75,
-          0.1375,
           9,
           0
         ]
@@ -449,7 +441,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(95, 48%, 37%)",
+        "fill-color": "hsl(95, 48%, 38%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -463,8 +455,6 @@
           0.5,
           8,
           0.5,
-          8.75,
-          0.125,
           9,
           0
         ]
@@ -486,7 +476,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 55%, 36%)"
+        "fill-color": "hsl(95, 55%, 38%)"
       }
     },
     {
@@ -508,7 +498,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 36%)"
       }
     },
     {
@@ -527,7 +517,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(95, 55%, 34%)",
+        "fill-color": "hsl(95, 55%, 35%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -541,8 +531,6 @@
           0.6,
           8,
           0.6,
-          8.75,
-          0.15000000000000002,
           9,
           0
         ]
@@ -567,7 +555,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 55%, 34%)"
+        "fill-color": "hsl(95, 55%, 35%)"
       }
     },
     {
@@ -590,7 +578,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 55%, 34%)"
+        "fill-color": "hsl(95, 55%, 35%)"
       }
     },
     {
@@ -612,7 +600,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 36%)",
         "fill-opacity": 0.6
       }
     },
@@ -635,7 +623,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)",
+        "fill-color": "hsl(95, 54%, 36%)",
         "fill-opacity": 0.5
       }
     },
@@ -659,7 +647,7 @@
         false
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 36%)"
       }
     },
     {
@@ -676,7 +664,7 @@
         "cemetery"
       ],
       "paint": {
-        "fill-color": "hsl(95, 54%, 35%)"
+        "fill-color": "hsl(95, 54%, 36%)"
       }
     },
     {

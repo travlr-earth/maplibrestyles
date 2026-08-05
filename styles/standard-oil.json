@@ -146,7 +146,7 @@
       "source": "composite",
       "id": "landuse",
       "paint": {
-        "fill-color": "hsl(43, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 85%)",
         "fill-pattern": "",
         "fill-opacity": [
           "interpolate",
@@ -343,7 +343,7 @@
       "source": "composite",
       "id": "hospital-base",
       "paint": {
-        "fill-color": "hsl(43, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 85%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -381,7 +381,7 @@
       "id": "school-hospital",
       "paint": {
         "fill-pattern": "yellow-pattern",
-        "fill-color": "hsl(43, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 85%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -414,7 +414,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(43, 47%, 87%)",
+        "fill-color": "hsl(43, 47%, 86%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -428,8 +428,6 @@
           0.6,
           8,
           0.6,
-          8.75,
-          0.15000000000000002,
           9,
           0
         ]
@@ -451,7 +449,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(43, 41%, 87%)",
+        "fill-color": "hsl(43, 41%, 86%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -465,8 +463,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]
@@ -488,7 +484,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(43, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 85%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -502,8 +498,6 @@
           0.55,
           8,
           0.55,
-          8.75,
-          0.1375,
           9,
           0
         ]
@@ -531,7 +525,7 @@
       "id": "park",
       "paint": {
         "fill-pattern": "gray-pattern",
-        "fill-color": "hsl(43, 46%, 86%)",
+        "fill-color": "hsl(43, 46%, 85%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -564,7 +558,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(43, 47%, 85%)",
+        "fill-color": "hsl(43, 47%, 83%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -578,8 +572,6 @@
           0.75,
           8,
           0.75,
-          8.75,
-          0.1875,
           9,
           0
         ]
@@ -603,7 +595,7 @@
       "layout": {},
       "paint": {
         "fill-pattern": "gray-pattern",
-        "fill-color": "hsl(43, 47%, 85%)"
+        "fill-color": "hsl(43, 47%, 83%)"
       }
     },
     {
@@ -622,7 +614,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(43, 39%, 93%)",
+        "fill-color": "hsl(43, 39%, 94%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -636,8 +628,6 @@
           0.55,
           8,
           0.55,
-          8.75,
-          0.1375,
           9,
           0
         ]
@@ -659,7 +649,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(43, 40%, 84%)",
+        "fill-color": "hsl(43, 40%, 83%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -673,8 +663,6 @@
           0.5,
           8,
           0.5,
-          8.75,
-          0.125,
           9,
           0
         ]

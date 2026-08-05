@@ -17043,7 +17043,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 8%, 96%)",
+        "fill-color": "hsl(40, 8%, 97%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17057,8 +17057,6 @@
           0.25,
           8,
           0.25,
-          8.75,
-          0.0625,
           9,
           0
         ]
@@ -17080,7 +17078,7 @@
       "source": "mapbox-streets-v6",
       "id": "snow-copy",
       "paint": {
-        "fill-color": "hsl(40, 8%, 96%)"
+        "fill-color": "hsl(40, 8%, 97%)"
       },
       "source-layer": "landcover"
     },
@@ -17135,7 +17133,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 16%, 90%)",
+        "fill-color": "hsl(40, 16%, 89%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17149,8 +17147,6 @@
           0.25,
           8,
           0.25,
-          8.75,
-          0.0625,
           9,
           0
         ]
@@ -17172,7 +17168,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 10%, 90%)",
+        "fill-color": "hsl(40, 10%, 89%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17186,8 +17182,6 @@
           0.25,
           8,
           0.25,
-          8.75,
-          0.0625,
           9,
           0
         ]
@@ -17209,7 +17203,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 15%, 89%)",
+        "fill-color": "hsl(40, 15%, 88%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17223,8 +17217,6 @@
           0.25,
           8,
           0.25,
-          8.75,
-          0.0625,
           9,
           0
         ]
@@ -17251,7 +17243,7 @@
       "source": "mapbox-streets-v6",
       "id": "highlight-89-copy-2",
       "paint": {
-        "fill-color": "hsl(40, 15%, 89%)",
+        "fill-color": "hsl(40, 15%, 88%)",
         "fill-pattern": "paleblue-lines-32",
         "fill-opacity": 0.25
       },
@@ -17273,7 +17265,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 16%, 88%)",
+        "fill-color": "hsl(40, 16%, 86%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17287,8 +17279,6 @@
           0.25,
           8,
           0.25,
-          8.75,
-          0.0625,
           9,
           0
         ]
@@ -17310,7 +17300,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(40, 9%, 87%)",
+        "fill-color": "hsl(40, 9%, 86%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -17324,8 +17314,6 @@
           0.5,
           8,
           0.5,
-          8.75,
-          0.125,
           9,
           0
         ]
@@ -17334,7 +17322,7 @@
     {
       "id": "highlight-89-copy",
       "paint": {
-        "fill-color": "hsl(40, 15%, 89%)",
+        "fill-color": "hsl(40, 15%, 88%)",
         "fill-opacity": 0.5
       },
       "layout": {

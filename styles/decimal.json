@@ -100,8 +100,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]
@@ -123,7 +121,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(0, 3%, 3%)",
+        "fill-color": "hsl(0, 3%, 4%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -137,8 +135,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]
@@ -171,7 +167,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "hsl(0, 3%, 3%)",
+        "fill-color": "hsl(0, 3%, 4%)",
         "fill-antialias": true,
         "fill-opacity": 0.75
       }
@@ -203,7 +199,7 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-color": "hsl(0, 3%, 3%)",
+        "fill-color": "hsl(0, 3%, 4%)",
         "fill-antialias": true,
         "fill-opacity": 0.75
       }
@@ -224,7 +220,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(0, 4%, 4%)",
+        "fill-color": "hsl(0, 4%, 6%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -238,8 +234,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]
@@ -261,7 +255,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(0, 0%, 8%)",
+        "fill-color": "hsl(0, 0%, 10%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -275,8 +269,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]
@@ -298,7 +290,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(0, 0%, 5%)",
+        "fill-color": "hsl(0, 0%, 6%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -312,8 +304,6 @@
           0.5,
           8,
           0.5,
-          8.75,
-          0.125,
           9,
           0
         ]
@@ -344,7 +334,7 @@
       "source": "composite",
       "id": "cemeteries",
       "paint": {
-        "fill-color": "hsl(0, 3%, 3%)",
+        "fill-color": "hsl(0, 3%, 4%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -377,7 +367,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(0, 3%, 3%)",
+        "fill-color": "hsl(0, 3%, 4%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -423,8 +413,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]

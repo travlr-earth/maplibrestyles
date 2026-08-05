@@ -87,7 +87,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(264, 31%, 95%)",
+        "fill-color": "hsl(264, 31%, 94%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -101,8 +101,6 @@
           0.1,
           8,
           0.1,
-          8.75,
-          0.024999999999999994,
           9,
           0
         ]
@@ -124,7 +122,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -138,8 +136,6 @@
           0.1,
           8,
           0.1,
-          8.75,
-          0.024999999999999994,
           9,
           0
         ]
@@ -161,7 +157,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(264, 37%, 93%)",
+        "fill-color": "hsl(264, 37%, 91%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -175,8 +171,6 @@
           0.1,
           8,
           0.1,
-          8.75,
-          0.024999999999999994,
           9,
           0
         ]
@@ -204,7 +198,7 @@
       "source": "composite",
       "id": "landcover-foliage",
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -284,8 +278,6 @@
           0.1,
           8,
           0.1,
-          8.75,
-          0.024999999999999994,
           9,
           0
         ]
@@ -307,7 +299,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(264, 30%, 92%)",
+        "fill-color": "hsl(264, 30%, 91%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -321,8 +313,6 @@
           0.5,
           8,
           0.5,
-          8.75,
-          0.125,
           9,
           0
         ]
@@ -372,7 +362,7 @@
       "source": "composite",
       "id": "industrial",
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-outline-color": "#F4E7F8"
       },
       "source-layer": "landuse"
@@ -403,7 +393,7 @@
       "source": "composite",
       "id": "schools",
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-opacity": 1,
         "fill-outline-color": "#fff",
         "fill-antialias": true
@@ -436,7 +426,7 @@
       "source": "composite",
       "id": "hospitals",
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-opacity": 1,
         "fill-outline-color": "#fff",
         "fill-antialias": true
@@ -468,7 +458,7 @@
       "source": "composite",
       "id": "cemeteries",
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -500,7 +490,7 @@
       "source": "composite",
       "id": "parks",
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -532,7 +522,7 @@
       "source": "composite",
       "id": "pitch",
       "paint": {
-        "fill-color": "hsl(264, 36%, 94%)",
+        "fill-color": "hsl(264, 36%, 93%)",
         "fill-outline-color": "#F4E7F8"
       },
       "source-layer": "landuse"
@@ -553,7 +543,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(264, 37%, 95%)",
+        "fill-color": "hsl(264, 37%, 94%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -567,8 +557,6 @@
           0.1,
           8,
           0.1,
-          8.75,
-          0.024999999999999994,
           9,
           0
         ]
@@ -588,7 +576,7 @@
       "source": "composite",
       "id": "sand",
       "paint": {
-        "fill-color": "hsl(264, 37%, 95%)"
+        "fill-color": "hsl(264, 37%, 94%)"
       },
       "source-layer": "landcover"
     },

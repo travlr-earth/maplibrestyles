@@ -87,8 +87,6 @@
           0.55,
           8,
           0.55,
-          8.75,
-          0.1375,
           9,
           0
         ]
@@ -283,7 +281,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(180, 24%, 96%)",
+        "fill-color": "hsl(180, 24%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -297,8 +295,6 @@
           0.6,
           8,
           0.6,
-          8.75,
-          0.15000000000000002,
           9,
           0
         ]
@@ -320,7 +316,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(180, 18%, 96%)",
+        "fill-color": "hsl(180, 18%, 95%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -334,8 +330,6 @@
           0.4,
           8,
           0.4,
-          8.75,
-          0.09999999999999998,
           9,
           0
         ]
@@ -357,7 +351,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(180, 23%, 95%)",
+        "fill-color": "hsl(180, 23%, 94%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -371,8 +365,6 @@
           0.55,
           8,
           0.55,
-          8.75,
-          0.1375,
           9,
           0
         ]
@@ -489,7 +481,7 @@
       "id": "landuse-background",
       "paint": {
         "fill-antialias": false,
-        "fill-color": "hsl(180, 23%, 95%)",
+        "fill-color": "hsl(180, 23%, 94%)",
         "fill-opacity": [
           "interpolate",
           [
@@ -623,19 +615,19 @@
             "class"
           ],
           "grass",
-          "hsl(180, 23%, 95%)",
+          "hsl(180, 23%, 94%)",
           "agriculture",
-          "hsl(180, 23%, 95%)",
+          "hsl(180, 23%, 94%)",
           "park",
-          "hsl(180, 23%, 95%)",
+          "hsl(180, 23%, 94%)",
           "cemetery",
-          "hsl(180, 23%, 95%)",
+          "hsl(180, 23%, 94%)",
           "pitch",
-          "hsl(180, 23%, 95%)",
+          "hsl(180, 23%, 94%)",
           "sand",
-          "hsl(180, 24%, 96%)",
+          "hsl(180, 24%, 95%)",
           "rock",
-          "hsl(180, 24%, 96%)",
+          "hsl(180, 24%, 95%)",
           "residential",
           "#ffe5e5",
           "hsl(60, 0%, 95%)"
@@ -713,7 +705,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(180, 24%, 94%)",
+        "fill-color": "hsl(180, 24%, 92%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -727,8 +719,6 @@
           0.75,
           8,
           0.75,
-          8.75,
-          0.1875,
           9,
           0
         ]
@@ -781,7 +771,7 @@
       ],
       "layout": {},
       "paint": {
-        "fill-color": "hsl(180, 17%, 93%)",
+        "fill-color": "hsl(180, 17%, 92%)",
         "fill-antialias": false,
         "fill-opacity": [
           "interpolate",
@@ -795,8 +785,6 @@
           0.5,
           8,
           0.5,
-          8.75,
-          0.125,
           9,
           0
         ]
@@ -923,7 +911,7 @@
       "source": "composite",
       "id": "landuse-(1)",
       "paint": {
-        "fill-color": "hsl(180, 23%, 95%)",
+        "fill-color": "hsl(180, 23%, 94%)",
         "fill-opacity": [
           "step",
           [
