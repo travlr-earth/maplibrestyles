@@ -2,12 +2,12 @@
 
 27 finished **MapLibre GL JS** styles for Travlr's self-hosted, token-free map stack.
 
-All styles are baked from [`travlr-earth/style-builder`](https://github.com/travlr-earth/style-builder) — which migrates the original Mapbox GL JS styles to MapLibre via the `preprocessForMapLibre()` pipeline. Tile data comes from [OpenFreeMap](https://openfreemap.org/) (OMT schema). Fonts, terrain DEM, contours, and sprites are self-hosted via jsDelivr CDN.
+All styles are baked from [`travlr-earth/map-style-builder`](https://github.com/travlr-earth/map-style-builder) — which migrates the original Mapbox GL JS styles to MapLibre via the `preprocessForMapLibre()` pipeline. Tile data comes from [OpenFreeMap](https://openfreemap.org/) (OMT schema). Fonts, terrain DEM, contours, and sprites are self-hosted via jsDelivr CDN.
 
 ## Usage
 
 ```
-https://cdn.jsdelivr.net/gh/travlr-earth/maplibrestyles@main/styles/<id>.json
+https://cdn.jsdelivr.net/gh/travlr-earth/map-styles@main/styles/<id>.json
 ```
 
 Example:
@@ -15,7 +15,7 @@ Example:
 ```js
 const map = new maplibregl.Map({
   container: 'map',
-  style: 'https://cdn.jsdelivr.net/gh/travlr-earth/maplibrestyles@main/styles/streets.json',
+  style: 'https://cdn.jsdelivr.net/gh/travlr-earth/map-styles@main/styles/streets.json',
 });
 ```
 

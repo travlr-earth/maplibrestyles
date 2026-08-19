@@ -35,7 +35,7 @@
       "attribution": "Natural Earth (naturalearthdata.com)"
     }
   },
-  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/style-builder@main/styles/unicorn/sprite/sprite",
+  "sprite": "https://cdn.jsdelivr.net/gh/travlr-earth/map-style-builder@main/styles/unicorn/sprite/sprite",
   "glyphs": "https://travlr-tiles.matsmiersen.workers.dev/styles/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
